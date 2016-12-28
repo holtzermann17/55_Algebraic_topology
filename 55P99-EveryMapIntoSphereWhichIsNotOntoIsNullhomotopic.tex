@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryMapIntoSphereWhichIsNotOntoIsNullhomotopic}
+\pmcreated{2013-03-22 18:31:41}
+\pmmodified{2013-03-22 18:31:41}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{every map into sphere which is not onto is nullhomotopic}
+\pmrecord{8}{41233}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition}. Let $X$ be a topological space and $f:X\to\mathbb{S}^{n}$ a continous map from $X$ to $n$-dimensional sphere which is not onto. Then $f$ is nullhomotopic.
+
+\textit{Proof}. Assume that there is $y_0\in\mathbb{S}^{n}$ such that $y_0\not\in\mathrm{im}(f)$. It is well known that there is a homeomorphism $\phi:\mathbb{S}^{n}\setminus\{y_{0}\}\to\mathbb{R}^{n}$. Then we have an induced map
+$$\phi\circ f:X\to\mathbb{R}^{n}.$$
+Since $\mathbb{R}^{n}$ is contractible, then there is $c\in\mathbb{R}^{n}$ such that $\phi\circ f$ is homotopic to the constant map in $c$ (denoted with the same symbol $c$). Let $\psi:\mathbb{R}^{n}\to\mathbb{S}^{n}$ be a map such that $\psi(x)=\phi^{-1}(x)$ (note that $\psi$ is not the inverse of $\phi$ because $\psi$ is not onto) and take any homotopy $H:\mathrm{I}\times X\to\mathbb{R}^{n}$ from $\phi\circ f$ to $c$. Then we have a homotopy $F:\mathrm{I}\times X\to\mathbb{S}^{n}$ defined by the formula $F=\psi\circ H$. It is clear that
+$$F(0,x)=\psi (H(0,x))=\psi(\phi(f(x))) = f(x);$$
+$$F(1,x)=\psi (H(1,x))=\psi(c)\in\mathbb{S}^{n}.$$
+Thus $F$ is a homotopy from $f$ to a constant map. $\square$
+
+\textbf{Corollary}. If $A\subseteq\mathbb{S}^{n}$ is a deformation retract of $\mathbb{S}^{n}$, then $A=\mathbb{S}^{n}$.
+
+\textit{Proof}. If $A\subseteq X$ then by deformation retraction (associated to $A$) we understand a map $R:\mathrm{I}\times X\to X$ such that $R(0,x)=x$ for all $x\in X$, $R(1,a)=a$ for all $a\in A$ and $R(1,x)\in A$ for all $x\in X$. Thus a deformation retract is a subset $A\subseteq X$ such that there is a deformation retraction $R:\mathrm{I}\times X\to X$ associated to $A$.
+
+Assume that $A$ is a deformation retract of $\mathbb{S}^{n}$ and $A\neq\mathbb{S}^{n}$. Let $R:\mathrm{I}\times\mathbb{S}^{n}\to \mathbb{S}^{n}$ be a deformation retraction. Then $r:\mathbb{S}^{n}\to\mathbb{S}^{n}$ such that $r(x)=R(1,x)$ is homotopic to the identity map (by definition of a deformation retract), but on the other hand it is homotopic to a constant map (it follows from the proposition, since $r$ is not onto, because $A$ is a proper subset of $\mathbb{S}^{n}$). Thus the identity map is homotopic to a constant map, so $\mathbb{S}^{n}$ is contractible. Contradiction. $\square$
+%%%%%
+%%%%%
+\end{document}

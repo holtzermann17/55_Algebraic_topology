@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BundleMap}
+\pmcreated{2013-03-22 13:07:24}
+\pmmodified{2013-03-22 13:07:24}
+\pmowner{RevBobo}{4}
+\pmmodifier{RevBobo}{4}
+\pmtitle{bundle map}
+\pmrecord{5}{33557}
+\pmprivacy{1}
+\pmauthor{RevBobo}{4}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R10}
+\pmdefines{bundle morphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%%\usepackage{xypic}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $E_1 \overset{\pi_1}\to B_1$ and $E_2 \overset{\pi_2}\to B_2$ be fiber bundles for which there is a continuous map $f:B_1 \to B_2$ of base spaces. A \emph{bundle map} (or \emph{bundle morphism}) is  a commutative square
+$$
+\xymatrix{
+E_1 \ar[r]^{\hat{f}} \ar[d]_{\pi_1} & E_2 \ar[d]^{\pi_2} \\
+B_1 \ar[r]^{f} & B_2
+}
+$$
+such that the induced map $E_1 \to f^{-1}E_2$ is a homeomorphism (here $f^{-1}E_2$ denotes the pullback of $f$ along the bundle projection $\pi_2$).
+%%%%%
+%%%%%
+\end{document}

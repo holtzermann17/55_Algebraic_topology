@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeRhamCohomology}
+\pmcreated{2013-03-22 14:24:40}
+\pmmodified{2013-03-22 14:24:40}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{de Rham cohomology}
+\pmrecord{9}{35913}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N05}
+\pmclassification{msc}{58A12}
+\pmdefines{de Rham cohomology group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\HdR}{{\rm H}_{\rm dR}}
+\newcommand{\im}{\mathop{\mathrm{im}}}
+\begin{document}
+Let $X$ be a paracompact ${\cal C}^\infty$ differential manifold.  Let
+$$
+\Omega X=\bigoplus_{i=0}^\infty\Omega^i X
+$$
+denote the graded-commutative $\mathbb{R}$-algebra of differential forms on $X$.  Together with the exterior derivative
+$$
+d^i\colon\Omega^i X\to\Omega^{i+1}X\quad(i=0,1,\ldots),
+$$
+$\Omega X$ forms a chain complex $(\Omega X,d)$ of $\mathbb{R}$-vector spaces.  The \PMlinkescapetext{{\it de Rham cohomology groups}} ${\rm H}_{\rm dR}^i X$ of $X$ are defined as the homology groups of this complex, that is to say
+$$
+{\rm H}_{\rm dR}^i X:=(\ker d^i)/(\im d^{i-1})\quad(i=0,1,\ldots),
+$$
+where $\Omega^{-1}X$ is taken to be 0, so $d^{-1}\colon 0\to\Omega^0 X$ is the zero map.  The wedge product in $\Omega X$ induces the structure of a graded-commutative $\mathbb{R}$-algebra on
+$$
+{\rm H}_{\rm dR}X:=\bigoplus_{i=0}^{\infty}\HdR^i X.
+$$
+
+If $X$ and $Y$ are both paracompact ${\cal C}^\infty$ manifolds and $f\colon X\to Y$ is a differentiable map, there is an induced map
+$$
+f^*\colon \HdR Y\to\HdR X,
+$$
+defined by
+$$
+f^*[\omega]:=[f^*\omega]\quad\hbox{for $\omega\in\ker d$}.
+$$
+Here $[\omega]$ denotes the class of $\omega$ modulo $\im d$, and the second $f^*$ is the map $\Omega Y\to\Omega X$ induced by the functor $\Omega$.  This action on differentiable maps makes the de Rham cohomology into a contravariant functor from the category of paracompact ${\cal C}^\infty$ manifolds to the category of graded-commutative $\mathbb{R}$-algebras.  It turns out to be homotopy invariant; this implies that homotopy equivalent manifolds have isomorphic de Rham cohomology.
+%%%%%
+%%%%%
+\end{document}

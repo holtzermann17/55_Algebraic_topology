@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupCohomologytopologicalDefinition}
+\pmcreated{2013-03-22 14:32:24}
+\pmmodified{2013-03-22 14:32:24}
+\pmowner{whm22}{2009}
+\pmmodifier{whm22}{2009}
+\pmtitle{group cohomology (topological definition)}
+\pmrecord{18}{36085}
+\pmprivacy{1}
+\pmauthor{whm22}{2009}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N25}
+%\pmkeywords{cohomology}
+%\pmkeywords{topological group}
+%\pmkeywords{classifying space}
+\pmrelated{CohomologyGroupTheorem}
+\pmdefines{group cohomology}
+\pmdefines{classifying spaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $G$ be a topological group.  Suppose some contractible space $X$ admits a fixed point free action of $G$, so that the quotient map $p:X \rightarrow X/G$ is a fibre map.  Then $X/G$, denoted $BG$ is called the classifying space of $G$.  Classifying spaces always exist and are unique up to homotopy.  Further, if $G$ has the structure of a CW- complex, we can choose $BG$ to have one too.
+
+The group (co)homology of $G$ is defined to be the  (co)homology of $BG$.  From the long-exact sequence associated to the fibre map, $p$, we know that $\pi_{n} (G) = \pi_{n+1}(BG)$ for $n \geq 0$.  In particular the fundamental group of $BG$ is $\pi_0(G)$, which inherits a group structure as a quotient of $G$. Let $H$ denote $\pi_0(G)$.  Then $H$ acts freely on the cells of $BG^{*}$, the universal over of $BG$.  Hence the cellular resolution for $BG^{*}$, denoted, $C_*(BG^{*})$, is a sequence of free $ZH$- modules and $ZH$- linear maps.  Taking coefficients in some $ZH$- module $A$, we have 
+
+$$
+H^n(G; A)=H^n(C_{*}(BG^{*}); A) \,\,\rm{ and }\,\, H_n(G; A)=H_n(C_{*}(BG^{*}); A)
+$$
+
+In particular, when $G$ is discrete, $p$ must be the covering map associated to a universal cover.  Hence $X=BG^{*}$ and $C_*(BG^{*})$ is exact, as $X$ is contractible and hence has trivial homology.  Note in this case $H=G$.  So for a discrete group $G$, we have, 
+
+$$
+H^n(G; A)=Ext^n_{ZG}(Z, A) \,\,\rm{  and  }\,\, H_n(G; A)= Tor^n_{ZG}(Z, A)
+$$
+
+Also, as passing to the universal cover preserves $\pi_{n}$ for  $n > 1$, we know that $\pi_n (BG)=0$ for $n > 1$.  $BG$ is always connected and for a discrete group $\pi_0(G)=G$ so we have $BG = k(G,1)$, the Eilenberg - Maclane space.
+
+As an example take $G = SU_1$.  Note topologically, $SU_1=S^1 = k(Z, 1)$.  As $\pi_n (G) = \pi_{n+1}(BG)$ for  $n \geq 0$, we know that $BSU_1= k(Z, 2)= CP^\infty$.
+
+More explicitly, we may identify $SU_1$ with the unit complex numbers.  This acts freely on the infinite complex sphere (which is contractible) leaving a quotient of $CP^\infty$.  
+
+Hence $H^n(SU_1,Z)=Z$ if $2$ divides $n$ and $0$ otherwise.
+
+Similiarly $BC_2= RP^\infty$ and $BSU_2 = HP^\infty$, as $C_2$ and $SU_2$ are isomorphic to U(R) and U(H) respectively.    So $H^n(C_2, Z_2)=Z_2$ for all $n$ and $H^n(SU_2,Z)=Z$ if $4$ divides $n$ and $0$ otherwise.
+%%%%%
+%%%%%
+\end{document}

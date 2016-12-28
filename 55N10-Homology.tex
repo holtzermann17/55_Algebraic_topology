@@ -1,0 +1,240 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Homology}
+\pmcreated{2013-03-22 13:14:41}
+\pmmodified{2013-03-22 13:14:41}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{homology}
+\pmrecord{17}{33720}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N10}
+\pmsynonym{singular homology}{Homology}
+\pmrelated{SimplicialComplex}
+\pmrelated{GeometryOfTheSphere}
+\pmrelated{BettiNumber}
+\pmrelated{HomologyChainComplex}
+\pmrelated{CohomologyGroupTheorem}
+\pmdefines{singular n-chain}
+\pmdefines{singular n-simplex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\ab}[1]{{#1}_{\mathrm{ab}}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\Aut}{\mathrm{Aut}\,}
+\newcommand{\Aff}[2]{\mathrm{Aff}_{#1} #2}
+\newcommand{\aff}[2]{\mathfrak{aff}_{#1} #2}
+\newcommand{\mcB}{\mathcal{B}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\bfrac}[2]{\left[\frac{#1}{#2}\\right]}
+\newcommand{\bkh}{\backslash}
+\newcommand{\Cyc}[2]{\mathcal{C}^{#1}_{#2}}
+\newcommand{\Cbar}[2]{\overline{\C{#1}{#2}}}
+%\newcommand{\CD}{\R[\Delta]}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CF}[2]{\ensuremath{\mathfrak{C}(#1,#2)}}
+\newcommand{\Cinf}{\EuScript{C}^{\infty}}
+\newcommand{\cmp}{cyclic mod $p$\xspace}
+\newcommand{\cp}{\mathrm{c.p.}}
+\newcommand{\CS}{\EuScript{CS}}
+\newcommand{\deck}{\EuScript{D}}
+\newcommand{\defl}[1]{\mathfrak{def}_{#1}}
+\newcommand{\Der}{\mathrm{Der}\,}
+\newcommand{\eH}{[X_H]-[Y_H]}
+\newcommand{\EL}{\mathcal{EL}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\ES}[1]{\EuScript{#1}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\fr}[1]{\mathfrak{#1}}
+\newcommand{\Frat}{\mathrm{Frat}\,}
+\newcommand{\Gal}[1]{\Gamma(#1 |\Q)}
+\newcommand{\GL}[2]{\mathrm{GL}_{#1} #2}
+\newcommand{\gl}[2]{\mathfrak{gl}_{#1} #2}
+\newcommand{\GrR}[1]{a(#1 G)}
+\newcommand{\Gr}{\mathrm{Gr}\,}
+\newcommand{\mcH}{\mathcal{H}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\Hom}[2]{\mathrm{Hom}(#1,#2)}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\im}{\mathrm{im}}
+\newcommand{\ind}[2]{\mathrm{ind}^{#1}_{#2}}
+\newcommand{\indp}[2]{\mathfrak{ind}^{#1}_{#2}}
+\renewcommand{\inf}[1]{\mathfrak{inf}_{#1}}
+\newcommand{\inn}[1]{\langle #1\rangle}
+\renewcommand{\int}{\mathrm{int}}
+\newcommand{\Iso}{\mathrm{Iso}}
+\newcommand{\K}{\mathcal{K}}
+\renewcommand{\ker}{\mathrm{ker}\,}
+\renewcommand{\L}[1]{\mathfrak{L}(#1)}
+\newcommand{\lap}[1]{\Delta_{#1}}
+\newcommand{\lapM}{\Delta_M}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\lineq}{linearly equivalent\xspace}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mG}{m_G}
+\newcommand{\mK}{m_{\K}}
+\newcommand{\mindeg}[1]{\fr{md}(#1)}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega}
+\newcommand{\Orb}{\mathrm{Orb}}
+\newcommand{\pad}{\hat{\Z}_p}
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pderw}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\pdersec}[2]{\frac{\partial^2 #1}{\partial {#2}^2}} 
+\newcommand{\perm}[1]{\pi_{#1}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rad}{\mathrm{rad}\,}
+\newcommand{\res}[2]{\mathrm{res}^{#1}_{#2}}
+\newcommand{\resp}[2]{\mathfrak{res}^{#1}_{#2}}
+\newcommand{\RG}{\EuScript{R}_G}
+\newcommand{\rk}{\mathrm{rk}\,}
+\newcommand{\V}[1]{\mathbf{#1}}
+\newcommand{\vp}{\varphi}
+\newcommand{\Stab}{\mathrm{Stab}}
+\newcommand{\SL}[2]{\mathrm{SL}_{#1} #2}
+\renewcommand{\sl}[2]{\fr{sl}_{#1} #2}
+\newcommand{\SO}[2]{\mathrm{SO}_{#1} #2}
+%\newcommand{\so}[2]{\fr{so}_{#1} #2}
+\newcommand{\Sp}[2]{\mathrm{Sp}_{#1} #2}
+\renewcommand{\sp}[2]{\fr{sp}_{#1} #2}
+\newcommand{\SU}[1]{\mathrm{SU}( #1)}
+\newcommand{\su}[1]{\fr{su}_{#1}}
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\sym}{\mathrm{sym}}
+\newcommand{\Tg}{\mc{T}(\fr g)}
+\newcommand{\tom}{\tilde{\omega}}
+\newcommand{\ghtghp}{\fr g/\fr h\oplus(\fr g/\fr h^\perp)^*}
+\newcommand{\ghps}{(\fr g/\fr h^\perp)^*}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\tr}{\mathrm{tr}}
+%\renewcommand{\thechapter}{\Roman{chapter}}
+%\renewcommand{\thesection}{\thechapter.\arabic{section}}
+%\renewcommand{\thethm}{\thechapter.\arabic{thm}}
+\newcommand{\Ug}{\mc{U}(\fr g)}
+\newcommand{\Uh}{\mc{U}(\fr h)}
+\renewcommand{\V}[1]{\mathbf{#1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Zp}{\Z/p}
+\begin{document}
+\PMlinkescapeword{name}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{measures}
+\PMlinkescapeword{loop}
+\PMlinkescapeword{order}
+\PMlinkescapeword{difference}
+Homology is the general name for a number of functors from topological spaces to abelian groups (or more generally modules over a fixed ring).  It turns out that in most reasonable cases a large number of these (singular homology, cellular homology, Morse homology, simplicial homology) all coincide.  There are other generalized homology \PMlinkescapetext{theories}, but I won't consider those.  There are also related cohomology theories which serve the same purpose with slightly different machinery.
+
+In an intuitive sense, homology measures ``holes'' in topological spaces.  The idea is that we want to measure the topology of a space by looking
+at sets which have no boundary, but are not the boundary of something else.  These are things
+that have wrapped around ``holes'' in our topological space, allowing us to detect those ``holes.''
+Here I don't mean boundary in the formal topological sense, but in an intuitive sense.  Thus a loop
+has no boundary as I mean here, even though it does in the general topological definition.  You 
+will see the formal definition below.
+
+Perhaps the simplest form of homology to visualize, and to work with in practice, is simplicial homology.  It is based on computing the homology groups of a simplicial complex (generally a finite one).  However, it is generally nontrivial to show that a space of interest is homeomorphic to a simplicial complex, and it can also be difficult to apply more advanced methods such as spectral sequences when working with simplicial homology.  Singular homology is similar: it is in some sense a continuous version of simplicial homology, and it does not suffer from these problems.
+
+Singular homology is defined as follows:  We define the standard $n$-simplex to be the subset
+\[
+\Delta_n=\{(x_1,\ldots,x_n)\in\R^n| x_i\geq 0, \sum_{i=1}^n x_i\leq 1\}
+\]
+of $\R^n$.  The $0$-simplex is a point, the $1$-simplex a line segment, the 2-simplex, a triangle,
+and the 3-simplex, a tetrahedron.
+
+A \emph{singular $n$-simplex} in a topological space $X$ is a continuous map $f:\Delta_n\to X$.
+A \emph{singular $n$-chain} is a formal linear combination (with integer coefficients) of a 
+finite number of singular $n$-simplices. The $n$-chains in $X$ form a group under formal addition, 
+denoted $C_n(X,\Z)$.
+
+Next, we define a boundary operator $\partial_n:C_n(X,\Z)\to C_{n-1}(X,\Z)$.  Intuitively, this is just taking
+all the faces of the simplex, and considering their images as simplices of one lower dimension
+with the appropriate sign to keep orientations correct.  Formally, we let $v_0,v_1,\ldots,v_n$
+be the vertices of $\Delta_n$, pick an order on the vertices of the $n-1$ simplex, and let 
+$[v_0,\ldots,\hat{v}_i,\ldots,v_n]$ be the face spanned by all vertices other than $v_i$, identified
+with the $n-1$-simplex by mapping the vertices $v_0,\ldots,v_n$ except for $v_i$, in that order,
+to the vertices of the $(n-1)$-simplex in the order you have chosen.
+Then if $\vp:\Delta_n\to X$ is an $n$-simplex, $\vp([v_0,\ldots,\hat{v}_i,\ldots,v_n])$ is the map
+$\vp$, restricted to the face $[v_0,\ldots,\hat{v}_i,\ldots,v_n]$, made into a singular 
+$(n-1)$-simplex by the identification with the standard $(n-1)$-simplex I defined above.
+Then 
+\[
+\partial_n(\vp)=\sum_{i=0}^n(-1)^i\vp([v_0,\ldots,\hat{v}_i,\ldots,v_n]).
+\]
+
+It is a simple exercise in reindexing to check that $\partial_n\circ\partial_{n+1}=0$.
+
+For example, if $\vp$ is a singular $1$-simplex (that is a path), then $\partial(\vp)=\vp(1)-\vp(0)$.
+That is, it is the difference of the endpoints (thought of as 0-simplices).
+
+Now, we are finally in a position to define homology groups.  Let $H_n(X,\Z)$, the $n$ homology
+group of $X$ be the quotient 
+\[
+H_n(X,\Z)=\frac{\ker \partial_{n}}{\im \partial_{n+1}}.
+\]
+
+The association $X\mapsto H_n(X,\Z)$ is a functor from topological spaces to abelian groups, and the maps $f_*:H_n(X,\Z)\to H_n(Y,\Z)$ induced by a map $f:X\to Y$
+are simply those induced by composition of an singular $n$-simplex with the map $f$.
+
+From this definition, it is not at all clear that homology is at all computable.  But, in fact, homology is often much more easily computed than homotopy groups or most other topological invariants.  Important tools in the calculation of homology are long exact sequences, the Mayer-Vietoris sequence, cellular homology, spectral sequences, and homotopy invariance.
+
+Some examples of homology groups:
+
+\[
+H_m(\R^n,\Z)=
+\begin{cases}
+\Z	&	m=0\\
+0	&	m> 0.
+\end{cases}
+\]
+This reflects the fact that $\R^n$ has ``no holes''
+
+Consider the space $\R P^n$, real projective space, which is $\R^{n+1}\setminus\{0\}$ modulo the relation that $(x_0,\ldots,x_n)\equiv \lambda(x_0,\ldots,x_n)$ for every nonzero $\lambda$. For $n$ even,
+\[
+H_m(\R P^n,\Z)=\begin{cases}
+\Z	&	m=0\\ 
+\Z_2	&	m\equiv 1\pmod 2\text{ or } n>m>0\\ 
+0	&	m\equiv 0\pmod 2,\, n>m>0 \text{ or } m\geq n,
+\end{cases}
+\]
+and for $n$ odd,
+\[
+H_m(\R P^n,\Z)=
+\begin{cases}
+\Z	&	m=0\text{ or }n\\ 
+\Z_2	&	m\equiv 1\pmod 2\text{ or }n>m>0\\
+0	&	m\equiv 0\pmod 2,\,n>m>0 \text{ or } m>n.
+\end{cases}
+\]
+%%%%%
+%%%%%
+\end{document}

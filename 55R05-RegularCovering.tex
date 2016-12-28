@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularCovering}
+\pmcreated{2013-03-22 13:27:38}
+\pmmodified{2013-03-22 13:27:38}
+\pmowner{Dr_Absentius}{537}
+\pmmodifier{Dr_Absentius}{537}
+\pmtitle{regular covering}
+\pmrecord{6}{34027}
+\pmprivacy{1}
+\pmauthor{Dr_Absentius}{537}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R05}
+\pmsynonym{normal covering}{RegularCovering}
+\pmsynonym{Galois covering}{RegularCovering}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+%\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+\newcommand{\Au}{ \operatorname{Aut}}
+\def\co{\colon\thinspace}
+\begin{document}
+\begin{thm}
+  Let $p\co E\to X$ be a covering map where $E$ and $X$ are connected and
+  locally path connected and let $X$ have a basepoint $*$. The following are
+  equivalent:
+  \begin{enumerate}
+  \item The action of $\Au(p)$, the group of covering transformations of
+  $p$, is transitive on the fiber $p^{-1}(*)$,
+  \item for some $e\in p^{-1}(*)$,  $p_*\left(\pi_1(E,e)\right)$ is a
+  normal  subgroup of $\pi_1(X,*)$, where $p_*$
+  denotes $\pi_1(p)$,
+\item $\forall e,e'\in p^{-1}(*), \quad
+  p_*\left(\pi_1(E,e)\right)=p_* \left(\pi_1(E,e')\right)$,
+\item  there is a discrete group $G$ such that $p$ is a principal $G$-bundle.
+  \end{enumerate}
+\end{thm}
+All the elements for the proof of this theorem are contained in the articles 
+about the monodromy action and the deck transformations.
+\begin{defn}
+  A covering with the properties described in the previous theorem is called
+  a \emph{regular} or \emph{normal} covering. The term \emph{Galois}
+  covering is also used sometimes. 
+\end{defn}
+%%%%%
+%%%%%
+\end{document}

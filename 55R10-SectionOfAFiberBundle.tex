@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SectionOfAFiberBundle}
+\pmcreated{2013-03-22 13:26:43}
+\pmmodified{2013-03-22 13:26:43}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{section of a fiber bundle}
+\pmrecord{10}{34008}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R10}
+\pmsynonym{section}{SectionOfAFiberBundle}
+\pmsynonym{cross section}{SectionOfAFiberBundle}
+\pmsynonym{cross-section}{SectionOfAFiberBundle}
+\pmrelated{FiberBundle}
+\pmdefines{smooth section}
+\pmdefines{global section}
+\pmdefines{local section}
+\pmdefines{zero section}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{theorem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\cpxs}{{\mathbb C}} % The "complexes" :)
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\theorembodyfont{\upshape}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newtheorem{exm}{Example}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\projp}{{\mathbb R}P}
+
+% open cells (not very nice...)
+\newcommand{\oce}{\smash{\overset{\circ}e}} 
+\newcommand{\ocD}{\smash{\overset{\circ}D}} 
+
+\newcommand{\susp}{\Sigma}
+\newcommand{\restr}[2]{{#1}|_{#2}}
+
+\renewcommand{\hom}{\mathop{\mathrm{Hom}}} % Homomorphisms functor
+\newcommand{\rp}{\reals P} % real projective space
+\newcommand{\cp}{\cpxs P} % complex projective space
+\newcommand{\zmod}[1]{\integs / #1\integs} % Z/nZ
+\begin{document}
+\PMlinkescapeword{restricted}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{normal}
+
+Let $\funcdef{p}{E}{B}$ be a fiber bundle, denoted by $\xi.$ 
+
+A {\em section\/} of $\xi$ 
+is a continuous map $\funcdef{s}{B}{E}$ such that the composition $p\comp s$ equals the identity. 
+That is, for every $b\in B,$ $s(b)$ is an element of the fiber over $b.$
+More generally, given a topological subspace $A$ of $B,$ a section of $\xi$ over $A$ is a section of the restricted bundle 
+$\funcdef{\restr{p}{A}}{\inv{p}(A)}{A}.$ 
+
+The set of sections of $\xi$ over $A$ is often denoted by $\Gamma(A;\xi),$ or
+by $\Gamma(\xi)$ for sections defined on all of $B.$ Elements of $\Gamma(\xi)$ are sometimes
+called {\em global sections,\/} in contrast with the {\em local sections\/} $\Gamma(U;\xi)$ defined on an open set $U.$
+
+
+\begin{rmk}
+If $E$ and $B$ have, for example, smooth structures, one can talk about smooth 
+sections of the bundle. According to the context, the notation $\Gamma(\xi)$ often
+denotes smooth sections, or some other set of suitably restricted sections.
+\end{rmk}
+
+\begin{exm}
+If $\xi$ is a trivial fiber bundle with fiber $F,$ so that $E=F\cross B$ and
+$p$ is projection to $B,$ then sections of $\xi$ are in a natural bijective correspondence with continuous functions $\funcsig{B}{F}.$
+\end{exm}
+
+
+\begin{exm}
+If $B$ is a smooth manifold and $E=TB$ its tangent bundle, a (smooth) section of this bundle is precisely a (smooth) tangent vector field. 
+
+In fact, any tensor field on a smooth manifold $M$ is a section of
+an appropriate vector bundle. For instance, a contravariant $k$-tensor field is a section of the bundle $TM^{\otimes k}$ obtained by repeated  tensor product from the tangent bundle, and similarly for covariant and mixed tensor fields.
+\end{exm}
+
+\begin{exm}
+If $B$ is a smooth manifold which is smoothly embedded in a Riemannian manifold 
+$M,$ we can let the fiber over $b\in B$ be the orthogonal complement in $T_b M$ of the tangent space $T_b B$ of $B$ at $b$. These choices of fiber turn out to 
+make up a vector bundle $\nu(B)$ over $B,$ called the {\em 
+\PMlinkescapetext{normal bundle}\/} of $B$. A section of $\nu(B)$ is a normal 
+vector field on $B.$
+\end{exm}
+
+\begin{exm}
+If $\xi$ is a vector bundle, the {\em zero section\/} is defined simply by
+$s(b)=0,$ the zero vector on the fiber. 
+
+It is interesting to ask if a  vector bundle admits a section which is 
+nowhere zero. The answer is yes, for example, in the case of a trivial vector 
+bundle, but in general it depends on the topology of the spaces involved.
+A well-known case of this question is the {\em hairy ball theorem,} which
+says that there are no nonvanishing tangent vector fields on the sphere.
+\end{exm}
+
+\begin{exm}
+If $\xi$ is a \PMlinkname{principal}{PrincipalBundle} $G$-\PMlinkname{bundle}{PrincipalBundle}, the existence of {\em any\/} section is 
+equivalent to the bundle being trivial.
+\end{exm}
+
+\begin{rmk}
+The correspondence taking an open set $U$ in $B$ to $\Gamma(U;\xi)$ is an example
+of a sheaf on $B.$
+\end{rmk}
+%%%%%
+%%%%%
+\end{document}

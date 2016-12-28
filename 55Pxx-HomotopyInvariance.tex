@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomotopyInvariance}
+\pmcreated{2013-03-22 14:24:51}
+\pmmodified{2013-03-22 14:24:51}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{homotopy invariance}
+\pmrecord{4}{35919}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55Pxx}
+\pmrelated{HomotopyEquivalence}
+\pmdefines{homotopy invariant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\cal F$ be a functor from the category of topological spaces to some category $\cal C$.  Then $\cal F$ is called {\em homotopy invariant} if for any two homotopic maps $f,g\colon X\to Y$ between topological spaces $X$ and $Y$ the morphisms ${\cal F}f$ and ${\cal F}g$ in $\cal C$ induced by $\cal F$ are identical.
+
+Suppose $\cal F$ is a homotopy invariant functor, and $X$ and $Y$ are homotopy equivalent topological spaces.  Then there are continuous maps $f\colon X\to Y$ and $g\colon Y\to X$ such that $g\circ f\simeq{\rm id}_X$ and $f\circ g\simeq{\rm id}_Y$ (i.e. $g\circ f$ and $f\circ g$ are homotopic to the identity maps on $X$ and $Y$, respectively).  Assume that $\cal F$ is a covariant functor.  Then the homotopy invariance of $\cal F$ implies
+$$
+{\cal F}g\circ{\cal F}f={\cal F}(g\circ f)={\rm id}_{{\cal F}X}
+$$
+and
+$$
+{\cal F}f\circ{\cal F}g={\cal F}(f\circ g)={\rm id}_{{\cal F}Y}.
+$$
+From this we see that ${\cal F}X$ and ${\cal F}Y$ are isomorphic in $\cal C$.  (The same argument clearly holds if $\cal F$ is contravariant instead of covariant.)
+
+An important example of a homotopy invariant functor is the fundamental group $\pi_1$; here $\cal C$ is the category of groups.
+%%%%%
+%%%%%
+\end{document}

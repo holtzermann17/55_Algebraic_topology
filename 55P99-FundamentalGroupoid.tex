@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalGroupoid}
+\pmcreated{2013-03-22 13:24:00}
+\pmmodified{2013-03-22 13:24:00}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{fundamental groupoid}
+\pmrecord{9}{33941}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P99}
+\pmrelated{FundamentalGroupoidFunctor}
+\pmrelated{FundamentalGroupoid2}
+\pmrelated{HomotopyDoubleGroupoidOfAHausdorffSpace}
+\pmrelated{QuantumFundamentalGroupoids}
+\pmrelated{HomotopyCategory}
+\pmrelated{GroupoidCategory}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+\begin{defn} Given a topological space $X$ the fundamental groupoid
+ $\Pi_1(X)$ of $X$ is defined as
+follows:
+\begin{itemize}
+\item The objects of $\Pi_1(X)$ are the points of $X$
+$$\mathrm{Obj}(\Pi_1(X))=X\,,$$
+\item morphisms are homotopy classes of paths ``rel endpoints'' that is
+$$\mathrm{Hom}_{\Pi_1(X)}(x,y)=\mathrm{Paths}(x,y)/\sim\,,$$
+where, $\sim$ denotes homotopy rel endpoints, and,
+\item composition of morphisms is defined via concatenation of paths.
+\end{itemize}
+\end{defn}
+
+It is easily checked that the above defined category is indeed a groupoid
+with the inverse of (a morphism represented by) a path being (the homotopy
+class of) the ``reverse'' path.
+Notice that for $x \in X$, the group of automorphisms of $x$ is the
+fundamental group of $X$ with basepoint $x$,
+$$\mathrm{Hom}_{\Pi_1(X)}(x,x)=\pi_1(X,x)\,.$$
+
+\begin{defn}
+  Let $f\co X\to Y$ be a continuous function between two topological spaces.
+Then there is an induced functor 
+$$\Pi_1(f)\co \Pi_1(X)\to\Pi_1(Y)$$
+defined as follows
+\begin{itemize}
+\item on objects $\Pi_1(f)$ is just $f$,
+\item on morphisms $\Pi_1(f)$ is given by ``composing with $f$'', that is 
+if $\alpha\co I\to$~$ X$ is a path representing the morphism 
+$[\alpha]\co x\to y$ then a representative of
+ $\Pi_1(f)([\alpha])\co f(x)\to f(y)$
+is determined by the following commutative diagram 
+ $$\xymatrix{{I}\ar[d]_{\alpha}\ar@{-->}[dr]^{\Pi_1(f)(\alpha)}\\
+ {X}\ar[r]_f&{Y} }$$
+\end{itemize}
+\end{defn}
+
+It is straightforward to check that the above indeed defines a
+functor. Therefore $\Pi_1$ can (and should) be regarded as a functor from
+the category of topological spaces to the category of groupoids. This functor 
+is not really homotopy invariant but it is ``homotopy invariant up to
+homotopy'' in the sense that the following holds.
+\begin{thm}
+  A homotopy between two continuous maps induces a natural transformation
+  between the corresponding functors.
+\end{thm}
+
+A reader who understands the meaning of the statement should be able to give 
+an explicit construction and supply the proof without much trouble.
+%%%%%
+%%%%%
+\end{document}

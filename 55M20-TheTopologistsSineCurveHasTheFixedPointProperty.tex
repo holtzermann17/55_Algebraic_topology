@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheTopologistsSineCurveHasTheFixedPointProperty}
+\pmcreated{2013-03-22 16:59:37}
+\pmmodified{2013-03-22 16:59:37}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{the topologist's sine curve has the fixed point property}
+\pmrecord{6}{39274}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M20}
+\pmclassification{msc}{54H25}
+\pmclassification{msc}{47H10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The typical example of a connected space that is not path connected (the topologist's sine curve) has the fixed point property.
+
+Let $X_1 = \{0\} \times [-1,1]$ and $X_2 = \{(x,\sin(1/x)) : 0<x \le 1\}$, and $X = X_1 \cup X_2$.
+
+If $f:X \to X$ is a continuous map, then since $X_1$ and $X_2$ are both path connected, the image of each one of them must be entirely contained in another of them.
+
+If $f(X_1)\subset X_1$, then $f$ has a fixed point because the interval has the fixed point property.
+If $f(X_2) \subset X_1$, then $f(X) = f(cl(X_2)) \subset cl(f(X_2)) \subset X_1$, and in particular 
+$f(X_1) \subset X_1 $and again $f$ has a fixed point.
+
+So the only case that remains is that $f(X)\subset X_2$. And since $X$ is compact, its projection to the first coordinate is also compact so that it must be an interval $[a,b]$ with $a>0$. Thus $f(X)$ is contained in 
+$S = \{(x, \sin (1/x)) : x\in [a,b]\}$. But $S$ is homeomorphic to a closed interval, so that it has the fixed point property, and 
+the restriction of $f$ to $S$ is a continuous map $S \to S$, so that it has a fixed point.
+
+This proof is due to Koro.
+
+%%%%%
+%%%%%
+\end{document}

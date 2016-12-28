@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LiftingTheorem}
+\pmcreated{2013-03-22 13:24:58}
+\pmmodified{2013-03-22 13:24:58}
+\pmowner{Dr_Absentius}{537}
+\pmmodifier{Dr_Absentius}{537}
+\pmtitle{lifting theorem}
+\pmrecord{9}{33963}
+\pmprivacy{1}
+\pmauthor{Dr_Absentius}{537}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R05}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+Let $p\co E\to B$ be a covering map and $f\co X\to B$ be a (continuous)
+map where $X$,  $B$ and $E$ are path connected and \PMlinkname{locally path connected}{LocallyConnected}.  
+Also let $x\in X$  and $e\in E$ be points such that $f(x)=p(e)$.
+ Then $f$ lifts to a map $\tilde f\co X\to E$ with $\tilde f(x)=e$ if and only if
+$\pi_1(f)$ maps  $\pi_1(X,x)$ inside the image
+$\pi_1(p)\left(\pi_1(E,e)\right)$, where $\pi_1$ denotes the fundamental
+group functor. Furthermore $\tilde f$ is unique (provided it exists of course).
+
+The following diagrams might be useful: To check
+$$\xymatrix{
+&{(E,e)}\ar[d]^{p}\\
+{(X,x)}\ar[r]_{f}\ar@{-->}[ur]^{?\tilde f}&{(B,b)} }
+$$
+one only needs to check
+$$\xymatrix{
+&&{\pi_1(E,e)}\ar[d]^{\pi_1(p)}\\
+&&{\pi_1(p)\left(\pi_1(E,e)\right)}\ar[d]^{\subset}\\
+{\pi_1(X,x)}\ar[r]^-{\pi_1(f)}&{\pi_1(f)\left(\pi_1(X,x)\right)}\ar@{-->}[ur]^{?}\ar[r]_{\quad\subset}& {\pi_1(B,b)} }
+$$
+
+\begin{cor}
+  Every map from a simply connected space $X$ lifts. In particular:
+  \begin{enumerate}
+  \item a path $\Gg\co I\to B$ lifts, 
+  \item a homotopy of paths $H\co I\times I\to B$ lifts, and
+  \item a map $\Gs\co S^n\to B$, lifts if $n\geq 2$. 
+  \end{enumerate}
+\end{cor}
+
+Note that (3) is not true for $n=1$ because the circle is not simply
+connected.  So although by (1) every closed path in $B$ lifts to a path in
+$E$  it does not
+necessarily lift to a closed path.
+%%%%%
+%%%%%
+\end{document}

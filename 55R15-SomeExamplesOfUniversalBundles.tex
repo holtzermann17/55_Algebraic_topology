@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SomeExamplesOfUniversalBundles}
+\pmcreated{2013-03-22 13:12:05}
+\pmmodified{2013-03-22 13:12:05}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{some examples of universal bundles}
+\pmrecord{11}{33663}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R15}
+\pmclassification{msc}{55R10}
+\pmsynonym{universal family of spaces}{SomeExamplesOfUniversalBundles}
+%\pmkeywords{Universal Bundle}
+%\pmkeywords{bundle of Hilbert spaces in definition of  quantum automata}
+\pmrelated{CategoryOfQuantumAutomata}
+\pmdefines{Hilbert bundle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The universal bundle  for a topological group $G$ is usually written as $\pi:EG\to BG$.  Any principal $G$-bundle for which the total space is contractible 
+is universal; this will help us to find universal bundles without worrying about Milnor's construction of $EG$ involving infinite joins.
+
+\begin{itemize}
+
+\item $G=\mathbb{Z}_2$: $E\mathbb{Z}_2=S^\infty$ and $B\mathbb{Z}_2=\mathbb{R}P^\infty$.
+
+\item $G=\mathbb{Z}_n$: $E\mathbb{Z}_n=S^\infty$ and $B\mathbb{Z}_n=S^\infty/\mathbb{Z}_n$. Here $\mathbb{Z}_n$ acts on $S^\infty$ (considered as a subset of a separable complex Hilbert space) via multiplication with an $n$-th root of unity.
+
+\item $G=\mathbb{Z}^n$: $E\mathbb{Z}^n=\mathbb{R}^n$ and $B\mathbb{Z}^n=T^n$.
+
+\item More generally, if $G$ is any discrete group then one can take  $BG$ to be any Eilenberg-Mac Lane space $ K(G,1)$ and $EG$ to be its universal cover. Indeed $EG$ is simply connected, and it follows from the lifting theorem that $\pi_n(EG)=0$ for $n\geq 0$. This example includes the previous three and many more. 
+
+\item $G=S^1$: $ES^1=S^\infty$ and $BS^1=\mathbb{C}P^\infty$.
+
+\item $G=SU(2)$: $ESU(2)=S^\infty$ and $BSU(2)=\mathbb{H}P^\infty$.
+
+\item $G=O(n)$, the $n$-th orthogonal group: $EO(n)=V(\infty,n)$, the manifold of frames
+of $n$ orthonormal vectors in $\mathbb{R}^\infty$, and $BO(n)=G(\infty, n)$,  the
+Grassmanian of $n$-planes in $\mathbb{R}^\infty$.  The projection map is
+taking the subspace spanned by a frame of vectors.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

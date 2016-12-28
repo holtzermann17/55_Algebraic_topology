@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomotopyCategory}
+\pmcreated{2013-03-22 18:17:07}
+\pmmodified{2013-03-22 18:17:07}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{homotopy category}
+\pmrecord{44}{40895}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P99}
+\pmclassification{msc}{55R10}
+\pmclassification{msc}{55R05}
+\pmclassification{msc}{55R65}
+\pmclassification{msc}{55R37}
+\pmsynonym{category of homotopy equivalence classes}{HomotopyCategory}
+%\pmkeywords{homotopy equivalence classes of a topological space}
+%\pmkeywords{homotopy category}
+\pmrelated{FundamentalGroupoidFunctor}
+\pmrelated{TopologicalSpace}
+\pmrelated{ApproximationTheoremForAnArbitrarySpace}
+\pmrelated{FundamentalGroupoid}
+\pmrelated{RiemannianMetric}
+\pmrelated{CohomologyGroupTheorem}
+\pmrelated{OmegaSpectrum}
+\pmrelated{CategoryOfGroupoids2}
+\pmdefines{fundamental groupoid}
+\pmdefines{fundamental group functor}
+\pmdefines{homotopy category}
+\pmdefines{fundamental groupoid of a topological space}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsection{Homotopy category, fundamental groups and fundamental groupoids}
+
+  Let us consider first the category \textbf{$Top$} whose objects are topological spaces $X$ with a chosen 
+basepoint $x \in X$ and whose morphisms are continuous maps $X \to Y$ that associate the basepoint of $Y$ to the
+basepoint of $X$. The fundamental group of $X$ specifies a functor $Top \to \textbf{G}$,
+with $\textbf{G}$ being the category of groups and group homomorphisms, which is called 
+\emph{the fundamental group functor}. 
+
+\subsection{Homotopy category}
+  Next, when one has a suitably defined relation of homotopy between morphisms, or maps, in a category \textbf{$U$}, one can define the \emph{homotopy category} $hU$ as the category whose objects are the same as the objects of \textbf{$U$}, but with morphisms being defined by the homotopy classes of maps; this is in fact the homotopy category of \emph{unbased spaces}. 
+
+\subsection{Fundamental groups}
+ We can further require that homotopies on \textbf{$Top$} map each basepoint to a corresponding basepoint, thus leading to the definition of the \emph{homotopy category $hTop$ of based spaces}. Therefore, the fundamental group is a \emph{homotopy invariant} functor on \textbf{$Top$}, with the meaning that the latter functor factors through a functor $ hTop \to \textbf{G} $. A homotopy equivalence in \textbf{$U$} is an isomorphism in $hTop$. Thus, based homotopy equivalence induces an isomorphism of fundamental groups. 
+
+\subsection{Fundamental groupoid}
+ In the general case when one does not choose a basepoint, a \emph{fundamental groupoid}
+$\Pi_1 (X)$ of a topological space $X$ needs to be defined as the category whose objects are
+the base points of $X$ and whose morphisms $x \to y$ are the equivalence classes of paths from $x$ to $y$.
+\begin{itemize}
+\item Explicitly, the objects of $\Pi_1(X)$ are the points of $X$
+$$\mathrm{Obj}(\Pi_1(X))=X\,,$$
+\item morphisms are homotopy classes of paths ``rel endpoints'' that is
+$$\mathrm{Hom}_{\Pi_1(x)}(x,y)=\mathrm{Paths}(x,y)/\sim\, ,$$
+where, $\sim$ denotes homotopy rel endpoints, and,
+\item composition of morphisms is defined \emph{via} piecing together, or concatenation, of paths.
+\end{itemize}
+
+\subsection{Fundamental groupoid functor}
+
+  Therefore, the set of endomorphisms of an object $x$ is precisely the fundamental group
+$\pi(X,x)$. One can thus construct the \emph{groupoid of homotopy equivalence classes}; this construction can be then carried out by utilizing functors from the category \textbf{$Top$}, or its subcategory $hU$,
+to the \emph{category of groupoids and groupoid homomorphisms}, $Grpd$. One such functor 
+which associates to each topological space its fundamental (homotopy) groupoid is appropriately called the
+\emph{fundamental groupoid functor}.
+
+\subsection{An example: the category of simplicial, or CW-complexes}
+ 
+  As an important example, one may wish to consider the category of simplicial, or $CW$-complexes and homotopy defined
+for $CW$-complexes. Perhaps, the simplest example is that of a one-dimensional $CW$-complex, which is a graph.
+As described above, one can define a functor from the category of graphs, \textbf{Grph}, to \textbf{$Grpd$}
+and then define the fundamental homotopy groupoids of graphs, hypergraphs, or pseudographs. The case of freely generated
+graphs (one-dimensional $CW$-complexes) is particularly simple and can be computed with a digital computer by a finite
+algorithm using the finite groupoids associated with such finitely generated $CW$-complexes.
+
+\subsubsection{Remark}
+ Related to this concept of homotopy category for unbased topological spaces, one can then prove the 
+\emph{approximation theorem for an arbitrary space} by considering a functor 
+$$\Gamma : \textbf{hU} \longrightarrow \textbf{hU},$$ and also the construction of an approximation of an arbitrary space $X$ as the 
+colimit $\Gamma X$ of a sequence of cellular inclusions of $CW$-complexes $X_1, ..., X_n$ , so 
+that one obtains $X \equiv colim  [X_i]$. 
+
+  Furthermore, the homotopy groups of the $CW$-complex $\Gamma X$ are the colimits of the 
+homotopy groups of $X_n$,  and $\gamma_{n+1} : \pi_q(X_{n+1})\longmapsto\pi_q (X)$ is a group epimorphism.
+
+\begin{thebibliography} {9}
+
+\bibitem{MJP1999}
+May, J.P. 1999, \emph{A Concise Course in Algebraic Topology.}, The University of Chicago Press: Chicago
+
+
+\bibitem{BR-JG2k4}
+R. Brown and G. Janelidze.(2004). Galois theory and a new homotopy double groupoid of a map of spaces.(2004). 
+{\em Applied Categorical Structures},\textbf{12}: 63-80. Pdf file in arxiv: math.AT/0208211 
+
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

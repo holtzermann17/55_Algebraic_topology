@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RoundComplexity}
+\pmcreated{2013-03-22 15:54:52}
+\pmmodified{2013-03-22 15:54:52}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{round complexity}
+\pmrecord{11}{37918}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M30}
+%\pmkeywords{t-cat}
+\pmrelated{LusternikSchnirelmannCategory}
+\pmrelated{TCat}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+\newcommand{\paren}[1]{\left(\begin{array}{c} #1 \end{array}\right) }
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Mimicking the Lusternik-Schnirelmann category invariant for a smooth manifold $M$ we can ask about the minimal number of critical loops of smooth scalar maps $M\to\mathbb{R}$ which are round functions, that is functions whose critical points are aligned in  a disjoint union of closed curves (a link). 
+
+This number is called the {\bf round complexity} of $M$ and it is symbolized as ${\rm roc}(M)$
+
+Then 
+$${\rm roc}(M)=\min\#\{\mbox{critical loops of\quad}f\quad|\quad f\colon M \to\mathbb{R}\quad \mbox{is round function}\}$$
+
+This concept is related to the invariant called t-cat.
+
+Theorem 1: {\it The round complexity for the 2-torus and the Klein bottle is two; all the other closed surfaces have a round complexity of three.} 
+
+Theorem 2: {\it For each closed manifold, $t-cat\le roc$}
+
+
+{\bf Bibliography}
+
+D. Siersma, G. Khimshiasvili, On minimal round functions, Preprint 1118, Department of Mathematics, Utrecht University, 1999, pp. 18. 
+
+
+
+%%%%%
+%%%%%
+\end{document}

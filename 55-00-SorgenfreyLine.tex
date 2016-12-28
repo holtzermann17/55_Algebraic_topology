@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SorgenfreyLine}
+\pmcreated{2013-03-22 13:03:45}
+\pmmodified{2013-03-22 13:03:45}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{Sorgenfrey line}
+\pmrecord{9}{33469}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55-00}
+\pmclassification{msc}{54-00}
+\pmclassification{msc}{22-00}
+\pmsynonym{Sorgenfrey topology}{SorgenfreyLine}
+\pmdefines{lower limit topology}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\R{\mathbb{R}}
+\begin{document}
+The \emph{Sorgenfrey line} is a nonstandard topology on the real line $\R$.
+Its topology is defined by the following base of half open intervals
+\[
+  \mathcal{B} = \{ {[a,b)} \mid a,b\in\R, a<b \}.
+\]
+Another name is \emph{lower limit topology}, since a sequence $x_\alpha$
+converges only if it converges in the standard topology and its limit is
+a limit from above (which, in this case, means that at most finitely many
+points of the sequence lie below the limit). For example, the sequence
+$(1/n)$ converges to $0$, while $(-1/n)$ does not.
+
+This topology is finer than the standard topology on $\R$.
+The Sorgenfrey line is first countable and separable, but is not second countable.
+It is therefore not metrizable.
+
+\begin{thebibliography}{9}
+\bibitem{sorgenfrey}
+ R.~H.~Sorgenfrey,
+ {\it On the topological product of paracompact spaces},
+ Bulletin of the American Mathematical Society 53 (1947) 631--632.
+ (This paper is
+ \PMlinkexternal{available on-line}{http://projecteuclid.org/euclid.bams/1183510809}
+ from Project Euclid.)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

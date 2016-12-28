@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EilenbergMacLaneSpace}
+\pmcreated{2013-03-22 13:25:42}
+\pmmodified{2013-03-22 13:25:42}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{Eilenberg-MacLane space}
+\pmrecord{6}{33986}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P20}
+\pmsynonym{Eilenberg-Mac Lane space}{EilenbergMacLaneSpace}
+%\pmkeywords{cohomology}
+%\pmkeywords{CW complex}
+\pmrelated{NaturalTransformation}
+\pmrelated{LoopSpace}
+\pmrelated{HomotopyGroups}
+\pmrelated{RepresentableFunctor}
+\pmrelated{FundamentalGroupoid2}
+\pmrelated{CohomologyGroupTheorem}
+\pmrelated{ProofOfCohomologyGroupTheorem}
+\pmrelated{OmegaSpectrum}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\cpxs}{{\mathbb C}} % The "complexes" :)
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newtheorem{exm}{Example}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\projp}{{\mathbb R}P}
+
+% open cells (not very nice...)
+\newcommand{\oce}{\smash{\overset{\circ}e}} 
+\newcommand{\ocD}{\smash{\overset{\circ}D}} 
+
+\newcommand{\susp}{\Sigma}
+\newcommand{\restr}[2]{{#1}|_{#2}}
+
+\renewcommand{\hom}{\mathop{\mathrm{Hom}}} % Homomorphisms functor
+\begin{document}
+\PMlinkescapeword{type}
+
+Let $\pi$ be a discrete group. A based topological space $X$ is called an {\em Eilenberg-MacLane space\/} of type $K(\pi,n)$, where $n\ge 1,$  if all the homotopy groups $\pi_k(X)$ are trivial except for $\pi_n(X),$ which is isomorphic to $\pi.$ Clearly, for such a space to exist when $n\ge 2,$ $\pi$ must be abelian.
+
+Given any group $\pi,$ with $\pi$ abelian if $n\ge 2,$ there exists an Eilenberg-MacLane space of type $K(\pi,n).$ Moreover, this space can be constructed as a CW complex. It turns out that any two Eilenberg-MacLane spaces of type $K(\pi,n)$ are weakly homotopy equivalent. The Whitehead theorem then implies that there is a unique $K(\pi,n)$ space up to homotopy equivalence in the category of topological spaces of the homotopy type of a CW complex. We will henceforth restrict ourselves to this category. With a slight abuse of notation, we refer to any such space as $K(\pi,n).$
+
+An important property of $K(\pi,n)$ is that, for $\pi$ abelian, 
+there is a natural isomorphism
+\[
+H^n(X;\pi) \isom [X,K(\pi,n)]
+\]
+of contravariant set-valued functors, where $[X,K(\pi,n)]$ is the set of homotopy classes of based maps from $X$ to $K(\pi,n).$ Thus one says that the $K(\pi,n)$ are {\em representing spaces\/} for cohomology with coefficients in $\pi.$
+
+\begin{rmk}
+Even when the group $\pi$ is nonabelian, it can be seen that the set 
+$[X,K(\pi,1)]$ is naturally isomorphic to $\hom(\pi_1(X),\pi)/\pi;$ that is,
+to conjugacy classes of homomorphisms from $\pi_1(X)$ to $\pi.$ In fact, this
+is a way to define $H^1(X;\pi)$ when $\pi$ is nonabelian.
+\end{rmk}
+
+\begin{rmk}
+Though the above description does not include the case $n=0,$ it is natural to define a $K(\pi,0)$ to be any space homotopy equivalent to $\pi.$ The above statement about cohomology then becomes true for the reduced zeroth cohomology functor.
+\end{rmk}
+
+
+% Might add this later...
+%
+%Using the fact that $\pi_k(\Omega X)\isom\pi_{k+1}(X),$ it is clear that %$\Omega K(\pi,n)$ is a $K(\pi,n).$ It follows  that there is a homotopy %equivalence $\funcdef{f_n}{\Omega K(\pi,n)}{K(\pi,n-1)}$, making the sequence %$\seq{K(\pi,n),f_n}$ an Omega-spectrum.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomotopyExtensionProperty}
+\pmcreated{2013-03-22 12:13:36}
+\pmmodified{2013-03-22 12:13:36}
+\pmowner{RevBobo}{4}
+\pmmodifier{RevBobo}{4}
+\pmtitle{homotopy extension property}
+\pmrecord{15}{31600}
+\pmprivacy{1}
+\pmauthor{RevBobo}{4}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P05}
+\pmrelated{Cofibration}
+\pmrelated{HomotopyLiftingProperty}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all]{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a topological space and $A$ a subspace of $X$. Suppose there is a continuous map $f:X \to Y$ and a homotopy of maps $F: A \times I \to Y$. The inclusion map $i: A \to X$ is said to have the \emph{homotopy extension property} if there exists a continuous map $F^{'}$ such that the following diagram commutes:
+$$
+\SelectTips{eu}{}
+\xymatrix{
+& A \ar[d]^{i} \ar[r]^{i_{0}} & A \times I \ar[d]^{F} \ar@/^1.5pc/[dd]^{i \times id_{I}} \\
+& X \ar[r]^{f} \ar[dr]^{i_{0}} & Y \\
+& &  X \times I \ar[u]_{F^{'}} 
+}
+$$
+Here, $i_0=(x,0)$ for all $ x \in X$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfCohomologyAndMayerVietorisSequence}
+\pmcreated{2013-03-22 19:13:27}
+\pmmodified{2013-03-22 19:13:27}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{example of cohomology and Mayer-Vietoris sequence}
+\pmrecord{7}{42145}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N33}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Consider n-dimensional sphere $S^n = \{v\in R^{n+1}| \quad |v|=1\}$.
+
+Let $A = \{ (x_0,...,x_n)\in S^n| \quad x_0>-1/2 \}$ and
+$B = \{ (x_0,...,x_n)\in S^n| \quad x_0<1/2 \}$.
+
+Of course both $A$ and $B$ are open (in $S^n$) and their union is $S^n$. Furthermore, it can be easily seen, that their intersection can be contracted into "big circle", i.e. $A\cap B$ has homotopy type of $S^{n-1}$. Also both $A$ and $B$ are contractible (they are  homeomorphic to $R^n$ via stereographic projection). So, write part of a Meyer-Vietoris sequence (for the cohomology $H^m(X)=H^m(X,G)$, where $G$ is a fixed Abelian group):
+
+$\cdots \rightarrow H^m(A) \oplus H^m(B) \rightarrow H^m(A\cap B)\rightarrow H^{m+1}(S^n)\rightarrow H^{m+1}(A) \oplus H^{m+1}(B)\rightarrow \cdots$
+
+Since both $A$ and $B$ are contractible and $A\cap B$ is homotopic to $S^{n-1}$,  we have the following short exact sequence:
+
+$0 \rightarrow H^m(S^{n-1}) \rightarrow  H^{m+1}(S^n) \rightarrow  0$
+
+which shows that $H^m(S^{n-1})$ is isomorphic to $H^m(S^n)$ for every  $n>0$ and $m>0$. So, in order to calculate cohomology groups of spheres, we only need to know the cohomology groups  of $S^1$. And those can be also calculated, if we once again apply previous schema. Note, that in the case of $S^1$ we have that $A\cap B$ has the homotopy type of a discrete space with two points. Therefore all their cohomology groups are trivial, except for $H^0$ (which can be easily calculated to be equal to $H^0(*) \oplus H^0(*)$, where * is a one-pointed space). 
+
+This schema can be used for other spaces like the torus (which can be also calculated from Kunneth's formula).
+%%%%%
+%%%%%
+\end{document}

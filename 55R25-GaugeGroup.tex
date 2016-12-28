@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaugeGroup}
+\pmcreated{2013-03-22 17:02:34}
+\pmmodified{2013-03-22 17:02:34}
+\pmowner{sjm1979}{13837}
+\pmmodifier{sjm1979}{13837}
+\pmtitle{gauge group}
+\pmrecord{9}{39331}
+\pmprivacy{1}
+\pmauthor{sjm1979}{13837}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R25}
+\pmdefines{bundle of homomorphisms}
+\pmdefines{bundle of endomorphisms}
+\pmdefines{automorphism bundle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gl}{Gl}
+\begin{document}
+Let us start with two vector bundles $ E $ and $ F $ over a space $ B $
+\begin{equation*}
+E = \Bigl ( \coprod_{\alpha} U_{\alpha} \times \mathbb{R}^{n} \Bigr ) /\{g_{\alpha \beta} \}
+\end{equation*}
+and
+\begin{equation*}
+F = \Bigl ( \coprod_{\alpha} U_{\alpha} \times \mathbb{R}^{m} \Bigr) /\{h_{\alpha \beta} \}
+\end{equation*}
+
+The first objective is to show how to create a bundle called $ \Hom(E,F) $.  There are two different ways to do this.  The first way is to observe that since for vector spaces $ V, W $ that $ \Hom(V,W) \cong W \otimes V^{\ast} $ (here just meaning the module of homomorphisms from $ V $ to $ W $) thus if we take the bundle $ \Hom(E,F) := F \otimes E^{\ast} $ then we have that since the fibers $ (F\otimes E^{\ast})_{b} = F_{b} \otimes E^{\ast}_{b} $ we have what we want.
+
+Another way of looking at the creation of the bundle $ \Hom(E,F) $ is to look at representations and what we would ideally like our bundle to look like.  If we have that the bundle that represents $ F $ is given by taking the principle $ \Gl (m,\mathbb{R}) $ bundle
+\begin{equation*}
+P_{F} = \Bigl( \coprod_{\alpha} U_{\alpha} \times \Gl(m, \mathbb{R}) \Bigl)/\{h_{\alpha \beta} \}
+\end{equation*}
+and a trivial representation then the bundle afforded by the trivial representation is simply $ F $.  The same thing is true with the bundle $ E $.  We then have that if we look at the structure group of our proposed new bundle it should be $ \Gl(m,\mathbb{R}) \times \Gl(n,\mathbb{R}) $.  The fibers of our proposed new bundle definitely should be $ \Hom(\mathbb{R}^{n},\mathbb{R}^{m}) $ thus we have that the representation we are looking for should take something in our structure group and something in the fiber and give us something new in the fiber.  The proposed representation is $ \rho(A,B)(U) = A \circ U \circ B^{-1} $.  Then looking at the bundle associated to the representation of $ \rho $ gives us that if 
+\begin{equation*}
+P = P_{F} \times P_{E} = \Bigl ( \coprod_{\alpha} U_{\alpha} \times \Gl(m, \mathbb{R}) \times \Gl(n,\mathbb{R}) \Bigr)/\{h_{\alpha \beta} \times g_{\alpha \beta} \} 
+\end{equation*}
+then 
+\begin{equation*}
+\Hom(E,F) \equiv P \times_{\rho} \Hom(\mathbb{R}^{n},\mathbb{R}^{m})
+\end{equation*}
+we can similarly define
+\begin{equation*}
+\Aut(E) = P_{E} \times_{\rho} \Gl(n,\mathbb{R})
+\end{equation*}
+
+The group of sections of $ \Aut(E) $ is called the \emph{gauge group}.  It is a group since we have that if $ (f,f^{\prime}) $ is a section of $ \Aut(E) $ and $ (\tau,\tau^{\prime}) $ is also a section of $ \Aut(E) $ then we have a group operation given by composition:
+\begin{equation*}
+\xymatrix{
+E \ar[r]^{\tau} \ar[d]^{\pi} & E \ar[r]^{f} \ar[d]^{\pi} & E \ar[d]^{\pi} \\
+B \ar[r]^{\tau^{\prime}} & B \ar[r]^{f^{\prime}} & B
+}
+\end{equation*}
+The fact that these bundle maps are isomorphisms of bundles gives the existence of an inverse.  The reason for this is that for each section $ (f,f^{\prime}) $, $ E_{b} \cong E_{f^{\prime}(b)} $ since $ f_{b} $ is a vector space isomorphism.  Thus we now have that if we look at the bundle map given by taking $ \Bigl (f^{-1}, (f^{\prime})^{-1}) \Bigr ) $ (where $ f^{-1} $ means $ (f_{b})^{-1} $ for each $ b \in B $).  Associativity is clear by composition of functions being associative and the identity map acts as the identity element.
+%%%%%
+%%%%%
+\end{document}

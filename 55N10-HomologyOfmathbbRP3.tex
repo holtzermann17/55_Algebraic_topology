@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomologyOfmathbbRP3}
+\pmcreated{2013-03-22 13:50:23}
+\pmmodified{2013-03-22 13:50:23}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{homology of $\mathbb{RP}^3$.}
+\pmrecord{8}{34576}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N10}
+\pmrelated{HomologicalComplexOfTopologicalVectorSpaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[all]{xy}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+We need for this problem knowledge of the homology groups of $S^2$ and $\mb{RP}^2$.  We will simply assume the former:
+\begin{align*}
+H_k(S^2; \Z)&= 
+\begin{cases}
+\Z&k=0,2\\
+0&else
+\end{cases}
+\end{align*}
+
+Now, for $\mb{RP}^2$, we can argue without Mayer-Vietoris. $X=\mb{RP}^2$ is connected, so $H_0(X;\Z)=\Z$.  $X$ is non-orientable, so $H_2(X;\Z)$ is 0.  Last, $H_1(X;\Z)$ is the abelianization of the already abelian fundamental group $\pi_1(X)=\Z/2\Z$, so we have:
+\begin{align*}
+H_k(\mb{RP}^2; \Z)&=
+\begin{cases}
+\Z&k=0\\
+\Z/2\Z&k=1\\
+0&k\geq 2
+\end{cases}\\
+\end{align*}
+
+Now that we have the homology of $\mb{RP}^2$, we can compute the 
+homology of $\mb{RP}^3$ from Mayer-Vietoris.  Let $X=\mb{RP}^3$,
+$V=\mb{RP}^3\backslash\{pt\}\sim\mb{RP}^2$ (by vieweing $\mb{RP}^3$ as a CW-complex), $U\sim D^3\sim\{pt\}$, and $U\cap V\sim S^2$, where $\sim$ denotes equivalence through a deformation retract.  Then the Mayer-Vietoris sequence gives
+
+$$\xymatrix{
+&0\ar[r]& H_3(X;\Z)\ar `r_l[ll] `l^d[dll] [dll]\\
+H_2(S^2;\Z)\ar[r] &  H_2(pt;\Z)\oplus H_2(\mb{RP}^2;\Z)\ar[r] & H_2(X;\Z)\ar `r_l[ll] `l^d[dll] [dll]\\
+H_1(S^2;\Z)\ar[r] & H_1(pt;\Z)\oplus H_1(\mb{RP}^2;\Z)\ar[r] & H_1(X;\Z)\ar `r_l[ll] `l^d[dll] [dll]\\
+H_0(S^2;\Z) \ar[r] &  H_0(pt;\Z)\oplus H_0(\mb{RP}^2;\Z)  \ar[r] & H_0(X;\Z)\ar[r] &0}$$
+
+From here, we substitute in the \PMlinkescapetext{information} from above, and use the fact that the $k$-th homology group of an $n$-dimensional object is 0 if $k>n$, and begin to compute using the \PMlinkescapetext{theory} of short exact sequences.  Since we have as a \PMlinkescapetext{subsequence} the short exact sequence $0\ra H_3(X;\Z)\ra\Z\ra0$, we can conclude $H_3(X;\Z)=\Z$.  Since we have as a \PMlinkescapetext{subsequence} the short exact sequence $0\ra H_2(X;\Z)\ra 0$, we can conclude $H_2(X;\Z)=0.$  Since the bottom \PMlinkescapetext{sequence} splits, we get $0\ra\Z/2\Z\ra H_1(X;\Z)\ra 0$, so that $H_1(X;\Z)=\Z/2\Z$.  We thus conclude that
+
+\begin{align*}
+H_k(\mb{RP}^3; \Z)&=
+\begin{cases}
+\Z&k=0\\
+\Z/2\Z&k=1\\
+0&k=2\\
+\Z&k=3\\
+0&k>3\\
+\end{cases}
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

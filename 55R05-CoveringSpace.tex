@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoveringSpace}
+\pmcreated{2013-03-22 11:59:30}
+\pmmodified{2013-03-22 11:59:30}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{covering space}
+\pmrecord{21}{30910}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R05}
+\pmsynonym{covering map}{CoveringSpace}
+\pmrelated{Cover}
+\pmrelated{Site}
+\pmrelated{EtaleMorphism}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{covering}
+Let $X$ and $E$ be topological spaces and suppose there is a surjective continuous map 
+$p\colon E \rightarrow X$ which satisfies the following condition: for each $x \in X$, there is an open neighborhood $U$ of $x$ such that 
+\begin{itemize}
+\item $p^{-1}(U)$ is a disjoint union of open sets $E_{i} \subset E$, and 
+\item each $E_{i}$ is mapped homeomorphically onto $U$ via $p$. 
+\end{itemize}
+Then $E$ is called a \emph{covering space}, $p$ is called a \emph{covering map}, the $E_{i}$'s are \emph{sheets} of the covering of $U$ and for each $x \in X$, $p^{-1}(x)$ is the \emph{fiber} of $p$ above $x$. The open set $U$ is said to be \emph{evenly covered}.
+If $E$ is simply connected, it is called the \emph{universal covering space}.
+
+From this we can derive that $p$ is a local homeomorphism, so that any local property $E$ 
+has is inherited by $X$ (local connectedness, local path connectedness etc.). Covering spaces
+are foundational in the study of the fundamental group of a topological space; in particular, there is a \PMlinkname{correspondence}{ClassificationOfCoveringSpaces} between connected coverings of $X$ and subgroups of the group of deck transformations of its universal covering space which is exactly analogous to the fundamental theorem of Galois theory.
+
+Covering maps are especially important in the study of Riemann surfaces; in this context, one sometimes discusses a generalized notion of covering map called a ``ramified covering''; this allows one to replace a discrete set of the local homeomorphisms by maps that locally look like $z\mapsto z^n$ in the complex plane near zero. Covering maps are also generalized in algebraic geometry; there the corresponding notion is that of \'etale morphism.
+
+
+Note that this is a completely separate usage of the word ``cover'' than we encounter in ``open cover''; confusion usually does not arise.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

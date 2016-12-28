@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FixedPointProperty}
+\pmcreated{2013-03-22 13:56:32}
+\pmmodified{2013-03-22 13:56:32}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{fixed point property}
+\pmrecord{20}{34704}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M20}
+\pmclassification{msc}{54H25}
+\pmclassification{msc}{47H10}
+\pmsynonym{fixed-point property}{FixedPointProperty}
+\pmrelated{FixedPoint}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\sC}{\mathbb{C}}
+\newcommand{\sN}{\mathbb{N}}
+\newcommand{\sR}{\mathbb{R}}
+\newcommand{\sZ}{\mathbb{Z}}
+\newcommand{\RP}{\mathbb{RP}}
+\begin{document}
+\PMlinkescapeword{between}
+\PMlinkescapeword{square}
+\PMlinkescapeword{states}
+\PMlinkescapeword{unit}
+
+Let $X$ be a topological space.
+If every continuous function $f\colon X\to X$ has a 
+\PMlinkname{fixed point}{FixedPoint}, 
+then $X$ is said to have the \emph{fixed point property}.
+
+The fixed point property is obviously preserved under homeomorphisms.
+If $h\colon X\to Y$ is a homeomorphism between topological
+spaces $X$ and $Y$, and $X$ has the fixed point property,
+and $f\colon Y\to Y$ is continuous,
+then $h^{-1}\circ f\circ h$ has a fixed point $x\in X$,
+and $h(x)$ is a fixed point of $f$.
+
+\section*{Examples}
+\begin{enumerate}
+\item A space with only one point has the fixed point property.
+\item A closed interval $[a,b]$ of $\sR$ has the fixed point property.
+\PMlinkname{This can be seen using the mean value theorem.}{BrouwerFixedPointInOneDimension}
+\item The extended real numbers have the fixed point property,
+as they are homeomorphic to $[0,1]$.
+\item The topologist's sine curve has the fixed point property.
+\item The real numbers $\sR$ do not have the fixed point property.
+For example, the map $x\mapsto x+1$ on $\sR$ has no fixed point.
+\item An open interval $(a,b)$ of $\sR$ does not have the fixed point property.
+This follows since any such interval is homeomorphic to $\sR$.
+Similarly, an open ball in $\sR^n$ does not have the fixed point property.
+\item Brouwer's Fixed Point Theorem states that in $\sR^n$,
+the closed unit ball with the subspace topology has the fixed point property.
+(Equivalently, $[0,1]^n$ has the fixed point property.)
+The Schauder Fixed Point Theorem generalizes this result further.
+\item For each $n\in\sN$, the real projective space $\RP^{2n}$ has the fixed point property.
+\item Every simply-connected plane continuum has the fixed-point property.
+\item The Alexandroff--Urysohn square (also known as the Alexandroff square)
+has the fixed point property.
+\end{enumerate}
+
+\section*{Properties}
+\begin{enumerate}
+\item \PMlinkname{Any topological space with the fixed point property is connected}{AnyTopologicalSpaceWithTheFixedPointPropertyIsConnected}
+and \PMlinkname{$\operatorname{T}_0$}{T0Space}.
+\item Suppose $X$ is a topological space with the
+fixed point property, and $Y$ is a retract of $X$. Then
+$Y$ has the fixed point property.
+\item Suppose $X$ and $Y$ are topological spaces, and $X\times Y$ has the
+fixed point property. Then $X$ and $Y$ have the fixed point property.
+(Proof: If $f\colon X\to X$ is continuous,
+then $(x,y)\mapsto (f(x),y)$ is continuous, so $f$ has a fixed point.)
+\end{enumerate}
+
+\begin{thebibliography}{9}
+ \bibitem{naber} G.\ L.\ Naber, \emph{Topological methods in Euclidean spaces},
+   Cambridge University Press, 1980.
+ \bibitem{jameson} G.\ J.\ Jameson, \emph{Topology and Normed Spaces},
+   Chapman and Hall, 1974.
+ \bibitem{ward} L.\ E.\ Ward, \emph{Topology, An Outline for a First Course},
+   Marcel Dekker, Inc., 1972.
+ \bibitem{hagopian} Charles Hagopian,
+   The Fixed-Point Property for simply-connected plane continua,
+   Trans. Amer. Math. Soc. 348 (1996) 4525--4548.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

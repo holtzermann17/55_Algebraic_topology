@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Supersymmetry}
+\pmcreated{2013-03-22 18:17:00}
+\pmmodified{2013-03-22 18:17:00}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{supersymmetry}
+\pmrecord{22}{40893}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55U40}
+\pmclassification{msc}{55-02}
+\pmclassification{msc}{81Q60}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{81R15}
+\pmsynonym{extended quantum symmetry structures}{Supersymmetry}
+\pmsynonym{generalized double algebras}{Supersymmetry}
+\pmsynonym{supersymmetries}{Supersymmetry}
+%\pmkeywords{Supergravity}
+%\pmkeywords{Quantum Gravity}
+%\pmkeywords{Superspace}
+%\pmkeywords{Relativistic QFT and quantum field theories}
+\pmrelated{QuantumAlgebraicTopology}
+\pmrelated{AlgebraicFoundationsOfQuantumAlgebraicTopology}
+\pmrelated{SuperfieldsSuperspace}
+\pmrelated{LieSuperalgebra3}
+\pmdefines{extended quantum symmetry structures}
+\pmdefines{both local and global}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\begin{definition}
+\emph{Supersymmetry} or Poincar\'e, (extended) quantum symmetry is usually defined as an extension of ordinary spacetime symmetries obtained by adjoining $N$ spinorial generators $Q$ whose anticommutator yields a
+translation generator: $\left\{Q ,Q \right\} = \left\{P\right\}$.
+\end{definition}
+ 
+As further explained in ref. \cite{JSG98}: 
+\begin{quote}
+``This \emph{(super)} symmetry...(of the \emph{superspace})... can be realized on ordinary fields (that are defined as certain functions of physical spacetime(s)) by transformations that mix bosons and fermions. 
+\emph{Such realizations suffice to study supersymmetry (one can write invariant actions, etc.) but are as
+cumbersome and inconvenient as doing vector calculus component by component. A compact alternative to this `component field' approach is given by the \emph{superspace--superfield} approach}", which is defined next.  
+\end{quote}  
+
+\begin{definition}
+\emph{Quantum superspace, or superspacetimes}, can be defined as an extension(s) of ordinary spacetime(s) to include
+additional anticommuting coordinates, for example, in the form of $N$ two-component Weyl spinors $\theta$.
+\end{definition}
+
+\begin{definition}
+\emph{(Quantum) superfields} $\Psi(x , \theta)$ are \emph{functions} defined over such superspaces, or superspacetimes. 
+Taylor series expansions of the superfield functions can be then performed with respect to the anticommuting coordinates $\theta$; this Taylor series has only a finite number of terms and the series expansion
+coefficients obtained in this manner are the ordinary `component fields' specified above. 
+\end{definition}
+
+\textbf{Remarks:}
+Supersymmetry is expected to be manifested, or observable, in such superspaces, that is, the  \emph{supersymmetry algebras} are represented by translations and rotations involving \emph{both} the spacetime and the anticommuting coordinates. Then, the transformations of the `component fields' can be computed from the Taylor expansion of
+the \emph{translated and rotated superfields}. Especially important are those transformations that mix boson
+and fermion symmetries; further details are found in ref. \cite{LS2k}.
+
+
+\begin{thebibliography}{9}
+\bibitem{JSG98}
+J.S. Gates, Jr, et al. ``Superspace''.,  arxiv-hep-th/0108200 preprint (1983).
+
+\bibitem{LS2k}
+``Preprint of 1,001 Lessons in Supersymmetry.'' \PMlinkexternal{on line PDF}{http://arxiv.org/abs/hep-th/0108200}.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

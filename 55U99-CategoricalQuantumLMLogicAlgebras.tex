@@ -1,0 +1,487 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoricalQuantumLMLogicAlgebras}
+\pmcreated{2013-03-22 18:11:04}
+\pmmodified{2013-03-22 18:11:04}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{categorical quantum LM- logic  algebras}
+\pmrecord{83}{40756}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55U99}
+\pmclassification{msc}{55U40}
+\pmclassification{msc}{55U35}
+\pmclassification{msc}{55U30}
+\pmclassification{msc}{81T05}
+\pmclassification{msc}{18A40}
+\pmclassification{msc}{18A15}
+\pmclassification{msc}{18A05}
+\pmclassification{msc}{18A99}
+\pmsynonym{formal logics}{CategoricalQuantumLMLogicAlgebras}
+\pmsynonym{classification of existential categories}{CategoricalQuantumLMLogicAlgebras}
+%\pmkeywords{category applications}
+%\pmkeywords{formal ontology}
+%\pmkeywords{philosophical foundations of science}
+%\pmkeywords{classification of existential categories}
+\pmrelated{UltraComplexSystems}
+\pmrelated{ComplexSystemsBiology}
+\pmrelated{RosettaGroupoids}
+\pmrelated{NonAbelianTheories}
+\pmrelated{NonAbelianStructures}
+\pmrelated{CommutativeVsNonCommutativeDynamicModelingDiagrams}
+\pmrelated{GeneralizedToposesTopoiWithManyValuedLogicSubobjectClassifiers}
+\pmrelated{TopicEntryOnFoundationsOfMathematics}
+\pmdefines{quantum logics}
+\pmdefines{categorical}
+\pmdefines{categorical ontology}
+
+% this is the default PlanetMath preamble.  
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym,color,enumerate}
+%%\usepackage{xypic}
+\xyoption{curve}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{7.1in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.2in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-1.0in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.30in
+
+%the next gives two direction arrows at the top of a 2 x 2 matrix
+
+\newcommand{\directs}[2]{\def\objectstyle{\scriptstyle}  \objectmargin={0pt}
+\xy
+(0,4)*+{}="a",(0,-2)*+{\rule{0em}{1.5ex}#2}="b",(7,4)*+{\;#1}="c"
+\ar@{->} "a";"b" \ar @{->}"a";"c" \endxy }
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+
+\theoremstyle{plain}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\Ce}{\mathsf{C}}
+\newcommand{\Q}{\mathsf{Q}}
+\newcommand{\grp}{\mathsf{G}}
+\newcommand{\dgrp}{\mathsf{D}}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{\operatorname{Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+
+\newcommand{\hdgb}{\boldsymbol{\rho}^\square}
+\newcommand{\hdg}{\rho^\square_2}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\renewcommand{\leq}{{\leqslant}}
+\renewcommand{\geq}{{\geqslant}}
+
+\def\red{\textcolor{red}}
+\def\magenta{\textcolor{magenta}}
+\def\blue{\textcolor{blue}}
+\def\<{\langle}
+\def\>{\rangle}
+
+\begin{document}
+\subsection{Quantum LM-algebraic Logic} 
+
+\subsubsection{Fundamental concepts of space and time in quantum theory \emph{vs.} space-times in general relativity}
+ 
+A notable feature of current 21-st century physical thought involves a close examination of the validity of the classical model of space-time as a $4$--dimensional manifold equipped with a Lorentz metric. The expectation of the earlier approaches to quantum gravity (QG) was to cope with microscopic length scales where a traditional manifold structure (in the conventional sense) needs to be forsaken (for instance, at the Planck length $L_p = (\frac{G\hslash}{c^3})^{\frac{1}{2}} \approx 10^{-35}m$). Whereas Newton, Riemann, Einstein, Weyl, Hawking, Penrose,
+Weinberg and many other exceptionally creative theoreticians
+regarded physical space as represented by a \emph{continuum},
+there is an increasing number of proponents for a \emph{discrete,
+`quantized'} structure of space--time, since space itself is
+considered as discrete on the Planck scale. Like most radical
+theories, the latter view carries its own set of problems. The
+biggest problem  arises from the fact that any discrete,
+`point-set' (or discrete topology), view of physical space--time
+is not only in immediate conflict with Einstein's General
+Relativity representation of space--time as a \emph{continuous
+Riemann} space, but it also conflicts with the fundamental
+impossibility of carrying out quantum measurements that would
+localize precisely either quantum events or masses at `singular points' (in
+the sense of disconnected, or isolated , sharply defined,
+geometric points) in space--time. Since GR seems to break down at the Planck scale,
+\emph{space--time may no longer be describable by a smooth manifold
+structure} such as a Riemann metric tensor. While not neglecting the large scale classical model,
+one needs to propose a structure of `ideal observations' as manifest
+in a limit, in some sense, of `discrete', or at least separable,
+measurements, where in such a limit it also encompasses the classical event. 
+Further details are given in our recent, related paper \cite{Bggb4}.
+
+\subsection{Quantum Logics (QL) and Logic Lattice Algebras (LA): 
+Operational Quantum Logic (OQL) and \L{}ukasiewicz Quantum Logics (LQL)}
+
+
+\subsubsection{Quantum Fields, General Relativity and Symmetries}
+ As the experimental findings in high-energy physics--coupled
+with theoretical studies-- have revealed the presence of new fields
+and symmetries, there appeared the need in modern physics to develop
+systematic procedures for generalizing space--time and Quantum State
+Space (QSS) representations in order to reflect these new
+concepts. In the General Relativity (GR) formulation, the local structure of
+space--time, characterized by its various tensors (of
+energy--momentum, torsion, curvature, etc.), incorporates the
+gravitational fields surrounding various masses. In Einstein's own
+representation, the physical space--time of GR has the structure
+of a Riemannian $R^4$ space over large distances, although the
+detailed local structure of space--time -- as Einstein perceived
+it -- is likely to be significantly different. On the other hand, 
+there is a growing consensus in theoretical physics that a valid 
+theory of quantum gravity (QG) requires a much
+deeper understanding of the small(est)--scale structure of quantum
+space--time (QST) than currently developed. In Einstein's GR
+theory and his subsequent attempts at developing a unified field
+theory (as in the space concept advocated by Leibnitz), space-time
+does \emph{not} have an \emph{independent existence} from objects,
+matter or fields, but is instead an entity generated by the
+\emph{continuous} transformations of fields. Hence, the continuous
+nature of space--time was adopted in GR and Einstein's subsequent
+field theoretical developments. Furthermore, the quantum, or
+`quantized', versions of space-time, QST, are operationally
+defined through local quantum measurements in general reference
+frames that are prescribed by GR theory. Such a definition is
+therefore subject to the postulates of both GR theory and the
+axioms of local quantum physics (LQP). We must emphasize, however, that
+this is \emph{not} the usual definition of position and time
+observables in `standard' QM. The general reference
+frame positioning in QST is itself subject to the Heisenberg
+uncertainty principle, and therefore it acquires through quantum
+measurements, a certain `fuzziness' at the Planck scale which is
+intrinsic to all microphysical quantum systems. Such systems with
+fuzziness include \emph{spin networks} that change in time thus giving birth
+to \emph{spin foam}. 
+
+\subsubsection{Operational Quantum Logic (OQL) and \L{}ukasiewicz Quantum Logic (LQL)}
+ 
+ As pointed out by von Neumann and Birkhoff in 1930, a logical foundation of quantum mechanics consistent with quantum algebra is essential for both the completeness and mathematical validity of the theory. The development of quantum mechanics from its very beginnings both inspired and required the consideration of specialized logics compatible with a new theory of measurements for microphysical systems. Such a specialized logic was initially formulated by von Neumann and Birkhoff (1932) and called `quantum logic'. Subsequent research on MV-logics and quantum logics (Chang, 1958;
+Genoutti, 1968; Dalla Chiara, 1968, 2004) resulted in several approaches that involve several types of non-distributive lattice (algebra) for $n$--valued quantum logics. Thus, modifications of the \L ukasiewicz logic algebras that were introduced in the context of algebraic categories by Georgescu and Vraciu in 1970 \cite{GGCV70}, also recently reviewed and expanded by Georgescu in 2006, can provide an appropriate framework for representing quantum systems, or-- in their unmodified form- for describing the activities of complex networks in categories of \L{}ukasiewicz logic algebras \cite{ICB77}.
+
+\subsubsection{Lattices and Von Neumann-Birkhoff (VNB) Quantum Logic: Definitions and Basic Logical Properties}
+We commence here by giving the \emph{set-based definition of a Lattice}. An \emph{s--lattice} $\mathbf{L}$, or a `set-based' lattice, is defined as a \emph{partially ordered set} that has all
+binary products (defined by the $s$--lattice operation ``
+$\bigwedge$") and coproducts (defined by the $s$--lattice
+operation ``$ \bigvee$ "), with the "partial ordering" between two
+elements X and Y belonging to the $s$--lattice being written as
+``$X \preceq Y$". The partial order defined by $\preceq$ holds in
+\textbf{L }as $X \preceq  Y$ if and only if
+ $X = X \bigwedge Y $ (or equivalently, $Y = X \bigvee Y $
+Eq.(3.1)(p. 49 of Mac Lane and Moerdijk, 1992).
+
+\subsubsection{\L{}ukasiewicz-Moisil (LM) Quantum Logic (LQL) and Algebras}
+ With all truth 'nuances' or assertions of the type $<<$ \emph{system A } is excitable
+to the $i$-th level and system B is excitable to the $j$-th level $>>$ one can define 
+a special type of lattice which is subject to the axioms introduced by Georgescu and Vraciu in 1970 \cite{GGCV70} which then becomes a \emph{$n$-valued \L ukasiewicz-Moisil, or LM-algebra}. Further algebraic and logic details are provided in ref. \cite{GG2k6} and also in \cite{Bggb4}. In order to have the $n$-valued \L{}ukasiewicz logic algebra
+represent correctly the basic behaviour of quantum systems (that is, as observed through measurements that involve a quantum system interactions with a measuring instrument --which is a macroscopic object), several of these axioms have to be significantly changed so that the resulting lattice becomes \emph{non-distributive} and also (possibly) \emph{non--associative} (Dalla Chiara, 2004), in addition to being non-commutative. With an appropriately defined quantum logic of events one can proceed to define Hilbert, or `nuclear'/Frechet, spaces in order to be able to utilize the `standard' procedures of quantum theories.
+
+\subsubsection{Fundamental concepts of algebraic topology with potential application to ontology levels theory and 
+space-time structures}
+ We shall consider briefly the potential impact of novel algebraic topology concepts, methods and results on the problems of defining and classifying rigorously quantum space-times. With the advent of Quantum Groupoids--generalizing quantum groups, quantum algebra and quantum algebraic topology, several fundamental concepts and new theorems of algebraic topology may also acquire an enhanced importance through their potential applications to current problems in theoretical and mathematical physics, such as those described in \cite{BBGG1}, and also in subsequent publications \cite{Bggb4} and \cite{BGB2k7b}. 
+
+ Now, if quantum mechanics is to reject the notion of a continuum,
+then it must also reject the notion of the real line and the notion
+of a path. How then is one to construct a homotopy theory?
+One possibility is to take the route signalled by \v{C}ech, and which
+later developed in the hands of Borsuk into `shape theory'. Thus, a quite general space is studied by means of its approximation by open covers.
+
+ A few fundamental concepts of algebraic topology and category theory 
+are summarized here that have an extremely wide range of applicability to the higher complexity levels of reality as well as to the fundamental, quantum level(s). Technical details are omitted in this section in order to focus only on the ontologically-relevant aspects; full mathematical details are however also available in a recent paper by Brown et al (2007) that focuses on a mathematical/conceptual framework for a completely formal approach to categorical ontology and the theory of levels.
+
+\subsection{Local--to--global (LG) Construction Principles Consistent with AQFT}
+
+ A novel approach to QST construction in algebraic/axiomatic QFT (AQFT) involves the use
+of generalized fundamental theorems of algebraic topology from
+specialized, `globally well-behaved' topological spaces, to
+arbitrary ones (Baianu et al, 2007c). In this category, are the generalized, \emph{Higher
+Homotopy van Kampen theorems (HHvKT)} of algebraic topology with
+novel and unique non-Abelian applications. Such theorems greatly aid
+the calculation of higher homotopy of topological spaces.  R. Brown and coworkers (1999, 2004a,b,c)  generalized the van Kampen theorem, at first to fundamental  groupoids on a set of base points (Brown,1967), and
+then, to higher dimensional algebras involving, for example,
+homotopy double groupoids and 2-categories (Brown, 2004a). The more
+sensitive \emph{algebraic invariant} of topological spaces seems to
+be, however, captured only by \emph{cohomology} theory through an
+algebraic \emph{ring} structure that is not accessible either in
+homology theory, or in the existing homotopy theory.  Thus, two
+arbitrary topological spaces that have isomorphic homology groups
+may not have isomorphic cohomological ring structures, and may also
+not be homeomorphic, even if they are of the same homotopy type. 
+Furthermore, several \emph {non-Abelian} results in algebraic topology could only be derived from the Generalized van Kampen theorem (\emph{viz}. Brown, 2004a), so that one may find links of such results to the expected 
+\emph{`non-commutative} geometrical' structure of quantized space--time
+(Connes, 1994). In this context, the important algebraic--topological concept of a \emph{Fundamental Homotopy Groupoid (FHG) is applied to a quantum topological space (QTS)} as a ``partial classifier" of the \emph{invariant} topological propertiesof quantum spaces of any dimension; quantum topological
+spaces are then linked together in a \emph{crossed complex over a
+quantum groupoid} (Baianu, Brown and Glazebrook, 2006), thus
+suggesting the construction of global topological structures from
+local ones with well-defined quantum homotopy groupoids. The latter
+theme is then further pursued through defining locally topological
+groupoids that can be globally characterized by applying the
+globalization theorem, which involves the \emph{unique} construction
+of the holonomy groupoid. How such concepts might be applied in the context of algebraic or axiomatic quantum 
+field theories (AQFT) will be separately considered in order to provide a local-to-global construction of quantum space-times which would still be valid in the presence of intense gravitational fields without generating singularities as in GR. The result of such a construction is a \emph{quantum holonomy groupoid}, (QHG) which is unique up to an isomorphism.
+
+\subsubsection{Physical and Mathematical Theories: Physical Axioms, Principles, Postulates and Laws}
+
+ The Greeks devised \emph{the axiomatic method}, but thought of it
+in a different manner to that we do today. One can imagine that
+the way Euclid's `Geometry' evolved was simply through the
+delivering of a course covering the established facts of the time.
+In delivering such a course, it is natural to formalize the
+starting points, and so arranging a sensible structure. These
+starting points came to be called \emph{postulates, definitions
+and axioms}, and they were thought to deal with real, or even
+ideal, objects, named points, lines, distance and so on. The
+modern view, initiated by the discovery of non-Euclidean geometry,
+is that the words points, lines, etc. should be taken as undefined
+terms, and that axioms give the \emph{relations} between these.
+This allows the axioms to apply to many other instances, and has
+led to the power of modern geometry and algebra. Clarifying the meaning to be ascribed to `concept', `percept', `thought', `emotion', etc., and above all the \emph{relations} between these words, is clearly a fundamental but
+time--consuming step. Although relations--in their turn--can be, and
+were, defined in terms of sets, their axiomatic/categorical
+introduction greatly expands their range of applicability well beyond that of set-relations.
+Ultimately, one deals with \emph{relations among relations} and relations of higher order.
+
+ The more rigorous scientific theories, including those founded in
+logics and mathematics, proceed at a fundamental level from axioms
+and principles, followed in the case of `natural sciences' by laws
+of nature that are valid in specific contexts or well-defined
+situations. Whereas the hierarchical theory of levels provides a powerful,
+systemic approach through categorical ontology, the foundation
+of science involves \emph{universal} models and theories
+pertaining to different levels of reality. Such theories are based
+on axioms, principles, postulates and laws operating on distinct
+levels of reality with a specific degree of complexity. 
+
+ Because of such distinctions, inter-level principles or laws are rare and
+over-simplified principles abound.  As relevant examples, consider
+the chemical/biochemical thermodynamics, physical biochemistry
+and molecular biology fields which have developed a rich structure
+of specific-level laws and principles, however, without `breaking
+through' to the higher, emergent/integrative level of organismic
+biology. This does not detract of course from their usefulness, it
+simply renders them incomplete as theories of biological reality.
+With the possible exceptions of evolution and genetic principles 
+or laws, biology has until recently lacked other universal principles 
+for highly complex dynamics in organisms, populations and species, 
+as it will be shown in the following sections. One
+can therefore consider biology to be at an almost `pre--Newtonian'
+stage by comparison with either physics or chemistry.
+
+ Whereas axioms are rarely invoked in the natural
+sciences perhaps because of their abstract and exacting
+attributes, (as well as their coming into existence through
+elaborate processes of repeated abstraction and refinement),
+postulates are `obvious assumptions' of extreme generality that do
+not require proof but just like axioms are accepted on the basis
+of their very numerous, valid consequences. Principles and laws, even though quite strict, may not apply under certain exceptional, or `singular' situations. Natural laws are applicable to well-defined zones or levels of reality, and are thus less general, or universal, than principles. Unlike physical laws that are often expressed through
+mathematical equations, principles are instead often explained in words,
+and tend to have the most general form attainable/acceptable in an
+established theory. It is interesting to note that in Greek, and later
+Roman antiquity, both philosophers and orators did link philosophy and logic; moreover,
+in medieval time, first Francis Bacon, then Newton opted for quite precise formulations
+of ``natural philosophy" and a logical approach to `objective' reality. In Newton's
+approach, the logical and precise formulation of such ``natural principles" demanded the
+development of mathematical concepts suitable for the exact determination and quantification
+of the rate of a change in the ``state of motion" of any mechanical body, or system.
+Later philosophical developments have strayed from such precise formulations and, indeed, 
+mathematical developments seem to have lost their appeal in `natural philosophy'. 
+
+ On the other hand, it would seem natural to expect that theories aimed at different ontological levels of reality should have different principles. Furthermore, one may ontologically, address the question of why such distinct levels of reality originated in the first place, and then developed, or emerged, both in space and time.  Without reverting to any form of Newtonian or quantum-mechanical determinism, we are also pointing out in this essay the need for developing precise but nevertheless `flexible' concepts and novel mathematical representations suitable for understanding the emergence of the higher complexity levels of reality.  
+
+ It is also in this context that the `local-to-global' model approach becomes relevant, as in the case of generalized van Kampen theorems.
+
+\subsubsection{Symmetry, Commutativity and Abelian Structures}
+
+ The hierarchy constructed above, up to level 3, can be
+further extended to higher, $n$-levels, always in a consistent,
+natural manner, that is using commutative diagrams. Let us see
+therefore a few simple examples or specific instances of
+commutative properties. The type of global, natural hierarchy of
+items inspired by the mathematical TC-FNT has a kind of
+\emph{internal symmetry} because at all levels, the link
+compositions are \emph{natural}, that is, if $f: x \lra y$ and $g: y \lra z
+\Longrightarrow h: x \lra z$, then the composition of morphism $g$ with $f$ is
+given by another unique morphism  $h = g \circ f$. This general property involving the equality of such link composition chains or diagrams comprising any number of sequential links between the same beginning and ending objects is called \emph{commutativity} (see for example Samuel and Zarisky, 1957), and is often expressed as a \emph{naturality condition for diagrams}. This key mathematical property also includes the mirror-like symmetry $x\star y = y\star x$; when $x$ and $y$ are operators and the symbol '$\star$' represents the
+operator multiplication. Then, the equality of $x\star y$ with
+$y\star x$ defines the statement that ''the $x$ and $y$ 
+operators \emph{commute}''; in physical terms, this translates
+into a sharing of the same set of eigenvalues by the two commuting
+operators, thus leading to `equivalent' numerical results {i.e., 
+up to a multiplication constant); furthermore, the observations 
+X and Y corresponding, respectively, to these two operators 
+would yield the same result if X is performed before Y in time, 
+or if Y is performed first followed by X.  This property, when present,
+is very convenient for both mathematical and physical applications (such as those encountered in quantum mechanics). When commutativity is global in a structure, as in an Abelian (or commutative) group, commutative groupoid, commutative ring, etc., such a structure that is commutative throughout is usually called \textbf{\emph{Abelian}}. However, in the case of category theory, this concept of Abelian structure has been extended to a special class of categories that have meta-properties formally similar to those of the category of commutative groups, \emph{Ab}-\textbf{G}; the necessary and sufficient conditions for such `Abelianness' of categories other than that of Abelian groups were expressed as three axioms \textbf{Ab1} to \textbf{Ab3 } and their duals (Freyd, 1964; see also the details in Baianu et al 2007b and Brown et al 2007).  A first step towards re-gaining something like the `global commutativity' of an Abelian group is to require that all classes of morphisms $[A,B]$ or $Hom(A,B)$ have the structure of commutative groups; subject to a few other general conditions such categories are called \textbf{additive}. Then, some kind of global commutativity is assured for all morphisms of \emph{additive } categories. However, further conditions are needed to make additive categories `Abelian', and additional properties were also posited for Abelian categories in order to extend the applications of Abelian category theory to other fields of modern mathematics (Grothendieck, 1957; Grothendieck and Dieudon\'{e} 1960; Oberst 1969; Popescu 1973.) A Homotopy theory was also formulated in Abelian categories (Kleisli, 1962).  The equivalence of Abelian categories was reported by Roux, and important imbedding theorems were proved by Mitchell (1964) and by Lubkin (1960); a characterization of Abelian categories with generators and exact limits was presented by Gabriel and Popescu (1964). As one can see from both earlier and recent literature, Abelian categories have been studied in great detail, even though one cannot say that all their properties have been already found. 
+
+ However, not all quantum operators `commute', and not all categorical diagrams or mathematical structures are, or need be, commutative. Non-commutativity may therefore appear as a result of `breaking' the `internal symmetry' represented by commutativity. As a physical analogy, this might be considered a kind of \emph{`symmetry breaking'} which is thought to be responsible for our expanding universe and CPT violation, as well as many other physical phenomena such as phase transitions and superconductivity (Weinberg, 2003). 
+
+\begin{thebibliography}{99}
+\bibitem{Bggb4}
+Baianu, I.C., R. Brown and J. F. Glazebrook.(2007), A Non-Abelian, Categorical Ontology of Spacetimes and Quantum Gravity, {\em Axiomathes}, \textbf{17}: 169-225.
+
+\bibitem{GGCV70}
+Georgescu, G. and C. Vraciu (1970). On the Characterization of \L{}ukasiewicz Algebras., \emph{J. Algebra}, \textbf{16} (4), 486-495.
+
+\bibitem{ICB77}
+Baianu, I.C.: 1977, A Logical Model of Genetic Activities in \L{}ukasiewicz Algebras: The Non-linear Theory. \emph{Bulletin of Mathematical Biophysics},\textbf{39}: 249-258.
+
+\bibitem{GG2k6}
+Georgescu, George. (2006). N-Valued Logics. \emph{Axiomathes}. \textbf{17}: 251-262.
+
+\bibitem{ICB-RO2k8}
+Baianu, I.C. and R. Poli. (2008), From Simple to Complex and Ultra-Complex Systems: 
+A Paradigm Shift Towards Non-Abelian Systems Dynamics., In: {\em Theory and Applications of Ontology},
+vol. \textbf{1}, R. Poli, Ed., Springer: Berlin. 
+
+\bibitem{BBGG1}
+Baianu I. C., Brown R., Georgescu G. and J. F. Glazebrook.(2006), Complex Nonlinear Biodynamics in Categories, Higher Dimensional Algebra and \L{}ukasiewicz--Moisil Topos: Transformations of Neuronal, Genetic and Neoplastic Networks, 
+\emph{Axiomathes}, \textbf{16} Nos. 1--2: 65--122.
+
+\bibitem{BGB2k7b}
+Brown, R., Glazebrook, J. F. and I.C. Baianu.(2007), A Conceptual, Categorical and Higher Dimensional Algebra Framework of Universal Ontology and the Theory of Levels for Highly Complex Structures and Dynamics., \emph{Axiomathes} (17): 321--379.
+
+\bibitem{Poli1}
+Poli, R. (1998), Levels,\emph{Axiomathes}, \textbf{9}, 1-2, pp. 197-211.
+
+\bibitem{Poli2}
+Poli, R. (2001a), The Basic Problem of the Theory of Levels of Reality, \emph{Axiomathes}, \textbf{12}, 3-4, pp. 261-283.
+
+\bibitem{Poli3}
+Poli, R. (2001b), Alwis. {\em Ontology for Knowledge Engineers}. PhD Thesis, Univ. of Utrecht.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

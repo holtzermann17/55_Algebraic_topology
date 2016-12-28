@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomotopyWithAContractibleDomain}
+\pmcreated{2013-03-22 18:02:12}
+\pmmodified{2013-03-22 18:02:12}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{homotopy with a contractible domain}
+\pmrecord{26}{40557}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P99}
+%\pmkeywords{contractible domain}
+%\pmkeywords{homotopy}
+\pmrelated{homotopy}
+\pmrelated{contractible}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Theorem.} Assume that $Y$ is an arbitrary topological space and $X$ is a contractible topological space. Then all maps $f:X\rightarrow Y$ are homotopic if and only if $Y$ is path connected.\\ \\
+\textbf{\textit{Proof:}} Assume that all maps are homotopic. In particular constant maps are homotopic, so if $y_{1},y_{2}\in Y$, then there exists a continous map $H:I\times Y\rightarrow Y$ such that $H(0,y)=y_1$ and $H(1,y)=y_2$ for all $y\in Y$. Thus the map $\alpha:I\rightarrow Y$ defined by the formula $\alpha(t)=H(t,y_0)$ for a fixed $y_0\in Y$ is the wanted path.\\ \\
+On the other hand assume that $Y$ is path connected. Since $X$ is contractible, then for any $c\in X$ there exists a continous homotopy $H:I\times X\rightarrow X$ connecting the identity map and a constant map $c$. Let $f:X\rightarrow Y$ be an arbitrary map. Define a map $F:I\times X\rightarrow Y$ by the formula: $F(t,x)=f(H(t,x))$. This map is a homotopy from $f$ to a constant map $f(c)$. Thus every map is homotopic to some constant map.\\ \\
+The space $Y$ is path connected, so for all $y_1,y_2\in Y$ there exists a path $\alpha:I\rightarrow Y$ from $y_1$ to $y_2$. Therefore constant maps are homotopic via the homotopy $H(t,x)=\alpha(t)$.\\ \\
+Finaly for any continous maps $f,g:X\rightarrow Y$ and any point $c\in X$ we get:
+$$f\simeq f(c)\simeq g(c)\simeq g,$$
+which completes the proof. $\square$ \\ \\ \\
+\textbf{Corollary.} If $X$ is a contractible space, then for any topological space $Y$ there exists a bijection between the set $[X,Y]$ of homotopy classes of maps from $X$ to $Y$ and the set $\pi_0(Y)$ of path components of $Y$.\\ \\ 
+\textbf{\textit{Proof:}} Assume that $Y=\bigcup Y_{i}$, where $Y_i$ are path components of $Y$. It is well known that contractible spaces are path connected, thus the image of any continous map $f:X\rightarrow Y$ is contained in $Y_i$ for some $i$. It follows from the theorem that two maps from $X$ to $Y$ are homotopic if and only if their images are contained in the same $Y_i$. Thus we have a well defined, injective map $$\psi:[X,Y]\rightarrow\pi_0(Y)$$ $$\psi([f])=Y_i,$$ where $i$ is such that $f(X)\subseteq Y_i$. This map is also surjective, since for any $ i $ there exists  $y\in Y_i$, so the class of the constant map $f(x)=y$ is mapped into $Y_i$. $\square$
+%%%%%
+%%%%%
+\end{document}

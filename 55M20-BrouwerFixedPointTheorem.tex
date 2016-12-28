@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrouwerFixedPointTheorem}
+\pmcreated{2013-03-22 12:44:34}
+\pmmodified{2013-03-22 12:44:34}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Brouwer fixed point theorem}
+\pmrecord{7}{33046}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M20}
+\pmclassification{msc}{54H25}
+\pmclassification{msc}{47H10}
+%\pmkeywords{fixed point}
+%\pmkeywords{nonconstructive}
+\pmrelated{FixedPoint}
+\pmrelated{SchauderFixedPointTheorem}
+\pmrelated{TychonoffFixedPointTheorem}
+\pmrelated{KKMlemma}
+\pmrelated{KKMLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\begin{document}
+{\bf Theorem}
+Let $\textbf{B}=\{x\in\Reals^n: \norm{x}\le 1\}$ be the closed unit ball in 
+$\Reals^n$.  Any continuous function $f: \textbf{B}\to\textbf{B}$ has a fixed point.
+
+\subsection*{Notes}
+
+\begin{description}
+
+\item[Shape is not important]
+The theorem also applies to anything homeomorphic to a closed disk, of course.  In particular, we can replace $\textbf{B}$ in the formulation with a square or 
+a triangle.
+
+\item[Compactness counts (a)]
+The theorem is not true if we drop a point from the interior of $\textbf{B}$.  For example, the map $f(\vec{x})=\frac{1}{2}\vec{x}$ has the single fixed point at $0$; dropping it from the domain yields a map with no \PMlinkname{fixed points}{FixedPoint}.
+
+\item[Compactness counts (b)]
+The theorem is not true for an open disk.  For instance, the map $f(\vec{x})=\frac{1}{2}\vec{x}+(\frac{1}{2},0,\ldots,0)$ has its single fixed point on the boundary of $\textbf{B}$.
+
+\end{description}
+%%%%%
+%%%%%
+\end{document}

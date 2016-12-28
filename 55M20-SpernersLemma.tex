@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpernersLemma}
+\pmcreated{2013-03-22 13:44:33}
+\pmmodified{2013-03-22 13:44:33}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Sperner's lemma}
+\pmrecord{12}{34436}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M20}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{connected} \PMlinkescapeword{opposite}
+\PMlinkescapeword{contour integral}
+\PMlinkescapeword{contour integrals}
+\PMlinkescapeword{combinations} \PMlinkescapeword{colors}
+\PMlinkescapeword{size} \PMlinkescapeword{adjacent}
+\PMlinkescapeword{equivalent} \PMlinkescapeword{contains}
+Let $ABC$ be a triangle, and let $S$ be the set of vertices of some
+triangulation $T$ of $ABC$. Let $f$ be a mapping
+of $S$ into a three-element set, say $\{1,2,3\}=T$ (indicated by
+red/green/blue respectively in the figure), such that:
+\begin{itemize}
+\item
+any point $P$ of $S$, if it is on the side $AB$, satisfies
+$f(P)\in\{1,2\}$
+\item
+similarly if $P$ is on the side $BC$, then $f(P)\in\{2,3\}$
+\item
+if $P$ is on the side $CA$, then $f(P)\in\{3,1\}$
+\end{itemize}
+(It follows that $f(A)=1, f(B)=2, f(C)=3$.)
+Then some (triangular) simplex of $T$, say $UVW$, satisfies
+$$f(U)=1 \qquad f(V)=2 \qquad f(W)=3\;.$$
+
+\begin{center}
+\includegraphics{sperner}
+\end{center}
+
+We will informally sketch a proof of a stronger statement:
+Let $M$ (resp. $N$) be the number of simplexes satisfying (1) and whose
+vertices have the same orientation as $ABC$ (resp. the
+opposite orientation). Then $M-N=1$ (whence $M>0$).
+
+The proof is in the style of well-known proofs of, for example, Stokes's
+theorem in the plane, or Cauchy's theorems about a holomorphic function.
+
+Define an antisymmetric function $d:T\times T\to\mathbb{Z}$ by
+$$d(1,1)=d(2,2)=d(3,3)=0$$
+$$d(1,2)=d(2,3)=d(3,1)=1$$
+$$d(2,1)=d(3,2)=d(1,3)=-1\;.$$
+
+Let's define a ``circuit'' of size $n$ as an injective mapping $z$ of the
+cyclic group $\Z/n\Z$ into $V$ such that $z(n)$ is adjacent to $z(n+1)$
+for all $n$ in the group.
+
+Any circuit $z$ has what we will call a contour integral $Iz$, namely
+$$Iz=\sum_n d(z(n),z(n+1))\;.$$
+Let us say that two vertices $P$ and $Q$ are equivalent if $f(P)=f(Q)$.
+
+There are four steps:
+
+1) Contour integrals are added when their corresponding circuits are juxtaposed.
+
+2) A circuit of size 3, hitting the vertices of a simplex $PQR$, has contour integral
+\begin{itemize}
+\item 0 if any two of $P$, $Q$, $R$ are equivalent, else
+\item +3 if they are inequivalent and have the same orientation as $ABC$, else
+\item -3
+\end{itemize}
+
+3) If $y$ is a circuit which travels around the perimeter of the whole
+triangle $ABC$, and with same orientation as $ABC$, then $Iy=3$.
+
+4) Combining the above results, we get
+$$3=\sum Iw=3M - 3N$$
+where the sum contains one summand for each simplex $PQR$.
+
+\noindent
+\textbf{Remarks: }
+In the figure, $M=2$ and $N=1$: there are two ``red-green-blue'' simplexes and one blue-green-red. 
+
+With the same hypotheses as in Sperner's lemma, there is such a simplex $UVW$
+which is connected (along edges of the triangulation) to
+the side $AB$ (resp. $BC$,$CA$)
+by a set of vertices $v$ for which $f(v)\in\{1,2\}$ (resp. $\{2,3\}$,
+$\{3,1\})$. The figure illustrates that result: one of the red-green-blue
+simplexes is connected to the red-green side by a red-green ``curve'',
+and to the other two sides likewise.
+
+The original use of Sperner's lemma was in a proof
+of Brouwer's fixed point theorem in two dimensions.
+%%%%%
+%%%%%
+\end{document}

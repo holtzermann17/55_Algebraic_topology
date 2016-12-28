@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WhiteheadTheorem}
+\pmcreated{2013-03-22 13:25:48}
+\pmmodified{2013-03-22 13:25:48}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{Whitehead theorem}
+\pmrecord{10}{33988}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P10}
+\pmclassification{msc}{55P15}
+\pmclassification{msc}{55Q05}
+\pmrelated{ConjectureApproximationTheoremHoldsForWhitneyCrMNSpaces}
+\pmrelated{WeakHomotopyEquivalence}
+\pmrelated{ApproximationTheoremAppliedToWhitneyCrMNSpaces}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{theorem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\cpxs}{{\mathbb C}} % The "complexes" :)
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\theorembodyfont{\upshape}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newtheorem{exm}{Example}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\projp}{{\mathbb R}P}
+
+% open cells (not very nice...)
+\newcommand{\oce}{\smash{\overset{\circ}e}} 
+\newcommand{\ocD}{\smash{\overset{\circ}D}} 
+
+\newcommand{\susp}{\Sigma}
+\newcommand{\restr}[2]{{#1}|_{#2}}
+
+\renewcommand{\hom}{\mathop{\mathrm{Hom}}} % Homomorphisms functor
+\newcommand{\rp}{\reals P} % real projective space
+\newcommand{\cp}{\cpxs P} % complex projective space
+\newcommand{\zmod}[1]{\integs / #1\integs} % Z/nZ
+\begin{document}
+\PMlinkescapeword{type}
+\PMlinkescapeword{complex}
+
+\begin{thm}[J.H.C.~Whitehead]
+If $\funcdef{f}{X}{Y}$ is a weak homotopy equivalence and $X$ and $Y$ 
+are path-connected and of the homotopy type of CW complexes, then $f$ is a strong homotopy equivalence.
+\end{thm}
+\begin{rmk}
+It is essential to the theorem that isomorphisms between $\pi_k(X)$ and $\pi_k(Y)$ for all $k$ are induced by a map $\funcdef{f}{X}{Y};$ if an isomorphism exists which is not induced by a map, it need not be the case that the spaces are homotopy equivalent.
+
+For example, let $X=\rp^m\cross S^n$ and $Y=\rp^n\cross S^m.$
+Then the two spaces have isomorphic homotopy groups because they both have a universal covering space homeomorphic to $S^m\cross S^n,$ and it is a double covering in both cases. However, for $m<n,$ $X$ and $Y$ are not homotopy equivalent, as can be seen, for example, by using homology: 
+\begin{eqnarray*}
+H_m(X;\zmod{2})&\isom&\zmod{2}, \quad \textrm{but} \\
+H_m(Y;\zmod{2})&\isom&\zmod{2}\oplus\zmod{2}.
+\end{eqnarray*}
+
+(Here, $\rp^n$ is $n$-dimensional real projective space, and $S^n$ is the $n$-sphere.)
+
+\end{rmk}
+%%%%%
+%%%%%
+\end{document}

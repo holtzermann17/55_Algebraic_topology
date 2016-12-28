@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CapProduct}
+\pmcreated{2013-03-22 16:26:10}
+\pmmodified{2013-03-22 16:26:10}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{cap product}
+\pmrecord{9}{38589}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N45}
+\pmdefines{cap product}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newcommand{\CAP}{\frown}
+\newcommand{\CUP}{\smile}
+
+Let $X$ be a topological space, $(C_*(X),\partial)$ the singular chain complex, and $(C^*(X;\mathbb K),\delta)$ the singular cochain complex in any coefficient group $\mathbb K$. We can define a bilinear pairing operation $$\CAP: C^i(X;\mathbb K)\times C_n(X)\rightarrow C_{n-i}(X),\ \ \ (n\geq i)$$
+in the following way: for each cochain $b\in C^i(X;\mathbb K)$ and each chain $\sigma\in C_n(X)$ we define their  \emph{cap product} $b\CAP\sigma$ as the unique  $(n-i)$-singular chain such that $$a(b\CAP\sigma)=(a\CUP b)(\sigma),$$ where $\CUP: C^j(X;\mathbb K)\times C^h(X;\mathbb K)\rightarrow C^{j+h}(X;\mathbb K)$ denotes the cup product. 
+Combining the definition of cap product with the standard properties of cup product we obtain that $$\partial (b\CAP\xi)=(\partial b)\CAP\xi + (-1)^{\mathrm{dim}(b)}b\CAP\partial(\xi),$$ thus there is a corresponding operation in cohomology $$\CAP: H^i(X;\mathbb K)\otimes H_n(X)\rightarrow H_{n-i}(X),\ \ \ (n\geq i)$$ that we also call \emph{cap product}.
+%%%%%
+%%%%%
+\end{document}

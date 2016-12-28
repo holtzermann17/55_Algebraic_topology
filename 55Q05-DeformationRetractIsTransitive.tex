@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeformationRetractIsTransitive}
+\pmcreated{2013-03-22 15:43:59}
+\pmmodified{2013-03-22 15:43:59}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{deformation retract is transitive}
+\pmrecord{4}{37683}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55Q05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition*}{Proposition}
+\DeclareMathOperator{\id}{id}
+\begin{document}
+\PMlinkescapeword{between}
+\begin{proposition*}
+Let $Z\subset Y\subset X$ be nested topological spaces.  If there exist a 
+\PMlinkname{deformation retraction}{DeformationRetraction} of $X$ onto $Y$ and a deformation retraction of $Y$ onto $Z$,
+then there also exists a deformation retraction of $X$ onto $Z$.  In other words,
+``being a deformation retract of'' is a transitive relation.
+\end{proposition*}
+
+\begin{proof}
+Since $Y$ is a deformation retract of $X$, there is a homotopy 
+$F:I\times X\to X$ between $\id_X$ and a retract $r:X\to Y$ of 
+$X$ onto $Y$.  Similarly, there is a homotopy $G:I\times Y\to Y$
+between $\id_Y$ and a retract $s:Y\to Z$ of $Y$ onto $Z$.
+
+First notice that since both $r$ and $s$ fix $Z$, the map $sr:X\to Z$
+is a retraction.
+
+Now define a map $\widetilde{G}:I\times X\to X$ by 
+$\widetilde{G}=iG(\id_I\times r)$, where $i:Y\hookrightarrow X$ is 
+inclusion.  Observe that
+\begin{itemize}
+\item
+$\widetilde{G}(0,x)=r(x)$ for any $x\in X$;
+\item
+$\widetilde{G}(1,x)=sr(x)$ for any $x\in X$; and
+\item
+$\widetilde{G}(t,a)=a$ for any $a\in Z$.
+\end{itemize}
+Hence $\widetilde{G}$ is a homotopy between the retractions $r$ and $sr$.
+
+Finally we must 
+\PMlinkname{glue together the homotopies}{GluingTogentherContinuousFunctions} $F$ and $\widetilde{G}$ to get a 
+homotopy between $\id_X$ and $sr$.  To do this, define a function
+$H:I\times X\to X$ by
+\[
+H(t,x)=\begin{cases}
+F(2t,x),                & 0\le t\le\frac{1}{2} \\
+\widetilde{G}(2t-1, x), & \frac{1}{2}\le t\le 1.
+\end{cases}
+\]
+Since $F(1,x)=\widetilde{G}(0,x)=r(x)$, the gluing yieds a continuous map.
+By construction, 
+\begin{itemize}
+\item
+$H(0,x)=x$ for all $x\in X$;
+\item
+$H(1,x)=sr(x)$ for all $x\in X$; and
+\item
+$H(t,a)=a$ for any $a\in Z$.
+\end{itemize}
+Hence $H$ is a homotopy between the identity map on $X$ and a retraction of $X$ onto $Z$.  We conclude that $H$ is a deformation retraction of $X$ onto $Z$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

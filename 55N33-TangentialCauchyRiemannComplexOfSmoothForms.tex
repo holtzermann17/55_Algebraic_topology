@@ -1,0 +1,279 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentialCauchyRiemannComplexOfSmoothForms}
+\pmcreated{2013-03-22 18:24:18}
+\pmmodified{2013-03-22 18:24:18}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{tangential Cauchy-Riemann complex of smooth forms}
+\pmrecord{18}{41052}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N33}
+\pmclassification{msc}{13D25}
+\pmclassification{msc}{55R65}
+\pmclassification{msc}{22A22}
+\pmclassification{msc}{32V05}
+\pmclassification{msc}{32V99}
+\pmsynonym{tangential Cauchy-Riemann complexes}{TangentialCauchyRiemannComplexOfSmoothForms}
+%\pmkeywords{tangential Cauchy-Riemann complexes of smooth forms}
+\pmrelated{CRSubmanifold}
+\pmrelated{GenericManifold}
+\pmrelated{CohomologyGroupTheorem}
+\pmrelated{CohomologicalComplexOfTopologicalVectorSpaces}
+\pmrelated{GrassmanHopfAlgebrasAndTheirDualCoAlgebras}
+\pmrelated{CategoricalSequence}
+\pmrelated{ExactSequence2}
+\pmrelated{HomologicalComplexOfTopologicalVectorSpaces}
+\pmrelated{CauchyRiemannEquations}
+\pmrelated{Ca}
+\pmdefines{CR complex}
+\pmdefines{tangential Cauchy-Riemann complex of $C^{\infty)$-smooth forms}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsection{Tangential Cauchy-Riemann complexes}
+
+\subsubsection{Introduction:} \emph{Cauchy-Riemann ($CR$) manifolds and generic submanifolds}
+
+ Let $X$ be a complex manifold of complex dimension $n$. If $M$ is a $\mathcal{C}^{\infty}$-smooth
+real submanifold of real codimension $k$ in $X$, let us denote by $T_{\tau}^{\mathbb{C}} (M)$ the
+\emph{tangential complex space at $\tau \in M$}. Such a manifold $M$ can be locally represented in the form:
+$ M = { z \in \Omega | \rho_1(z)=...= \rho_k(z)=0}$, where all $\rho_i , 1 \leq i \leq k$ are real
+$\mathcal{C}^{\infty}$--functions in an open subset $\Omega$ of X. The submanifold $M$ is called \emph{$CR$} if the
+number $dim_{\mathbb{C}} T_{\tau}^{\mathbb{C}} (M)$ is independent of the point $\tau \in M$. A submanifold $M_g$
+is called \emph{CR generic} if $dim_{\mathbb{C}} T_{\tau}^{\mathbb{C}} (M_g)= (n-k)$ for every $\tau \in M$.
+
+\begin{definition}
+\emph{Tangential Cauchy-Riemann complexes}
+
+Let us consider $M_g$ to be an oriented $\mathcal{C}^{\infty}$-smooth $CR$ \emph{generic submanifold} of real
+codimension $k$ in an $n$-dimensional complex manifold $X$, and let us denote by $\mathsf{S_M}$
+the ideal sheaf in the \PMlinkname{Grassmann algebra}{GrassmanHopfAlgebrasAndTheirDualCoAlgebras} ${\E}$ of germs of complex valued $\mathcal{C}^{\infty}$--forms on
+$X$, that are \emph{locally generated by functions} (which vanish on $M_g$), and by their
+anti-holomorphic differentials. One also has on $X$ the \emph{Dolbeault complexes} for the
+sheaves of germs of smooth forms: 
+
+\[\xymatrix{
+{\E}^{p,*} : 0 \to {\E}^{p,0}\ar[r]^{~~~~~~~\overline{\partial}} & {\E}^{p,1} \ar[r]^{\overline {\partial}} & \cdots \ar[r]^{\overline {\partial}} & {\E}^{p,n}\ar[r] & 0
+}\]
+
+, where ${\E}^{p,j}$ is the sheaf of germs of complex valued $\mathcal{C}^{\infty}$--forms of bidegree $(p,j)$, for $p,j \leq n$. Let us also set $\mathsf{S_M}^{p,j} = \mathsf{S_M} \bigcup {\E}^{p,j} $.
+As $\overline{\partial}\mathsf{S_M}^{p,j} \subset \mathsf{S_M}^{p,j+1}$, for each $0 \leq p \leq n$
+we now have the categorical sequence of subcomplexes of the complex ${\E}^{p,*}$ written as :
+
+\[\xymatrix{
+{\mathsf{S_M}^{p,*}}: 0 \to {\mathsf{S_M}^{p,0}} \ar[r]^{~~~~~~~\overline{\partial}} & {\mathsf{S_M}^{p,1}} \ar[r]^{\overline{\partial}} & \cdots \ar[r]^{\overline{\partial}} & {\mathsf{S_M}^{p,n}}\ar[r] & 0.}
+\]
+
+Therefore, we also have the \emph{quotient complexes} ${\E}^{p,*}$ defined by the exact sequences of
+fine sheaves complexes:
+
+\[\xymatrix{
+{0} \to {\mathsf{S_M}^{p,*}} \ar[r]& {\E}^{p,*} \ar[r]& \cdots \ar[r] & [{\E}^{p,*}]\ar[r] & 0.
+}\]
+
+With the \emph{induced differentials} denoted by $\overline{\partial_M}$ we can now write
+the quotient complex--which is called the \emph{tangential Cauchy-Riemann complex of $\mathcal{C}^{\infty}$--smooth forms}-- as follows:
+
+\[\xymatrix{
+[{\E}^{p,*}]: 0 \to [{E}^{p,0}]~\ar[r]^{~~~~~~~\overline{\partial_M}} & [{\E}^{p,1}] \ar[r]^{\overline{\partial_M}} & \cdots \ar[r]^{\overline{\partial_M}} & [{\E}^{p,n}]\ar[r] & 0.
+}\]
+\end{definition}
+
+\textbf{Remarks:}
+There are two distinct ways of defining the tangential Cauchy-Riemann complex:
+\begin{itemize}
+\item an extrinsic approach that uses the $\overline{\partial_M}$ of the ambient $C^n$;
+
+\item an intrinsic approach that does not utilize the ambient $C^n$, and thus generalizes to abstract
+$CR$ manifolds (\emph{viz.} A. Bogess, 2000).
+\end{itemize}
+
+For further, full details the reader is referred to the recent textbook by Burgess (2000) on this subject.
+
+The \emph{cohomology groups} of $[{\E}^{p,*}]$ on $M \bigcap U$, for $U$ being an open subset
+of $X$, are then appropriately denoted here as $H_{\infty}^{p,j}(M\bigcap U)$.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{CLJL2k}
+Christine Laurent-Thi\'ebaut and J\''urgen Leiterer: Dolbeault Isomorphism for CR Manifolds ({\em preprint}).
+Pr\'epublication de l'Institut Fourier no. 521 (2000).
+
+\bibitem{NMVG87}
+M. Nacinovich and G. Valli, Tangential Cauchy-Riemann complexes on distributions, \emph{Ann. Math. Pure Appl.},
+146 (1987): 123--169.
+
+\bibitem{AB2k}
+A. Boggess, 2000. \emph{$CR$ Manifolds and the Tangential Cauchy-Riemann Complex}, Boca Raton: CRC Press
+(\PMlinkexternal{Book Abstract and Contents on line}{http://books.google.com/books?printsec=frontcover&id=UPQKdeVkLCwC};
+\PMlinkexternal{see also the PM book reference}{http://planetmath.org/?op=getobj&from=books&id=154}).
+
+\bibitem{SDGT2k6}
+Sorin Dragomir and Giuseppe Tomassini, 2006. Differential geometry and analysis on CR manifolds,
+{\em Progress in Mathematics}, vol. 246, Birkh\''auser, Basel.
+(\PMlinkexternal{avail. review in PDF}{http://www.ams.org/bull/2008-45-01/S0273-0979-07-01160-3/S0273-0979-07-01160-3.pdf})
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

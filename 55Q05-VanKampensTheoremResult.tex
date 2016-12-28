@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VanKampensTheoremResult}
+\pmcreated{2013-03-22 14:09:23}
+\pmmodified{2013-03-22 14:09:23}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Van Kampen's theorem result}
+\pmrecord{6}{35576}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55Q05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\begin{document}
+There is a more general version of the theorem of van Kampen which involves 
+the fundamental groupoid $\pi_1(X,A)$ on a {\it set $A$} of base points, 
+defined as the full subgroupoid of $\pi_1(X)$ on the set $A \cap X$. This 
+allows one to compute the fundamental group of the circle $S^1$ and many more 
+cases. 
+
+{\bf Theorem} If $X$ is the union of open sets $U,V$ with intersection $W$,
+and $A$ meets each path component of  $U,V,W$ then the following induced diagram 
+$$\xymatrix{ \pi_1(W,A) \ar [r] \ar [d] & \pi_1(U,A) \ar [d] \\
+\pi_1(V,A)  \ar [r] & \pi_1(X,A)} $$
+is a pushout in the category of groupoids. 
+
+This may be found in R. Brown's book ``Topology: a geometric account of general topology
+and the fundamental groupoid'', Ellis Horwood 1988 (first edition McGraw Hill, 1968).
+It has many useful applications, and was the guide for higher dimensional theorems 
+involving higher homotopy groupoids.
+%%%%%
+%%%%%
+\end{document}

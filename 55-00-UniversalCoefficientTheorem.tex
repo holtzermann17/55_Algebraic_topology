@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniversalCoefficientTheorem}
+\pmcreated{2013-03-22 13:28:17}
+\pmmodified{2013-03-22 13:28:17}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{universal coefficient theorem}
+\pmrecord{20}{34041}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55-00}
+
+%PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+\input xy
+\xyoption{all}
+% define commands here
+\begin{document}
+\PMlinkescapeword{universal}
+The Universal Coefficient Theorem for homology expresses the homology groups with coefficients in an arbitrary abelian group $G$ in terms of the homology groups with coefficients in $\mathbb{Z}$.
+
+\textbf{Theorem (Universal Coefficients for Homology)}\\
+Let $K$ be a chain complex of free abelian groups, and let $G$ any abelian group. Then there exists a split short exact sequence
+
+\[
+\xymatrix{
+0 \ar[r] & H_n(K) \otimes_{\mathbb{Z}} G \ar[r]^{\alpha} & H_n(K \otimes_{\mathbb{Z}} G) \ar[r]^{\beta} & \mbox{Tor}(H_{n-1}(K),G) \ar[r] & 0.}
+\]
+
+As well, $\alpha$  and $\beta$ are natural with respect to chain maps and homomorphisms of coefficient groups. The diagram splits naturally with respect to coefficient homomorphisms but not with respect to chain maps. Here, the functor $\mathrm{Tor(\_,G)}$ is $\mathrm{Tor}^{\mathbb{Z}}_{1}(\_,G)$, the first left derived functor of $\otimes_{\mathbb{Z}} G$.
+
+We can define the map $\alpha$ as follows: Chose a cycle $[u] \in H_n(K)$ represented by $u \in K_n$. Then $u \otimes x \in K_n \otimes G$ is a cycle, so we set $\alpha([u] \otimes x)$ to be the homology class of $u \otimes x$. Of course, one must check that this is well defined, in that it does not depend on our representative for $[u]$.
+
+The universal coefficient theorem for cohomology expresses the cohomology groups of a complex in terms of its homology groups. More specifically we have the following
+
+\textbf{Theorem (Universal Coefficients for Cohomology)}\\
+Let $K$ be a chain complex of free abelian groups, and let $G$ be any abelian group. Then there exists a split short exact sequence
+
+$$
+\xymatrix{
+0 \ar[r] & \mbox{Ext}(H_{n-1}(K),G) \ar[r]^{\beta} & H^n(\mbox{Hom}(K,G)) \ar[r]^{\alpha} & \mbox{Hom}(H_n(K),G) \ar[r] & 0.}
+$$
+
+The homomorphisms $\beta$ and $\alpha$ are natural with respect to coefficient homomorphisms and chain maps. The diagram splits naturally with respect to coefficient homomorphisms but not with respect to chain maps. Here $\mathrm{Ext}(\_,G)$ is $\mathrm{Ext}^{1}_{\mathbb{Z}}(\_,G)$, the first right derived functor of $\mathrm{Hom}_\mathbb{Z}(\_,G)$.
+
+The map $\alpha$ above is defined above in the following manner: Let $[u] \in H^n(\mbox{Hom}(K,G))$ be represented by the cocycle $u \in \mbox{Hom}(K_n,G)$. For $[x]$ a cycle in $H_n(K)$ represented by $x \in K_n$, we have $u(x) \in G$. We therefore set $\alpha([u])([x]) = u(x)$. Again, it is necessary to check that this does not depend on the chosen representatives $x$ and $u$.
+
+
+\begin{thebibliography}{9}
+\bibitem{massey} W. Massey, {\em Singular Homology Theory}, Springer-Verlag, 1980
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

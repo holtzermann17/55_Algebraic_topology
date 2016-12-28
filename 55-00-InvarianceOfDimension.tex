@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InvarianceOfDimension}
+\pmcreated{2013-03-22 13:42:38}
+\pmmodified{2013-03-22 13:42:38}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{invariance of dimension}
+\pmrecord{7}{34390}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+The following non-trivial result was proven by Brouwer \cite{brouwer_bib} 
+around 1910 \cite{hatcher_at}.
+
+{\bf Theorem\, (Invariance of dimension)}
+ Suppose $U$ and $V$ are open subsets of $\sR^n$ respectively $\sR^m$. 
+If $U$ and $V$ are non-empty and homeomorphic, then $n=m$. 
+
+\begin{thebibliography}{9}
+\bibitem{brouwer_bib}
+ The MacTutor History of Mathematics archive, \PMlinkexternal{entry on Luitzen Egbertus Jan Brouwer}{http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Brouwer.html}
+  \bibitem{hatcher_at} A. Hatcher, \emph{Algebraic Topology}, Cambridge University Press, 2002. Also available 
+ \PMlinkexternal{online}{http://www.math.cornell.edu/~hatcher/AT/ATpage.html}.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

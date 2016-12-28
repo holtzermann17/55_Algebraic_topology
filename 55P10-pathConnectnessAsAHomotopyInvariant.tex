@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{pathConnectnessAsAHomotopyInvariant}
+\pmcreated{2013-03-22 18:02:15}
+\pmmodified{2013-03-22 18:02:15}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{(path) connectness as a homotopy invariant}
+\pmrecord{8}{40558}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P10}
+\pmrelated{Homotopy}
+\pmrelated{homotopyequivalence}
+\pmrelated{path}
+\pmrelated{connectedspace}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Theorem.} Let $X$ and $Y$ be arbitrary topological spaces with $Y$ (path) connected. If there are maps $f:X\rightarrow Y$ and $g:Y\rightarrow X$ such that $g\circ f:X\rightarrow X$ is homotopic to the identity map, then $X$ is (path) connected.\\ \\
+\textbf{\textit{Proof:}} Let $f:X\rightarrow Y$ and $g:Y\rightarrow X$ be maps satisfying theorem's assumption. Furthermore let $X=\bigcup X_i$ be a decomposition of $X$ into (path) connected components. Since $Y$ is (path) connected, then $g(Y)\subseteq X_i$ for some $i$. Thus $(g\circ f)(X)\subseteq X_i$. Now let $H:I\times X\rightarrow X$ be the homotopy from $g\circ f$ to the identity map. Let $\alpha_{x}:I\rightarrow X$ be a path defined by the formula: $\alpha_{x}(t)=H(t,x)$. Since for all $x\in X$ we have $\alpha_{x}(0)\in X_i$ and $I$ is path connected, then $\alpha_{x}(I)\subseteq X_i$. Therefore $H(I\times X)\subseteq X_i$, but $H(\{1\}\times X)=X$ which implies that $X_i=X$, so $X$ is (path) connected. $\square$ \\ \\
+Straightforward application of this theorem is following:\\ \\
+\textbf{Corollary.} Let $X$ and $Y$ be homotopy equivalent spaces. Then $X$ is (path) connected if and only if $Y$ is (path) connected.
+%%%%%
+%%%%%
+\end{document}

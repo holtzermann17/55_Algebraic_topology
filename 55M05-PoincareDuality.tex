@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoincareDuality}
+\pmcreated{2013-03-22 13:11:36}
+\pmmodified{2013-03-22 13:11:36}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Poincar\'e duality}
+\pmrecord{10}{33652}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M05}
+\pmsynonym{Poincar\'e isomorphism}{PoincareDuality}
+\pmrelated{DualityInMathematics}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\Z{\mathbb{Z}}
+\begin{document}
+If $M$ is a compact, oriented, $n$-dimensional manifold, then there is a canonical (though non-\PMlinkname{natural}{NaturalTransformation}) isomorphism
+$$D:H^q(M,\Z)\to H_{n-q}(M,\Z)$$ (where $H^k(M,\Z)$ is the $k$th homology group of $M$ with integer coefficients and $H_k(M,\Z)$ the $k$th \PMlinkname{cohomology}{DeRhamCohomology} group) for all $q$, which is given by cap product with a generator of $H_n(M,\Z)$
+(a choice of a generator here corresponds to an orientation).  This isomorphism exists with
+coefficients in $\mathbb{Z}/2\mathbb{Z}$ regardless of orientation.
+
+This isomorphism gives a nice interpretation to cup product.  If $X,Y$ are transverse submanifolds of $M$, then $X\cap Y$ is also a submanifold.  All of these submanifolds represent homology classes of $M$ in the appropriate dimensions, and $$D^{-1}([X])\cup D^{-1}([Y])=D^{-1}([X\cap Y]),$$ where $\cup$ is cup product, and $\cap$ in intersection, not cap product.
+%%%%%
+%%%%%
+\end{document}

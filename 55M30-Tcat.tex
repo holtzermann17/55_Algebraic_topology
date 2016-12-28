@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Tcat}
+\pmcreated{2013-03-22 15:54:54}
+\pmmodified{2013-03-22 15:54:54}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{t-cat}
+\pmrecord{7}{37919}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M30}
+\pmrelated{RoundComplexity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\bf t-cat} of a topological space $X$ is the minimal number of open sets that cover $X$ such that each open set in the cover has the homotopy type of the unit circle $S^1$.  This means that for each open set $U$, the inclusion $U\stackrel{i}\hookrightarrow X$ is homotopic to some factorization $U\stackrel{a}\to S^1\stackrel{b}\to X$, i.e.
+$$i\simeq b\circ a.$$
+ 
+When $X$ is manifold, this is related to the round complexity of $X$.
+
+\begin{thebibliography}{9}
+\bibitem{dsgk} D. Siersma, G. Khimshiasvili, {\it On minimal round functions}, Preprint 1118, Department of Mathematics, Utrecht University, 1999, pp. 18.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

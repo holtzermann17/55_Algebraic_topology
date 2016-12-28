@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DegreemapOfSpheres}
+\pmcreated{2013-03-22 13:22:12}
+\pmmodified{2013-03-22 13:22:12}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{degree (map of spheres)}
+\pmrecord{12}{33897}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M25}
+\pmdefines{degree}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+\PMlinkescapeword{degree}
+Given a non-negative integer $n$, let $S^n$ denote the $n$-dimensional sphere. Suppose $f\colon S^n \to S^n$ is a continuous map. Applying the $n^{th}$ reduced homology functor $\widetilde{H}_n(\_)$, we obtain a homomorphism $f_*\colon \widetilde{H}_n(S^n) \to \widetilde{H}_n(S^n)$. Since $\widetilde{H}_n(S^n) \approx \Z$, it follows that $f_*$ is a homomorphism $\Z \to \Z$. Such a map must be multiplication by an integer $d$. We define the \emph{degree} of the map $f$, to be this $d$.
+
+\subsection{Basic Properties}
+\begin{enumerate}
+\item If $f,g\colon S^n \to S^n$ are continuous, then $\deg(f \circ g) = \deg(f)\cdot\deg(g)$.
+\item If $f,g\colon S^n \to S^n$ are homotopic, then $\deg(f) = \deg(g)$.
+\item The degree of the identity map is $+1$.
+\item The degree of the constant map is $0$.
+\item The degree of a reflection through an $(n+1)$-dimensional hyperplane through the origin is $-1$.
+\item The antipodal map, sending $x$ to $-x$, has degree $(-1)^{n+1}$. This follows since the map $f_i$ sending $(x_1,\ldots,x_i,\ldots,x_{n+1}) \mapsto (x_1,\ldots,-x_i,\ldots,x_{n+1})$ has degree $-1$ by (4), and the compositon $f_1\circ\cdots\circ f_{n+1}$ yields the antipodal map.
+\end{enumerate}
+
+\subsection{Examples}
+If we identify $S^1 \subset \mathbb{C}$, then the map $f : S^1 \to S^1$ defined by $f(z) = z^k$ has degree $k$. It is also possible, for any positive integer $n$, and any integer $k$, to construct a map $f\colon S^n \to S^n$ of degree $k$.
+
+Using degree, one can prove several theorems, including the so-called 'hairy ball theorem', which \PMlinkescapetext{states} that there exists a continuous non-zero vector field on $S^n$ if and only if $n$ is odd.
+%%%%%
+%%%%%
+\end{document}

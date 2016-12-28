@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hspace}
+\pmcreated{2013-03-22 16:18:18}
+\pmmodified{2013-03-22 16:18:18}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{H-space}
+\pmrecord{4}{38427}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P45}
+\pmsynonym{Hopf-space}{Hspace}
+\pmsynonym{H space}{Hspace}
+\pmsynonym{Hopf space}{Hspace}
+
+
+\begin{document}
+\PMlinkescapeword{basepoint}
+\PMlinkescapeword{fixed}
+\PMlinkescapeword{homotopies}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{relative}
+
+A topological space $X$ is said to be an \emph{H-space} (or \emph{Hopf-space})
+if there exists
+a continuous binary operation $\varphi\colon X\times X\to X$ 
+and a point $p\in X$ such that the functions 
+$X\to X$ defined by $x\mapsto\varphi(p,x)$ and $x\mapsto\varphi(x,p)$
+are both homotopic to the identity map via homotopies that leave $p$ fixed.
+The element $p$ is sometimes referred to as an `identity',
+although it need not be an identity element in the usual sense.
+Note that the definition implies that $\varphi(p,p)=p$.
+
+Topological groups are examples of H-spaces.
+
+If $X$ is an H-space with `identity' $p$,
+then the fundamental group $\pi_1(X,p)$ is abelian.
+(However, it is possible for the fundamental group to be non-abelian
+for other choices of basepoint, if $X$ is not path-connected.)
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneticNets}
+\pmcreated{2013-03-22 18:11:28}
+\pmmodified{2013-03-22 18:11:28}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{genetic nets}
+\pmrecord{50}{40767}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55U99}
+\pmclassification{msc}{92D15}
+\pmclassification{msc}{03B50}
+\pmclassification{msc}{92B20}
+\pmclassification{msc}{92B05}
+\pmsynonym{genome network}{GeneticNets}
+\pmsynonym{genome}{GeneticNets}
+\pmsynonym{entity of all interacting genes in a living organism}{GeneticNets}
+%\pmkeywords{category of genetic networks}
+%\pmkeywords{algebraic category of  Lukasiewicz algebras}
+%\pmkeywords{Lukasiewicz-Moisil generalized topos}
+\pmrelated{DirectedGraph}
+\pmrelated{AlgebraicCategoryOfLMnLogicAlgebras}
+\pmrelated{OrganismicSets3}
+\pmrelated{OrganismicSets2}
+\pmrelated{JanLukasiewicz}
+\pmrelated{SupercategoriesOfComplexSystems}
+\pmrelated{MolecularSetTheory}
+\pmrelated{CategoryTheory}
+\pmrelated{OrganismicSetTheory}
+\pmrelated{FunctionalBiology}
+\pmdefines{gene net}
+\pmdefines{Bayesian model}
+\pmdefines{genetic network}
+\pmdefines{N-state net models}
+\pmdefines{two-state models}
+\pmdefines{genome Boolean models}
+\pmdefines{category of genetic nets}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\subsection{Introduction}
+ 
+ \emph{Genetic `nets', or networks}, $GN$ -- that represent a living organism's genome --are mathematical models of functional genes linked through their non-linear, dynamic interactions. 
+
+ A simple genetic (or gene) network $GN_s$  may be thus represented by a directed graph $G_D$  whose nodes (or vertices) are the genes $g_i$ of a cell or a multicellular organism and whose edges (arcs) are arrows representing the actions of a gene $a_g^i$ on a linked gene or genes; such a directed graph representing a gene network has a canonically associated biogroupoid $\mathcal{G}_B$ which is generated or directly computed from the directed graph $G_D$. 
+
+\subsection{Boolean vs. N-state models of genetic networks in $LM_n$- logic algebras}
+
+ The simplest, Boolean, or two-state models of genomes represented by such directed graphs of gene networks form a proper subcategory of the category of n-state genetic networks, $\textbf{GN}_{\L{}M_n}$ that operate on the basis of a \L{}ukasiewicz-Moisil n-valued logic algebra $LM_n$. Then, the category of genetic networks,
+$\textbf{GN}_{\L{}M_n}$ was shown in ref. \cite{ICBetal2k6} to form a subcategory of the 
+\PMlinkname{algebraic category of \L{}ukasiewicz algebras}{AlgebraicCategoryOfLMnLogicAlgebras}, $\mathcal{LM}$ \cite{ICB77,ICBetal2k6}. There are several published, extensive computer simulations of Boolean two-state models of both genetic and neuronal networks (for a recent summary of such computations see, for example, ref. \cite{ICBetal2k6}. Most, but not all, such mathematical models are Bayesian, and therefore involve computations for random networks that may have limited biological relevance as the topology of genomes, defined as their connectivity, is far from being random.  
+
+
+ The category of automata (or sequential machines based on Chrysippean or Boolean logic) and the category of $(M,R)$-systems (which can be realized as concrete metabolic-repair biosystems of enzymes, genes, and so on) are subcategories of the category of gene nets $\textbf{GN}_{\L{}M_n}$. The latter corresponds to organismic sets of zero-th order $S_0$ in the simpler, Rashevsky's theory of organismic sets.
+ 
+
+\begin{thebibliography}{9}
+
+\bibitem{ICB77}
+Baianu, I.C. (1977). A Logical Model of Genetic Activities in \L{}ukasiewicz Algebras: The
+Non-linear Theory., {\em Bulletin of Mathematical Biology}, \textbf{39}:249-258.
+
+\bibitem{ICBetal2k6}
+Baianu, I.C., Brown, R., Georgescu, G., Glazebrook, J.F. (2006). Complex nonlinear biodynamics in
+categories, higher dimensional algebra and \L{}ukasiewicz-Moisil topos: transformations of neuronal,
+genetic and neoplastic networks. {\em Axiomathes} \textbf{16}(1-2):65-122.
+
+\bibitem{ICBetal2k8}
+Baianu, I.C., J. Glazebrook, G. Georgescu and R.Brown. (2008). A Novel Approach to
+Complex Systems Biology based on Categories, Higher Dimensional Algebra and \L{}ukasiewicz Topos. 
+{\em Manuscript in preparation}, 16 pp.
+
+\bibitem{GGCV70}
+Georgescu, G. and C. Vraciu (1970). On the Characterization of \L{}ukasiewicz Algebras.,
+\emph{J. Algebra}, \textbf{16} (4), 486-495.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

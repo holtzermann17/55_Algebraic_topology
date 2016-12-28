@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeformationRetract}
+\pmcreated{2013-03-22 13:31:44}
+\pmmodified{2013-03-22 13:31:44}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{deformation retract}
+\pmrecord{14}{34121}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55Q05}
+\pmrelated{Retract}
+\pmdefines{strong deformation retract}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ and $Y$ be topological spaces such that $Y\subset X$.
+A \emph{deformation retract} of $X$ onto $Y$ is a collection of
+mappings $f_t:X\rightarrow X$, $t\in [0,1]$ such that
+\begin{enumerate}
+\item $f_0 = id_X$, the identity mapping on $X$,
+\item $f_1(X) \subseteq Y$,
+\item $Y$ is a retract of $X$ via $f_1$ (that is, $f_1$ restricted to $Y$ is the identity on $Y$)
+\item the mapping $X\times I\rightarrow X$, $(x,t)\mapsto f_t(x)$ is continuous, where the topology on $X\times I$ is the product topology.
+\end{enumerate}
+
+Of course, by condition 3, condition 2 can be improved: $f_1(X)=Y$.
+
+A deformation retract is called a \emph{strong deformation retract} if condition 3 above is replaced by a stronger form: $Y$ is a retract of $X$ via $f_t$ for every $t\in [0,1]$.
+
+\subsubsection*{Properties}
+\begin{itemize}
+\item Let $X$ and $Y$ be as in the above definition. Then a collection of
+mappings $f_t:X\rightarrow X$, $t\in [0,1]$ is 
+a deformation retract (of $X$ onto $Y$) if and only if it is a 
+\PMlinkname{homotopy}{HomotopyOfMaps} rel Y \PMlinkescapetext{between} $\operatorname{id}_X$ and some retraction $r$ of $X$ onto $Y$. 
+\end{itemize}
+
+\subsubsection*{Examples}
+\begin{itemize}
+\item If $x_0\in \mathbb{R}^n$, then
+$f_t(x)=(1-t)x+tx_0$, $x\in \mathbb{R}^n$  shows that $\mathbb{R}^n$ deformation retracts onto $\{x_0\}$.
+ Since $\{x_0\} \subset \mathbb{R}^n$,
+it follows that deformation retract is not an equivalence relation.
+\item The same map as in the previous example can be used to deformation retract any star-shaped set in $\mathbb{R}^n$ onto a point.
+\item we obtain a
+deformation retraction of
+$\mathbb{R}^n\backslash \{0\}$ onto the \PMlinkid{$(n-1)$-sphere }{186} $S^{n-1}$ by setting $$f_t(x)=(1-t)x+t \displaystyle{\frac{x}{||x||}},$$ where $x\in \mathbb{R}^n\backslash \{0\}$, $n>0$,  
+\item The \PMlinkid{M\"obius strip}{3278} deformation retracts onto the circle $S^1$.
+\item The $2$-torus with one point removed deformation retracts onto
+two copies of $S^1$ joined at one point. (The circles can be
+chosen to be longitudinal and latitudinal circles of the torus.)
+\item The characters E,F,H,K,L,M,N, and T all deformation retract onto the charachter I, while the letter Q deformation retracts onto the letter O.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThomIsomorphismTheorem}
+\pmcreated{2013-03-22 15:40:52}
+\pmmodified{2013-03-22 15:40:52}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{Thom isomorphism theorem}
+\pmrecord{6}{37622}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55-00}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{theorem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\R}{{\mathbb R}} % The reals
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\cpxs}{{\mathbb C}} % The "complexes" :)
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\newcommand{\Th}{\operatorname{Th}}
+\theorembodyfont{\upshape}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newtheorem{exm}{Example}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\projp}{{\mathbb R}P}
+
+% open cells (not very nice...)
+\newcommand{\oce}{\smash{\overset{\circ}e}} 
+\newcommand{\ocD}{\smash{\overset{\circ}D}} 
+
+\newcommand{\susp}{\Sigma}
+\newcommand{\restr}[2]{{#1}|_{#2}}
+
+\renewcommand{\hom}{\mathop{\mathrm{Hom}}} % Homomorphisms functor
+\newcommand{\rp}{\reals P} % real projective space
+\newcommand{\cp}{\cpxs P} % complex projective space
+\newcommand{\zmod}[1]{\integs / #1\integs} % Z/nZ
+\newcommand{\pt}{\mathrm{pt}}
+\begin{document}
+Let $\xi\to X$ be a $d$-dimensional vector bundle over a topological space $X$, and let $h^*$ be a multiplicative generalized cohomology theory, such as ordinary cohomology. Let $\tau\in h^d(D(\xi),S(\xi))$ be a Thom class for $\xi$, where $D(\xi)$ and $S(\xi)$ are the associated disk and sphere bundles of $\xi$. 
+
+\newcommand{\rh}{\tilde{h}}
+
+Since $h^*$ is a multiplicative theory, there is a generalized cup product map $$h^*(D(\xi))\tensor_{h^*}h^*(D(\xi),S(\xi))\to h^*(D(\xi),S(\xi)),$$ where the tensor product is over the coefficient ring $h^*(\pt)$ of the theory. Using the isomorphism $p^*:h^*(X)\isom h^*(D(\xi))$ induced by the homotopy equivalence $p:D(\xi)\to X$, we obtain a homomorphism 
+$$T: h^n(X)\to h^{n+d}(D(\xi),S(\xi))\isom \rh^{n+d}(X^\xi) $$
+taking $\alpha$ to $p^*(\alpha)\cdot\tau$. Here $X^\xi$ stands for the Thom space $D(\xi)/S(\xi)$ of $\xi$.
+
+\medskip
+\textbf{Thom isomorphism theorem}\quad $T$ is an isomorphism $h^*(X)\isom \rh^{*+d}(X^\xi)$ of graded modules over $h^*(\pt)$.
+\medskip
+
+\begin{rmk} When $\xi$ is a trivial bundle of dimension $1$, this generalizes the suspension isomorphism. In fact, a typical proof of this theorem for compact $X$ proceeds by induction over the number of open sets in a trivialization of $\xi$, using the suspension isomorphism as the base case and  the Mayer-Vietoris sequence to carry out the inductive step.
+\end{rmk}
+
+\begin{rmk}
+There is also a homology Thom isomorphism $\rh_{*+d}(X^\xi)\isom h_*(X)$, in which the map is given by cap product with the Thom class rather than cup product.
+\end{rmk}
+%%%%%
+%%%%%
+\end{document}

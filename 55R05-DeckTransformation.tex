@@ -1,0 +1,224 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeckTransformation}
+\pmcreated{2013-03-22 13:26:49}
+\pmmodified{2013-03-22 13:26:49}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{deck transformation}
+\pmrecord{17}{34010}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R05}
+\pmsynonym{covering transformation}{DeckTransformation}
+\pmrelated{PoperlyDiscontinuousAction}
+\pmrelated{ClassificationOfCoveringSpaces}
+\pmdefines{deck transformation}
+\pmdefines{covering transformation}
+\pmdefines{equivalence}
+\pmdefines{self equivalence}
+\pmdefines{self-equivalence.}
+\pmdefines{Galois group of a cover}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+\newcommand{\Au}{\operatorname{Aut}}
+\def\co{\colon\thinspace}
+\begin{document}
+Let $p\co E\to X$ be a covering map.  A \emph{deck transformation} or
+\emph{covering transformation} is a map $D\co E\to E$ such that $p\circ
+D=p$, that is, such that the following diagram commutes.
+$$\xymatrix{ {E}\ar[dr]_{p}\ar[rr]^{D}&&{E}\ar[dl]^{p}\\
+          &{X}&  }$$
+
+It is straightforward to check that the set of deck transformations is closed
+under compositions and the operation of taking inverses. Therefore the set
+of deck transformations is a subgroup of the group of homeomorphisms of $E$. 
+This group  will be denoted by $\Au(p)$ and referred
+to as the \emph{group of deck transformations} or as the \emph{automorphism
+group} of $p$.  It is worth noting that an alternative name for the group of deck transformations is the \emph{Galois group} of the covering.  This terminology arises from an analogy with the fundamental theorem of Galois theory which gives the inclusion-reversing identification addressed in the classification of covering spaces.
+
+In the more general context of fiber bundles deck transformations correspond
+to \emph{isomorphisms over the identity} since the above diagram could be
+expanded to:
+  $$\xymatrix{ {E}\ar[d]_{p}\ar[r]^{D}&{E}\ar[d]^{p}\\
+               {X}\ar[r]_{\text{id}}& {X}  }$$ 
+An isomorphism not necessarily over the identity is called an
+\emph{equivalence}. In other words an equivalence between two covering maps    
+ $p\co E\to X$ and  $p'\co E'\to X'$ is a pair of maps $(\tilde f,f)$ that make the
+ following diagram commute
+$$\xymatrix{ {E'}\ar[d]_{p'}\ar[r]^{\tilde f}&{E}\ar[d]^{p}\\
+               {X'}\ar[r]_{f}& {X}  }$$ 
+ i.e. such that $p\circ\tilde f=f\circ p'$.
+
+Deck transformations should be perceived as the symmetries of $p$ (hence the
+notation $\Au(p)$), and therefore they should be expected to preserve any
+concept 
+that is defined in
+terms of $P$. Most of what follows is an instance of this meta--principle.
+
+
+\section*{Properties of deck transformations}
+For this section  we assume that  the total space $E$ is connected and locally
+path connected.
+Notice that a deck transformation is a lifting of $p\co E\to X$ and
+therefore (according to the lifting theorem) it is uniquely determined by
+the image of a point. In other words:
+\begin{prop}\label{prop:uniq}
+  Let  $D_1,D_2\in \Au(p)$. If there is  $e\in E$ such that $D_1(e)=D_2(e)$
+  then $D_1=D_2$. In particular if $D_1(e)=e$ for some $e\in E$ then
+  $D_1=\text{id}$.  
+\end{prop}
+
+Another simple (or should I say double?) application of the lifting theorem gives
+
+\begin{prop}\label{prop:exist}
+  Given $e,e' \in E$ with $p(e)=p(e')$, there is a $D\in \Au(p)$ such that $D(e)=e'$ if and
+  only if $p_*\left(\pi_1(E,e)\right)=p_*\left(\pi_1(E,e')\right)$, where
+  $p_*$  denotes $\pi_1(p)$. 
+\end{prop}
+
+
+\begin{prop}
+  Deck transformations commute with the monodromy action. That is if $*\in
+  X$, $e\in p^{-1}(*)$, $\Gg\in \pi_1(X,*)$ and $D\in \Au(p)$ then 
+$$D(x\cdot\Gg)=D(x)\cdot\Gg$$
+where $\cdot$ denotes the monodromy action.
+\end{prop}
+\begin{proof}
+  If $\tilde \Gg$ is a lifting of $\Gg$ starting at $e$, then
+  $D\circ\tilde\Gg$  is a lifting of $\Gg$ staring at $D(e)$.
+\end{proof}
+
+We simplify notation by using $\pi_e$ to denote the fundamental group
+$\pi_1(E,e)$ for $e\in E$.
+
+\begin{thm} For all  $e\in E$ 
+  $$\Au(p)\cong N\left(p_*(\pi_e)\right)/p_*(\pi_e)$$
+where,  $ N(p_*\pi_e)$ denotes the normalizer of  $p_*\pi_e$ inside
+$\pi_1\left(X,p(e)\right)$. 
+\end{thm}
+
+\begin{proof}
+  Denote $N(p_*\pi_e)$ by $N$.  Note that if  $\Gg\in N$ then
+  $p_*(\pi_{e\cdot\Gg})=p_*(\pi_e)$. Indeed, recall that
+  $p_*(\pi_e)$ is the stabilizer of $e$ under the momodromy
+  action and therefore we have  
+ $$ p*(\pi_{e\cdot\Gg})=
+ \operatorname{Stab}(e\cdot\Gg)=\Gg\operatorname{Stab}(e)\Gg^{-1}=\Gg p_*
+ (\pi_e)\Gg^{-1}= p_* (\pi_e)$$
+where, the last equality follows from the definition of normalizer.
+One can then
+define a map  
+$$\Gf\co N\to \Au(p)$$
+as follows: For $\Gg\in N$ let $\Gf(\Gg)$ be the deck transformation that
+maps $e$ to $e\cdot\Gg$. Notice that Proposition~\ref{prop:exist} ensures
+the existence of such a deck transformation while
+Proposition~\ref{prop:uniq} guarantees its uniqueness. Now
+\begin{itemize}
+\item $\Gf$ is a homomorphism.\newline
+Indeed $\Gf(\Gg_1\Gg_2)$ and  $\Gf(\Gg_1)\circ\Gf(\Gg_2)$ are deck
+transformations that map $e$ to $e\cdot(\Gg_1\Gg_2)$.
+\item $\Gf$ is onto.\newline
+Indeed given $D\in \Au(p)$ since $E$ is path connected one can find a path
+$\alpha$ in $E$ connecting $e$ and $D(e)$. Then $p\circ\alpha$ is a loop in
+$X$ and $D=\Gf(p\circ\alpha)$.
+\item $\ker(\Gf)=p_*(\pi_e)$. \newline
+ Obvious.
+
+Therefore the theorem follows by the first isomorphism theorem.
+\end{itemize}
+   
+\end{proof}
+
+\begin{cor}
+  If $p$ is regular covering then
+$$\Au(p)\cong \pi_1(X,*)/p_*\left(\pi_1(E,e)\right).$$
+\end{cor}
+
+\begin{cor}
+  If $p$ is the universal cover then 
+$$\Au(p)\cong \pi_1(X,*)\,.$$
+\end{cor}
+%%%%%
+%%%%%
+\end{document}

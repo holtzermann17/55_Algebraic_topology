@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BarycentricSubdivision}
+\pmcreated{2013-03-22 16:50:12}
+\pmmodified{2013-03-22 16:50:12}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{barycentric subdivision}
+\pmrecord{20}{39080}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55U05}
+\pmclassification{msc}{55U10}
+\pmrelated{CentreOfMassOfPolygon}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+\newrgbcolor{lightblue}{0.5 1 1}
+\newrgbcolor{purple}{1 0.5 1}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+Recall that an abstract $n$-simplex is an abstract simplicial complex $K$ such that $\bigcup K\in K$ and the cardinality of $\bigcup K$ is $n+1$.  It can be identified as the powerset (minus the empty set element) of a set $V_K$ of elements $v_1,\ldots, v_n$, called the vertices of $K$.
+
+The \emph{barycentric subdivision} of an abstract simplex $K$ is the construction of a certain abstract simplicial complex $K'$ from $K$.  $K'$ itself is called the \emph{barycentric subdivision} of $K$.  Before giving the general construction, let us describe some simple cases, specifically, when $n=1,2,$ and $3$ and when $V_K$ is embedded in some ambient Euclidean space $\mathbb{R}^m$ where $m\ge n$:
+\begin{itemize}
+\item When $n=1$, $V_K$ is just a one-point space.  We define the barycentric subdivision of $K$ to be $K$ itself: $K'=K$.
+\item When $n=2$, $V_K$ consists of two distinct points $v_1$ and $v_2$.  Take the midpoint $w$ of $v_1$ and $v_2$.  Then the barycentric subdivision $K'$ is defined to be the union of powersets of $\lbrace v_1, w\rbrace$ and $\lbrace v_2, w\rbrace$.  Abstracting this process, $K'$ can be thought of as the union of all the $2$-simplices having $w$ as a vertex.
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{bary.eps}
+\end{center}
+\end{figure}
+\item When $n=3$, $V_K$ consists of three distinct non-collinear points, $v_1,v_2,v_3$.  We may picture them as the vertices of a triangle.  From each of these vertices, draw a line connecting the vertex to the midpoint of the opposite side.  This construction creates six smaller triangles, such that each pair either intersect at a common vertex or a common side.  The barycentric subdivision $K'$ is defined as the union of each of these smaller triangles considered as a simplex.  In other words, $K'$ is the union of the powerset of the three-point sets that correspond to these smaller triangles.  
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{bary2.eps}
+\end{center}
+\end{figure}
+Abstracting this process, we may take $w$ as the barycenter of $v_1,v_2,$ and $v_3$.  Label $w=w(123)$, so $$w(123)=\frac{1}{3}(v_1+v_2+v_3).$$  Next, take $w(12),w(23),$ and $w(13)$ as the midpoints of $(v_1,v_2)$, $(v_2,v_3)$ and $(v_1,v_3)$.  Finally, relabel $v_1,v_2,v_3$ as $w(1),w(2),w(3)$.  We form six three-point sets:
+$$W(32):=\lbrace w(123), w(12), w(1) \rbrace,\quad W(31):=\lbrace w(123), w(12), w(2) \rbrace,$$
+$$W(23):=\lbrace w(123), w(13), w(1) \rbrace,\quad W(21):=\lbrace w(123), w(13), w(3) \rbrace,$$
+$$W(13):=\lbrace w(123), w(23), w(2) \rbrace,\quad W(12):=\lbrace w(123), w(23), w(3) \rbrace.$$
+The formation of any one of these sets goes as follows:
+\begin{enumerate}
+\item it must contain the barycenter $w(123)$;
+\item from $w(123)$, pick one of the midpoints $w(12),w(23),w(13)$ to be the next point in the set;
+\item once the midpoint is chosen, pick one of the initial vertices so that the label occurs in the labeling of the midpoint.  For example, if $w(23)$ were picked, only one of vertices $w(2)$ or $w(3)$ is allowed to be picked next.
+\end{enumerate}
+The logic behind the labeling $ab$ of $W(ab)$ comes from the fact that the labeling of the midpoint in $W(ab)$ does not contain $a$ and the labeling of the initial vertex in $W(ab)$ does not contain $b$.
+
+Finally, we form $K'$ as the union of the powersets of $W(ab)$'s.
+\end{itemize}
+
+In the last example, one can abstract the construction one step further.  Since each labelled point is the barycenter of at least one of the initial vertices $v_i$, we can uniquely identify any non-empty subset $V$ of $V_K$ with the labelled point that is the barycenter of the point(s) in $V$.  Then each $W(ab)$ above can be identified as a maximal chain (ordered by inclusion) in $K$ with $\varnothing$ deleted.
+
+This suggests the general construction of the barycentric subdivision of an abstract $n$-simplex.
+
+\textbf{Definition}.  Let $K$ be an abstract $n$-simplex.  Order $K$ by inclusion $\subseteq$.  Let $$\mathcal{C}_K:=\big\lbrace P(C) \mid C\mbox{ is a maximal chain in }K\big\rbrace.$$  The \emph{barycentric subdivision} $K'$ of $K$ is:
+$$K'=\bigcup \mathcal{C}_K - \lbrace \varnothing\rbrace.$$
+
+It is easy to see that every maximal chain in $K$ is an $(n-1)$-simplex whose powerset is an $n$-simplex (so isomorphic to $K$).  In addition, the barycentric subdivision $K'$ of $K$ is a simplicial complex with $n!$ maximal simplices, each of which is isomorphic to $K$.
+
+\textbf{Remark}.  This definition can be generalized to include the barycentric subdivision of an abstract simplicial complex.  If $K$ is an abstract simplicial complex, then the \emph{barycentric subdivision} $K'$ of $K$ is the union of the barycentric subdivisions of the individual maximal simplicies in $K$.  Below are two examples:
+\begin{itemize}
+\item
+In this example (pictured above), the maximal simplices of $K$ consist of a triangle, and two line segments.
+\begin{center}
+\begin{pspicture}(0,-1)(8,3)
+\pspolygon[fillstyle=solid,fillcolor=lightblue](0,0)(0,3)(3,0)
+\psline(0,3)(3,0)
+\psline(3,0)(3,3)
+\psline(0,3)(3,3)
+\psdots(0,0)
+\psdots(0,3)
+\psdots(3,0)
+\psdots(3,3)
+\rput[b](1.5,-1){$K$}
+\pspolygon[fillstyle=solid,fillcolor=lightblue](5,0)(5,3)(8,0)
+\psline(5,3)(8,0)
+\psline(5,0)(6.5,1.5)
+\psline(5,3)(6.5,0)
+\psline(8,0)(5,1.5)
+\psline(5,3)(8,3)
+\psline(8,0)(8,3)
+\psdots(5,0)
+\psdots(5,3)
+\psdots(8,0)
+\psdots(8,3)
+\psdots(5,1.5)
+\psdots(6.5,0)
+\psdots(6.5,1.5)
+\psdots(8,1.5)
+\psdots(6.5,3)
+\psdots(6,1)
+\rput[b](6.5,-1){$K'$}
+\end{pspicture}
+\end{center}
+\item
+Here (pictured below), the maximal simplices are two triangles meeting at a common edge.
+\begin{center}
+\begin{pspicture}(0,-1)(8,3)
+\pspolygon[fillstyle=solid,fillcolor=lightblue](0,0)(0,3)(3,0)
+\pspolygon[fillstyle=solid,fillcolor=purple](0,3)(3,3)(3,0)
+\psdots(0,0)
+\psdots(0,3)
+\psdots(3,0)
+\psdots(3,3)
+\psline(0,3)(3,0)
+\rput[b](1.5,-1){$K$}
+\pspolygon[fillstyle=solid,fillcolor=lightblue](5,0)(5,3)(8,0)
+\pspolygon[fillstyle=solid,fillcolor=purple](5,3)(8,3)(8,0)
+\psdots(5,0)
+\psdots(5,3)
+\psdots(8,0)
+\psdots(8,3)
+\psdots(5,1.5)
+\psdots(6.5,0)
+\psdots(6.5,1.5)
+\psdots(8,1.5)
+\psdots(6.5,3)
+\psdots(6,1)
+\psdots(7,2)
+\psline(5,3)(8,0)
+\psline(5,0)(8,3)
+\psline(5,3)(6.5,0)
+\psline(8,0)(5,1.5)
+\psline(5,3)(8,1.5)
+\psline(8,0)(6.5,3)
+\rput[b](6.5,-1){$K'$}
+\end{pspicture}
+\end{center}
+\end{itemize}
+In both examples, the vertex sets of the original simplicial complexes are the same.
+
+It can be shown that the barycentric subdivision $K'$ of an abstract simplicial complex $K$ can be constructed as follows: $V_{K'}:=\lbrace S\mid S\in K\rbrace$ is the set of vertices of $K'$, and $T\in K'$ iff $T$ is a chain of simplexes in $K$: $T=\lbrace S_1,\ldots,S_{n(T)}\rbrace$, $S_i\subset S_j$ for $i<j$.
+%%%%%
+%%%%%
+\end{document}

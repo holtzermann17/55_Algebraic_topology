@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GenusOfTopologicalSurface}
+\pmcreated{2013-03-22 12:56:21}
+\pmmodified{2013-03-22 12:56:21}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{genus of topological surface}
+\pmrecord{29}{33296}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M99}
+\pmsynonym{genus}{GenusOfTopologicalSurface}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need %them
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\newtheorem*{rem}{Remark}
+\newtheorem*{defn}{Definition}
+\begin{document}
+The \emph{genus} is a topological invariant of surfaces.  It is one of the oldest known topological invariants and, in fact, much of topology has been created in \PMlinkescapetext{order} to generalize this notion to more general situations than the topology of surfaces.  Also, it is a complete invariant in the sense that, if two orientable closed surfaces have the same genus, then they must be topologically equivalent.  This important topological invariant may be defined in several equivalent ways as given in the result below:
+
+\begin{thm}Let $\Sigma$ be a  compact, orientable connected $2$--dimensional manifold (a.k.a. surface) without boundary. Then the following two numbers are equal (in particular the first number is an integer)
+\begin{itemize}
+\item[(i)] half the first Betti number of $\Sigma$
+$$\frac{1}{2}\dim H^1(\Sigma\,;\mathbb{Q})\quad,$$
+\item[(ii)] the cardinality of a  set $C$ of mutually non-intersecting simple
+closed curves with the property that $\Sigma\setminus C$ is a connected \PMlinkescapetext{planar} surface.
+\end{itemize}
+\end{thm}
+
+ \begin{defn} The integer of the above theorem is called the genus of the 
+surface.
+\end{defn}
+
+\begin{thm} Any compact orientable surface without boundary is a connected sum of $g$ tori, where $g$ is its genus.
+\end{thm}
+
+\begin{rem} The previous theorem is the reason why genus is sometimes referred to as ``the number of handles''.
+\end{rem}
+
+\begin{thm} The genus is a  \PMlinkescapetext{{\em complete}} homeomorphism \PMlinkescapetext{invariant}, i.e. two   
+compact orientable surfaces without boundary are homeomorphic if and only if they have the same genus.
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

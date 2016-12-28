@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomotopyOfMaps}
+\pmcreated{2013-03-22 12:13:19}
+\pmmodified{2013-03-22 12:13:19}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{homotopy of maps}
+\pmrecord{12}{31584}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55Q05}
+\pmsynonym{homotopic maps}{HomotopyOfMaps}
+\pmrelated{HomotopyOfPaths}
+\pmrelated{HomotopyEquivalence}
+\pmrelated{ConstantFunction}
+\pmrelated{Contractible}
+\pmdefines{homotopic}
+\pmdefines{nullhomotopic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X,Y$ be topological spaces, $A$ a closed subspace of $X$ and $f,g:X \to Y$ continuous maps. A \emph{homotopy of maps} is a continuous function $F:X \times [0,1] \to Y$ satisfying
+\begin{enumerate}
+\item $F(x,0)=f(x)$ for all $x \in X$
+\item $F(x,1)=g(x)$ for all $x \in X$
+\item $F(x,t)=f(x)=g(x)$ for all $x \in A, t\in [0,1]$.
+\end{enumerate}
+We say that $f$ is homotopic to $g$ relative to $A$ and denote this by $f \simeq g$ $rel A$. If $A=\emptyset$, this can be written $f \simeq g$. If $g$ is the constant map (i.e. $g(x)=y$  for all $x \in X$), then we say that $f$ is \emph{nullhomotopic}.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

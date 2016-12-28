@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentStatementsToStatementThatSphereIsNotContractible}
+\pmcreated{2013-03-22 18:07:53}
+\pmmodified{2013-03-22 18:07:53}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{equivalent statements to statement that sphere is not contractible}
+\pmrecord{10}{40681}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $V$ be a normed space. Recall the definition of the sphere and the ball in $V$:
+$$\mathbb{S}=\{v\in V;\ \ \Vert v\Vert =1\};\ \ \ \mathbb{B}=\{v\in V;\ \ \Vert v\Vert\leq 1\}.$$
+\textbf{Proposition.} The following are equivalent:\\ \\
+$\mathrm{(1)}$ $\mathbb{S}$ is not contractible;\\ \\ 
+$\mathrm{(2)}$ for each continous map $F:\mathbb{B}\rightarrow\mathbb{B}$ there exists $x\in\mathbb{B}$ such that $F(x)=x$;\\ \\ 
+$\mathrm{(3)}$ there is no retraction from $\mathbb{B}$ onto $\mathbb{S}$.\\ \\ 
+\textit{Proof.} The proof of this proposition probably can be found in some books about topology. I present here the proof from my lecture due to Prof. $\mathrm{G\acute{o}rniewicz}$.\\ \\ 
+$\mathrm{(1)}\Rightarrow\mathrm{(2)}$ Assume there exists a continous map $F:\mathbb{B}\rightarrow\mathbb{B}$ such that for each $x\in\mathbb{B}$ we have $F(x)\neq x$. Define a map $H:\mathbb{S}\times [0,1]\rightarrow\mathbb{S}$ as follows:
+$$H(x,t)=\left\{\begin{matrix} \frac{x-2tF(x)}{\Vert x-2tF(x)\Vert}, & \mbox{if }0\leq t\leq \frac{1}{2} \\ & \\ \frac{(2-2t)x-F((2-2t)x)}{\Vert (2-2t)x-F((2-2t)x)\Vert} & \mbox{if }\frac{1}{2}\leq t\leq 1\end{matrix}\right.$$
+Thanks to the condition $F(x)\neq x$ this map is well defined and it is easy to check that this is a homotopy from the identity map to constant map. But $\mathbb{S}$ is not contractible. Contradiction.\\ \\
+$\mathrm{(2)}\Rightarrow\mathrm{(3)}$ Assume there exists a retraction $r:\mathbb{B}\rightarrow\mathbb{S}$. Define a map $F:\mathbb{B}\rightarrow\mathbb{B}$ by the formula $F(x)=-r(x)$. This map has no fixed point. Contradiction.\\ \\
+$\mathrm{(3)}\Rightarrow\mathrm{(1)}$ Assume that $\mathbb{S}$ is contractible and take any homotopy $H:\mathbb{S}\times [0,1]\rightarrow\mathbb{S}$ from constant map to identity map, i.e. for all $x\in\mathbb{S}$ we have $H(x,0)=x_0$ (for some $x_0\in\mathbb{S}$) and $H(x,1)=x$. Define a map $r:\mathbb{B}\rightarrow\mathbb{S}$ as follows:
+$$r(x)=\left\{\begin{matrix} x_0, & \mbox{if }\Vert x\Vert\leq\frac{1}{2} \\ & \\ H(\frac{x}{\Vert x\Vert},2\Vert x\Vert -1) & \mbox{if }\Vert x\Vert\geq\frac{1}{2}\end{matrix}\right.$$
+It is easy to see that this formula defines a retraction from $\mathbb{B}$ onto $\mathbb{S}$. Contradiction. $\square$\\ \\ \\
+Note that this proposition does not state that any of the conditions $\mathrm{(1)},\mathrm{(2)},\mathrm{(3)}$ hold. It only states that they are equivalent. It is well known that all of them are true if $V$ is finite dimensional and all are false if $V$ is infinite dimensional.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThomClass}
+\pmcreated{2013-03-22 15:40:48}
+\pmmodified{2013-03-22 15:40:48}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{Thom class}
+\pmrecord{5}{37621}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55-00}
+\pmrelated{Orientation2}
+\pmdefines{orientability with respect to a generalized homology theory}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{theorem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\R}{{\mathbb R}} % The reals
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\cpxs}{{\mathbb C}} % The "complexes" :)
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\newcommand{\Th}{\operatorname{Th}}
+\theorembodyfont{\upshape}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newtheorem{exm}{Example}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\projp}{{\mathbb R}P}
+
+% open cells (not very nice...)
+\newcommand{\oce}{\smash{\overset{\circ}e}} 
+\newcommand{\ocD}{\smash{\overset{\circ}D}} 
+
+\newcommand{\susp}{\Sigma}
+\newcommand{\restr}[2]{{#1}|_{#2}}
+
+\renewcommand{\hom}{\mathop{\mathrm{Hom}}} % Homomorphisms functor
+\newcommand{\rp}{\reals P} % real projective space
+\newcommand{\cp}{\cpxs P} % complex projective space
+\newcommand{\zmod}[1]{\integs / #1\integs} % Z/nZ
+\newcommand{\pt}{\mathrm{pt}}
+\begin{document}
+Let $h^*$ be a \PMlinkescapetext{multiplicative} generalized cohomology theory (for example, let $h^*=H^*$, singular cohomology with integer coefficients). Let $\xi\to X$ be a vector bundle of dimension $d$ over a topological space $X$. Assume for convenience that $\xi$ has a Riemannian metric, so that we may speak of its associated sphere and disk bundles, $S(\xi)$ and $D(\xi)$ respectively. 
+
+\newcommand{\rh}{\tilde{h}}
+
+Let $x\in X$, and consider the fibers $S(\xi_x)$ and $D(\xi_x)$. Since $D(\xi_x)/S(\xi_x)$ is homeomorphic to the $d$-sphere, the Eilenberg-Steenrod axioms for $h^*$ imply that $h^{*+d}(D(\xi_x),S(\xi_x))$ is isomorphic to the coefficient group $h^*(\pt)$ of $h^*$. In fact, $h^*(D(\xi_x),S(\xi_x))$ is a free module of rank one over the ring $h^*(\pt)$.
+
+\begin{defn}
+An element $\tau\in h^*(D(\xi),S(\xi))$ is said to be a \emph{Thom class} for $\xi$ if, for every $x\in X$, the restriction of $\tau$ to $h^*(D(\xi_x),S(\xi_x))$ is an $h^*(\pt)$-module generator.
+\end{defn}
+
+Note that $\tau$ lies necessarily in $h^d(D(\xi),S(\xi))$.
+
+\begin{defn}
+If a Thom class for $\xi$ exists, $\xi$ is said to be \emph{orientable} with respect to the cohomology theory $h^*$. 
+\end{defn}
+
+\begin{rmk}
+Notice that we may consider $\tau$ as an element of the reduced $h^*$-cohomology group $\rh^*(X^\xi)$, where $X^\xi$ is the Thom space $D(\xi)/S(\xi)$ of $\xi$. As is the case in the definition of the Thom space, the Thom class may be defined without reference to associated disk and sphere bundles, and hence to a Riemannian metric on $\xi$. For example, the pair $(\xi,\xi-X)$ (where $X$ is included in $\xi$ as the zero section) is homotopy equivalent to $(D(\xi),S(\xi))$.
+\end{rmk}
+
+\begin{rmk}
+If $h^*$ is singular cohomology with integer coefficients, then $\xi$ has a Thom class if and only if it is an orientable vector bundle in the ordinary sense, and the choices of Thom class are in one-to-one correspondence with the orientations.
+\end{rmk}
+%%%%%
+%%%%%
+\end{document}

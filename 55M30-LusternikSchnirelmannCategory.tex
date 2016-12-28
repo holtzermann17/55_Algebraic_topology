@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LusternikSchnirelmannCategory}
+\pmcreated{2013-03-22 15:53:30}
+\pmmodified{2013-03-22 15:53:30}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{Lusternik-Schnirelmann category}
+\pmrecord{13}{37893}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M30}
+%\pmkeywords{Contractible open cover}
+%\pmkeywords{Morse function}
+\pmrelated{Topology}
+\pmrelated{RoundComplexity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a topological space.  An important topological invariant of $X$ called Lusternik-Schnirelmann category {\bf cat} is defined as follows:
+
+$${\rm cat}(X)={\rm min}\{\#(C)\colon\mbox{where $C$ are the coverings of $X$ by contractible open sets}\}.$$
+
+If $X$ is a manifold, ${\rm cat}(X)$ coincides with the minimal number of critical points among all smooth scalars maps $X\to\mathbb{R}$. 
+
+This is equivalent to saying that $X$ has a covering $\{U_s\}$ such that
+it is posible to factor homotopically each $U_s\stackrel{i}\hookrightarrow X$ through $U_s\stackrel{a}\to *\stackrel{b}\to X$ i.e
+$$i\simeq b\circ a.$$
+
+This allows us to define another category, e.g.:\\
+\begin{quote}
+We can ask about the minimal number of open sets $U_s$ that cover $X$ and 
+are homotopically equivalent to $S^1$, say, 
+the inclusion  $U_s\stackrel{i}\hookrightarrow X$ and $U_s\stackrel{a}\to S^1\stackrel{b}\to X$ are $i\simeq b\circ a$.
+\end{quote}
+
+It is becoming standard to speak of the t-cat of $X$. 
+This is related to the round complexity of the space.  
+
+
+\begin{thebibliography}{1}
+\bibitem{cite:RHF}
+R.H. Fox, {\it On the Lusternik-Schnirelmann category}, Annals of Math. 42 (1941), 333-370.
+\bibitem{cite:FT}
+F. Takens, {\it The minimal number of critical points of a function on compact manifolds and the Lusternik-Schnirelmann category}, Invent. math. 6,(1968), 197-244.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

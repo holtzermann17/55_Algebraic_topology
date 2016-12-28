@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SheafOfSections}
+\pmcreated{2013-03-22 15:46:36}
+\pmmodified{2013-03-22 15:46:36}
+\pmowner{guffin}{12505}
+\pmmodifier{guffin}{12505}
+\pmtitle{sheaf of sections}
+\pmrecord{7}{37734}
+\pmprivacy{1}
+\pmauthor{guffin}{12505}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R25}
+%\pmkeywords{sheaf}
+%\pmkeywords{vector bundle}
+%\pmkeywords{sections}
+\pmrelated{VectorBundle}
+\pmdefines{Sheaf of Sections}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\spe}[1]{\ensuremath{ \text{Sp\'e}(#1)}}
+\newcommand{\RR}[0]{\ensuremath{\mathbb R}}
+\newcommand{\takes}[2]{\!:\!#1 \rightarrow #2}
+\begin{document}
+\subsection{Presheaf Definition}
+
+Consider a rank $r$ vector bundle $E\rightarrow M$, whose typical fibre is defined with respect to a field $k$.  Let $\{U_\alpha\}$ constitute a cover
+for $M$.  Then, sections of the bundle over some $U\subset M$ are defined
+as continuous functions $U\rightarrow E$, which commute with the natural projection
+map $\pi \takes E M$; $\pi \circ s = id_M$. Denote the space of sections of
+the bundle over U to be $\Gamma(U,E)$.  The space of sections is a vector
+space over the field $k$ by defining addition and scalar multiplication pointwise: for $s,t \in \Gamma(U,E)$, $p\in U$ and $a\in k$
+\[ (s+t)(p) \equiv s(p) + t(p) \qquad \qquad (a \cdot s) (p) \equiv a \cdot s(p).\]
+
+Then, this forms a presheaf $\mathcal E$, a functor from $((\text{top}_M))$
+to the category of vector spaces, with restriction maps the natural
+restriction of functions.
+
+\subsection{Sheaf Axioms}
+It is easy to see that it satisfies the sheaf
+axioms: for $U$ open and $\{V_i\}$ a cover of $U$,
+
+\begin{enumerate}
+\item if $s\in \mathcal E(U)$ and $s\vert_{V_i} =0 $ for all $i$, then $s=0$.
+\item if $s_i\in \mathcal E(V_i)$ for all $i$, such that for each $i,j$ with
+$V_i\cap V_j \ne \emptyset$, $s_i\vert_{V_i\cap V_j} = s_j\vert_{V_i\cap
+V_j}$, then there is an $s \in \mathcal E(U)$ with $s\vert_{V_i} = s_i$ for
+all $i$.
+\end{enumerate}
+
+The first follows from the fact that for any $U$, there is always at least
+one element of $\mathcal E(U)$, the zero section, and that the transition
+functions of the bundle are linear maps. The second follows by the construction of the bundle.\\
+
+\section{Sheafification}
+
+We may also see the vector bundle by applying associated sheaf construction
+to the presheaf $U \mapsto \Gamma(U,E)$.  First though, we show that the
+stalk of the sheaf $\mathcal E$ at a point is isomorphic to the fibre of the
+bundle $E$ at the point.  Let $[s,U]$ be a germ at $p\in M$ $(p\in U
+\subset M)$, and define a map $\psi \takes{\mathcal E_p}{ E_p}$ by
+\[\psi:[s,U] \mapsto s_p.\]
+
+First, we show that the map is a vector space homomorphism.  Consider two
+germs $[s,U]$ and $[t,V]$ in $\mathcal E_p$.  These map to $s_p$ and $t_p$
+respectively.  We add the germs by finding an open set $W\in U\cap V$ and
+adding the restrictions of the sections;
+\[[s,U] + [t,V] \equiv [s|_W + t|_W, W].\]
+
+Of course, $p\in W$, so we have $\psi(s|_W + t|_W) = s_p + t_p$, since the
+restriction maps are simply restriction of functions.
+Now, it is easy to show that $\psi$ is injective.  
+Assume $\psi([t,V]) = \psi([s,U]) = s_p$.  Then 
+\begin{align*}
+\psi([t,V]) - \psi([s,U]) &= s_p - s_p \\
+\psi([t,V] - [s,U]) &= 0\\
+[t,V] &= [s,U]
+\end{align*}
+
+Now, we show that $\psi$ is surjective.  For $s_p\in E_p$, let $U\subset M$
+open be isomorphic to some subset $U_\RR$ of $\RR^m$.  Then, $\Gamma(U,E)$ is the
+set of continuous maps $U\rightarrow V_E$, where $V_E$ is the typical fibre of $E$;
+\[\Gamma(U,E) = \bigoplus_{i=1}^r \mathcal C_{U_\RR}^\infty.\]
+Then let $[s,U]$ be the constant function $s:U_\RR\mapsto s_x$, and we
+have constructed an isomorphism $\psi$ between $\mathcal E_p$ and $E_p$.\\
+
+To construct the \'Etal\'e space, take the disjoint union of stalks,
+\(\text{Sp\'e}(\mathcal E) = \coprod_{p\in M} \mathcal E_p\), and endow it with
+the following topology:  the open sets shall be  of the form
+\[ U_s = \bigl\{s_p | s\in \Gamma(U,\mathcal E), p\in U\subset M\bigr\},\]
+collection of germs of sections at points in $U\subset M$.\\
+
+Then, the associated sheaf to $\mathcal E$ is the presheaf which assigns
+continuous maps $\Gamma(U,\spe {\mathcal E})$ to each open $U$.  These are
+maps where the preimage of $U_s$ is open. Clearly, this implies that
+$\Gamma(U,E) \subset \Gamma(U,\spe{\mathcal E})$.  To go the other way, note
+that open sets of $\spe{\mathcal E}$ are the images of continuous maps $U\rightarrow
+E$.  An open subset of $\spe{\mathcal E}$ may be written as a union of $U_t$;
+$U_{ts} \equiv \{t_p, s_p | p\in U\}$.  Then, by single-valuedness of maps,
+a continuous map $U\rightarrow \spe{\mathcal E}$ must map to $U_t$ for some $t\in
+\Gamma(U,E)$, so we have $\Gamma(U,E) \supset \Gamma(U,\spe{\mathcal E})$.
+%%%%%
+%%%%%
+\end{document}

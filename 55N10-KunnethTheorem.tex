@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KunnethTheorem}
+\pmcreated{2013-03-22 19:13:57}
+\pmmodified{2013-03-22 19:13:57}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{Kunneth theorem}
+\pmrecord{7}{42156}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N10}
+\pmsynonym{Kunneth formula}{KunnethTheorem}
+\pmsynonym{Kunneth's formula}{KunnethTheorem}
+\pmsynonym{Kunneth's theorem}{KunnethTheorem}
+\pmsynonym{Kunneth theorem}{KunnethTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$, $Y$ be topological spaces. One can ask a question: how homology of $X\times Y$ are related to homologies of $X$ and $Y$. The answer to this question depends on the homology theory we're talking about and also the coefficients ring. On the other hand, it is well known, that all homology theories are isomorphic on CW-complexes. Thus we may restrict to CW-complexes. Nevertheless the following theorem is more general:
+
+\textbf{Theorem.} (Kunneth) \textit{Assume, that $X$, $Y$ are topological spaces and $R$ is a principal ideal domain. Denote by $H_*(X,R)$ the singular homology with coefficients in $R$. Then, for any $k>0$ there exists following short exact sequence in the category of $R$-modules:
+$$0\to \bigoplus_{i+j=k} H_i(X,R)\otimes_R H_j(Y,R)\to H_k(X\times Y,R) \to \bigoplus_{i+j=k-1}\mathrm{Tor}_1^R(H_i(X,R),H_j(Y,R))\to 0,$$
+where $\mathrm{Tor}$ denotes the Tor functor. Furthermore this sequence splits, i.e. the middle term is a direct sum (up to an isomorphism) of left and right term.}
+
+It should be mentioned, that if $R=\mathbb{F}$ is a field, then the Tor functor is always trivial (i.e. $\mathrm{Tor}^{\mathbb{F}}_1(M,N)=0$ for all vector spaces $M,N$ over $\mathbb{F}$) and in this case Kunneth formula can be stated as
+$$H_k(X\times Y,\mathbb{F})\simeq \bigoplus_{i+j=k} H_i(X,\mathbb{F})\otimes_{\mathbb{F}} H_j(Y,\mathbb{F})$$
+for any $k>0$.
+%%%%%
+%%%%%
+\end{document}

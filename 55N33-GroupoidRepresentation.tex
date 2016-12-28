@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupoidRepresentation}
+\pmcreated{2013-03-22 19:19:17}
+\pmmodified{2013-03-22 19:19:17}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{groupoid representation}
+\pmrecord{40}{42260}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N33}
+\pmclassification{msc}{55N20}
+\pmclassification{msc}{55P10}
+\pmclassification{msc}{22A22}
+\pmclassification{msc}{20L05}
+\pmclassification{msc}{55U40}
+%\pmkeywords{groupoid}
+%\pmkeywords{representations}
+%\pmkeywords{vector bundle}
+%\pmkeywords{groupoid action}
+\pmrelated{GroupoidAction}
+\pmrelated{FrameGroupoid}
+\pmrelated{RepresentationsOfLocallyCompactGroupoids}
+\pmrelated{Functor}
+\pmrelated{FrameGroupoid}
+\pmrelated{LieGroupoid}
+\pmrelated{CategoryOfRepresentations}
+\pmrelated{FunctionalBiology}
+\pmdefines{frame groupoid}
+\pmdefines{Vect}
+\pmdefines{End(V)}
+\pmdefines{group endomorphism}
+\pmdefines{Lie groupoid representation}
+
+% this is the default PlanetMath preamble. as your knowledge
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in %%ps format
+%\hoffset=-1.0in %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\newcommand{\grp}{\mathcal G}
+
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+%\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram #1 \rto^{#2} \dto_{#4}&
+#3 \dto^{#5} \\ #6 \rto_{#7} & #8 \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+\end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+Let  $q:E \longrightarrow  M$ be a vector bundle, with $E$ the \emph{total space}, and $M$ a smooth manifold. Then, consider the representation $R_G$ of a group $G$  as an action on a vector space $V$, that is, as a homomorphism $h: G \longrightarrow  End(V)$, with $End(V)$  being the group of endomorphisms of  the vector space $V$. The generalization of the group representation to general representations of groupoids then occurs somewhat naturally by considering the \PMlinkname{groupoid action}{GroupoidAction} on a vector bundle $E \longrightarrow M$.
+
+
+\begin{definition}
+Let $\grp$ be a groupoid, and given a vector bundle $q: E \longrightarrow  M$ consider the \emph{frame groupoid} 
+$$\Phi(E)=s,t: \phi(E)\longrightarrow  M,$$  with $\phi(E)$ being the set of all vector space isomorphisms 
+$\eta: E_x \longrightarrow  E_y$ over all pairs $(x,y) \in M^2$, also with the associated structure maps. Then, a general \emph{representation} $R_d$ of  a groupoid $\grp$ is defined as a homomorphism $R_d: \grp \longrightarrow  \Phi(E)$  
+\end{definition}
+
+{\bf Example 0.1: Lie groupoid representations}
+
+\begin{definition}
+Let $\grp_L = s, t : G_1 \longrightarrow M$ be a Lie groupoid.  A \emph{representation of a Lie groupoid} $\grp_L = s, t : G_1 \longrightarrow M$  on a vector bundle $q:E \longrightarrow  M$ is defined as a smooth homomorphism (or a functor) $\rho : \grp_L  \longrightarrow \Phi(E)$ of Lie groupoids over $M$.
+\end{definition}
+
+{\bf Note:}
+A \emph{Lie groupoid representation} $\rho$ thus yields a functor, $R: \grp_L \longrightarrow {\bf Vect},$  with  ${\bf Vect}$ being the category of vector spaces and $R(x) = E_x$ being the fiber at each $x \in M$, as well as an isomorphism $R(g)$ for each $g: x \to y$.
+
+
+{\bf Example 0.2: Group representations}
+If one restricts the vector bundle to a single vector space in {\bf Definition 0.1} then one obtains a group representation, in the same manner as a groupoid that reduces to a group when its object space is reduced to a single object. 
+%%%%%
+%%%%%
+\end{document}

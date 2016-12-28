@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimplicialComplex}
+\pmcreated{2013-03-22 12:34:46}
+\pmmodified{2013-03-22 12:34:46}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{simplicial complex}
+\pmrecord{11}{32828}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55U10}
+\pmclassification{msc}{54E99}
+\pmrelated{HomologyTopologicalSpace}
+\pmrelated{CWComplex}
+\pmdefines{simplicial homology}
+\pmdefines{simplicial cohomology}
+\pmdefines{triangulation}
+\pmdefines{abstract simplicial complex}
+\pmdefines{abstract $n$-simplex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb{R}}
+\begin{document}
+An abstract \emph{simplicial complex} $K$ is a collection of nonempty
+finite sets with the property that for any element $\sigma \in K$, if
+$\tau \subset \sigma$ is a nonempty subset, then $\tau \in K$. An
+element of $K$ of cardinality $n+1$ is called an \emph{
+$n$-simplex}. An element of an element of $K$ is called a \emph{vertex}. In what follows, we may occasionally identify a vertex $v$ with its corresponding singleton set $\{v\} \in K$; the reader
+will be alerted when this is the case.
+
+The \emph{standard $n$-complex}, denoted by $\Delta_n$, is the
+simplicial complex consisting of all nonempty subsets of
+$\{0,1,\ldots,n\}$.
+
+\section{Geometry of a simplicial complex}
+Let $K$ be a simplicial complex, and let $V$ be the set of vertices of
+$K$. Although there is an established notion of infinite simplicial
+complexes, the geometrical treatment of simplicial complexes is much simpler in the finite case and so for
+now we will assume that $V$ is a finite set of cardinality $k$.
+
+We introduce the vector space $\mathbb{R}^V$ of formal
+$\R$--linear combinations of elements of $V$; i.e.,
+$$
+\R^V := \{a_1 V_1 + a_2 V_2 + \cdots + a_k V_k \mid a_i \in \R,\ V_i \in
+V\},
+$$
+and the vector space operations are defined by formal addition and
+scalar multiplication. Note that we may regard each vertex in $V$ as a
+one-term formal sum, and thus as a point in $\R^V$.
+
+The \emph{geometric realization} of $K$, denoted $|K|$, is the subset
+of $\mathbb{R}^V$ consisting of the union, over all $\sigma \in K$, of
+the convex hull of $\sigma \subset \mathbb{R}^V$. If we fix a bijection $\phi\colon V \to \{1, \ldots, k\}$, then the vector space $\mathbb{R}^V$ is isomorphic to the Euclidean vector space $\mathbb{R}^k$ via $\phi$, and the set $|K|$
+inherits a metric from $\mathbb{R}^k$ making it into a metric space
+and topological space. The isometry class of $K$ is independent of the choice of the bijection $\phi$.
+
+\textbf{Examples:}
+
+\begin{enumerate}
+\item $\Delta_2 = \{\{0\}, \{1\}, \{2\}, \{0,1\}, \{0,2\}, \{1,2\},
+\{0,1,2\}\}$ has $V = 3$, so its realization $|\Delta_2|$ is a subset
+of $\mathbb{R}^3$, consisting of all points on the hyperplane $x+y+z =
+1$ that are inside or on the boundary of the first octant. These
+points form a triangle in $\mathbb{R}^3$ with one face, three edges,
+and three vertices (for example, the convex hull of $\{0,1\} \in
+\Delta_2$ is the edge of this triangle that lies in the $xy$--plane).
+\item Similarly, the realization of the standard $n$--simplex
+$\Delta_n$ is an $n$--dimensional tetrahedron contained inside
+$\mathbb{R}^{n+1}$.
+\item A triangle without interior (a ``wire frame'' triangle) can be
+geometrically realized by starting from the simplicial complex
+$\{\{0\}, \{1\}, \{2\}, \{0,1\}, \{0,2\}, \{1,2\}\}$.
+\end{enumerate}
+
+Notice that, under this procedure, an element of $K$ of cardinality 1
+is geometrically a vertex; an element of cardinality 2 is an edge;
+cardinality 3, a face; and, in general, an element of cardinality $n$
+is realized as an $n$-face inside $\R^V$.
+
+In general, a \emph{triangulation} of a topological space $X$ is a
+simplicial complex $K$ together with a homeomorphism from $|K|$ to
+$X$.
+
+\section{Homology of a simplicial complex}
+
+In this section we define the homology and cohomology groups
+associated to a simplicial complex $K$. We do so not because the
+homology of a simplicial complex is so intrinsically interesting in
+and of itself, but because the resulting homology theory is identical
+to the singular homology of the associated topological space $|K|$,
+and therefore provides an accessible way to calculate the latter
+homology groups (and, by extension, the homology of any space $X$
+admitting a triangulation by $K$).
+
+As before, let $K$ be a simplicial complex, and let $V$ be the set of
+vertices in $K$. Let the chain group $C_n(K)$ be the subgroup of the
+exterior algebra $\Lambda(\R^V)$ generated by all elements of the form
+$V_0 \wedge V_1 \wedge \cdots \wedge V_n$ such that $V_i \in V$ and
+$\{V_0, V_1, \ldots, V_n\} \in K$. Note that we are ignoring here the
+$\R$--vector space structure of $\R^V$; the group $C_n(K)$ under this
+definition is merely a free abelian group, generated by the
+alternating products of the above form and with the relations that are
+implied by the properties of the wedge product.
+
+Define the boundary map $\partial_n: C_n(K) \longrightarrow
+C_{n-1}(K)$ by the formula
+$$
+\partial_n(V_0 \wedge V_1 \wedge \cdots \wedge V_n) := \sum_{j=0}^n
+(-1)^j (V_0 \wedge \cdots \wedge \hat{V_j} \wedge \cdots \wedge V_n),
+$$
+where the hat notation means the term under the hat is left out of the
+product, and extending linearly to all of $C_n(K)$. Then one checks
+easily that $\partial_{n-1} \circ \partial_n = 0$, so the collection
+of chain groups $C_n(K)$ and boundary maps $\partial_n$ forms a chain
+complex $\mathcal{C}(K)$. The simplicial homology and cohomology
+groups of $K$ are defined to be that of $\mathcal{C}(K)$.
+
+\textbf{Theorem:} The simplicial homology and cohomology groups of $K$,
+as defined above, are canonically isomorphic to the singular homology
+and cohomology groups of the geometric realization $|K|$ of $K$.
+
+The proof of this theorem is considerably more difficult than what we
+have done to this point, requiring the techniques of barycentric
+subdivision and simplicial approximation, and we refer the interested
+reader to~\cite{munkres}.
+
+\begin{thebibliography}{9}
+\bibitem{munkres}{Munkres, James. {\em Elements of Algebraic
+Topology}, Addison--Wesley, New York, 1984.}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

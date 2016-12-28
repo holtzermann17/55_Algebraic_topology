@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiberBundle}
+\pmcreated{2013-03-22 13:07:06}
+\pmmodified{2013-03-22 13:07:06}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{fiber bundle}
+\pmrecord{10}{33551}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R10}
+\pmsynonym{fibre bundle}{FiberBundle}
+\pmrelated{ReductionOfStructureGroup}
+\pmrelated{SectionOfAFiberBundle}
+\pmrelated{Fibration}
+\pmrelated{Fibration2}
+\pmrelated{HomotopyLiftingProperty}
+\pmrelated{SurfaceBundleOverTheCircle}
+\pmdefines{trivial bundle}
+\pmdefines{local trivializations}
+\pmdefines{structure group}
+\pmdefines{cocycle condition}
+\pmdefines{local trivialization}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%%\usepackage{xypic}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $F$ be a topological space and $G$ be a topological group which acts on $F$ on the left. A \emph{fiber bundle} with fiber $F$ and \emph{structure group} $G$ consists of the following data:
+\begin{itemize}
+\item a topological space $B$ called the base space, a space $E$ called the total space and a continuous surjective map $\pi:E \to B$ called the projection of the bundle,
+\item an open cover $\{U_i\}$ of $B$ along with a collection of continuous maps
+$\{\phi_i: \pi^{-1}U_i \to F\}$ called \emph{local trivializations} and
+\item a collection of continuous maps $\{g_{ij}: U_i \cap U_j \to G\}$ called \emph{transition functions}
+\end{itemize}
+which satisfy the following properties
+\begin{enumerate}
+\item the map $\pi^{-1}U_i \to U_i \times F$ given by $e \mapsto (\pi(e),\phi_i(e))$ is a homeomorphism for each $i$,
+\item for all indices $i,j$ and $e \in \pi^{-1}(U_i \cap U_j)$, $g_{ji}(\pi(e))\cdot \phi_i(e) = \phi_j(e)$ and
+\item for all indices $i,j,k$ and $b \in U_i \cap U_j \cap U_k$, $g_{ij}(b)g_{jk}(b) = g_{ik}(b)$.
+\end{enumerate}
+
+Readers familiar with \v{C}ech cohomology may recognize condition 3), it is often called the \emph{cocycle condition}. Note, this imples that $g_{ii}(b)$ is the identity in $G$ for each $b$, and $g_{ij}(b) = g_{ji}(b)^{-1}$. 
+
+If the total space $E$ is homeomorphic to the product $B \times F$ so that the bundle projection is essentially projection onto the first factor, then $\pi : E \to B$ is called a \emph{trivial bundle}. Some examples of fiber bundles are vector bundles and covering spaces.
+
+There is a notion of morphism of fiber bundles $E,E'$ over the same base $B$ with the same structure group $G$.  Such a morphism is a $G$-equivariant map $\xi:E\to E'$, making the following diagram commute
+
+$$\xymatrix{E\ar[rr]^\xi\ar[dr]_\pi& &E'\ar[dl]^{\pi'}\\ &B&}.$$
+
+Thus we have a category of fiber bundles over a fixed base with fixed structure group.
+%%%%%
+%%%%%
+\end{document}

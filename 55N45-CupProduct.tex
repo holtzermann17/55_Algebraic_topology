@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CupProduct}
+\pmcreated{2013-03-22 15:37:42}
+\pmmodified{2013-03-22 15:37:42}
+\pmowner{whm22}{2009}
+\pmmodifier{whm22}{2009}
+\pmtitle{cup product}
+\pmrecord{7}{37554}
+\pmprivacy{1}
+\pmauthor{whm22}{2009}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N45}
+%\pmkeywords{homology}
+%\pmkeywords{homological algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a topological space and $R$ be a commutative ring.  The diagonal map $\Delta: X \to X \times X$ induces a chain map between singular cochain complexes:
+$$
+ \Delta^*: C^*(X \times X;\, R) \to C^*(X; \, R)  
+$$. 
+
+Let $h:C^*(X ;\, R) \otimes C^*(X ;\, R) \to C^*(X \times X;\, R )$ 
+
+denote the chain homotopy equivalence associated with the Kunneth \PMlinkescapetext{Formula}.    
+
+Given $\alpha \in C^p (X ;\, R)$ and $\beta \in C^q(X ;\, R)$ we define
+
+$
+\alpha \smile \beta = \Delta^* h(\alpha \otimes \beta)
+$.
+
+As $\Delta^*$ and $h$ are chain maps, $\smile$ induces a well defined product on cohomology groups, known as the cup product.  Hence the direct sum of the cohomology groups of $X$ has the structure of a ring.  This is called the cohomology ring of $X$. 
+
+%%%%%
+%%%%%
+\end{document}

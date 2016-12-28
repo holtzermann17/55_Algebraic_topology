@@ -1,0 +1,246 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VariableTopology}
+\pmcreated{2013-03-22 18:15:39}
+\pmmodified{2013-03-22 18:15:39}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{variable topology}
+\pmrecord{11}{40858}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55U05}
+\pmclassification{msc}{55U35}
+\pmclassification{msc}{55U40}
+\pmclassification{msc}{18G55}
+\pmclassification{msc}{18B40}
+\pmsynonym{variable topology}{VariableTopology}
+%\pmkeywords{sequence of different topologies defined by distinct axioms or rules}
+\pmrelated{TopologicalSpace}
+\pmrelated{VariableTopology3}
+\pmdefines{indexed family of topological spaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\textbf{Preliminary data}
+Let us recall the basic notion that a \emph{topological space}
+consists of a set $X$ and a `topology' on $X$ where the latter
+gives a precise but general sense to the intuitive ideas of
+`nearness' and `continuity'. Thus the initial task is to
+axiomatize the notion of `neighborhood' and then consider a
+topology in terms of open or of closed sets, a compact-open
+topology, and so on (see Brown, 2006). In any case, a topological
+space consists of a pair $(X, \mathcal T)$ where $\mathcal T$ is a
+topology on $X$. For instance, suppose an \emph{open set topology}
+is given by the set $\mathcal U$ of prescribed open sets of $X$
+satisfying the usual axioms (Brown, 2006 Chapter 2). Now, to speak
+of a variable open-set topology one might conveniently take in
+this case a family of sets $\mathcal U_{\lambda}$ of \emph{a
+system of prescribed open sets}, where $\lambda$ belongs to some
+indexing set $\Lambda$. The system of open sets may of course be
+based on a system of contained neighbourhoods of points where one
+system may have a different geometric property compared say to
+another system (a system of disc-like neighbourhoods compared with
+those of cylindrical-type). 
+
+
+\begin{definition} In general, we may speak of a topological space with a 
+\emph{varying topology} as a pair $(X, \mathcal T_{\lambda})$ where $\lambda \in \Lambda$ 
+is an index set.
+\end{definition}
+
+\textbf{Example} The idea of a varying topology has been introduced to describe possible topological
+distinctions in bio-molecular organisms through stages of
+development, evolution, neo-plasticity, etc. This is indicated
+schematically in the diagram below where we have an $n$-stage
+dynamic evolution (through complexity) of categories $\mathsf D_i$
+where the vertical arrows denote the assignment of topologies
+$\mathcal T_i$ to the class of objects of the $\mathsf D_i$ along
+with functors  $\F_{i} : \mathsf D_{i} \lra \mathsf D_{i+1}$, for
+$1 \leq i \leq n-1$~:
+
+$$
+ \diagram  &  \mathcal
+T_{1} \dto<-.05ex> &  \mathcal T_{2} \dto<-1.2ex> & \cdots
+ &  \mathcal
+T_{n-1}  \dto <-.05ex> &  \mathcal T_{n} \dto<-1ex>_(0.45){}
+\\ & \mathsf D_{1}\rto^{\F_1}
+&  \mathsf D_{2} \rto^{\F_2}  \rule{0.5em}{0ex}  & & \cdots
+\rto^{\F_{n-1}} \rule{0.5em}{0ex} \mathsf D_{n-1} &
+\rule{0em}{0ex} \mathsf D_{n}
+\enddiagram
+$$
+
+In this way a \PMlinkname{variable topology}{VariableTopology} can be realized through such
+$n$-levels of complexity of the development of an organism.
+
+
+  Another example is that of  cell/network topologies in a categorical approach
+involving concepts such as \emph{the free groupoid over a graph}
+(Brown, 2006). Thus a \emph{varying graph system} clearly induces an
+accompanying \PMlinkname{system of variable groupoids}{VariableTopology3}. As suggested by
+Golubitsky and Stewart (2006), symmetry groupoids of various cell
+networks would appear relevant to the physiology of animal locomotion as one example.
+
+
+
+%%%%%
+%%%%%
+\end{document}

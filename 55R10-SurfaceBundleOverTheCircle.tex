@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SurfaceBundleOverTheCircle}
+\pmcreated{2013-03-22 15:42:37}
+\pmmodified{2013-03-22 15:42:37}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{surface bundle over the circle}
+\pmrecord{24}{37657}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R10}
+\pmclassification{msc}{57M50}
+\pmclassification{msc}{57N10}
+\pmrelated{FiberBundle}
+\pmrelated{FourSurfaceBundles}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{\PMlinkescapetext{surface}} bundle over $S^1$ is a closed 3-manifold which is constructed as a fiber bundle over the circle with fiber a closed surface.
+$$F\subset E\to S^1.$$
+This construction it is also a particular case of a more general concept called {\bf mapping torus}.
+
+The precise construction is as follows: Take any surface $F$ and multiply by the unit interval $I$ to get $F\times I$. Choose any $\phi$ autohomeomorphism of $F$.
+Then the quotient space
+$$E_{\phi}=\frac{F\times I}{(x,0)\sim(\phi(x),1)}$$
+defines a 3-manifold, characterized by the isotopy class of $\phi$, that is, any other representative of the same class is going to produce a bundle homeomorphic to the original one. The isotopy class is called the monodromy for the bundle. It is also used for $E_{\phi}$ the symbol:
+$$F\times _{\phi}S^1$$
+
+This construction is an important source of examples in low dimensional topology as well in geometric group theory, because the geometry associated to the monodromy's action and because the bundle's fundamental group can be viewed as a particular kind of HNN extension: the fundamenal group of $F$ extended by the integers. More precisely, if $\pi^*=g_1g_2g_1^{-1}g_2^{-1}\cdots g_{k-1}g_{k}g_{k-1}^{-1}g_{k}^{-1}$ or $\pi^*=g_1^2\cdots g_k^2$ then
+$$\pi_1(E_{\phi})=\langle g_1,...,g_k,x\ |\ \pi^*=1, xg_k x^{-1}=\phi_*(g_k)\rangle,$$
+depending on $F$ is orientable or non-orientable.
+
+When one considers periodic monodromies it is an amusing situation since, in this case, the bundles can be seen as {\bf Seifert fiber space} i.e. bundles of the form
+$$S^1\subset E\to G$$
+where $G$  may be, perhaps, an orbifold.  
+
+For example, it is known that the extended mapping class group of the torus is $GL_2({\mathbb{Z}})$, so there are only seven periodic elements, corresponding to seven Seifert fiber space already studied by J.Hempel.  
+  
+\centerline{\bf Seven torus bundles $T\subset M\to S^1$.}
+ 
+It is known that the following matrices generate ${\cal{M}}^*(T)$ 
+
+$$t_a
+=\left(\begin{array}{cc}
+1 & -1 \\
+0 & 1 \\  
+\end{array}\right)
+,\quad 
+t_b
+=\left(\begin{array}{cc}
+1 & 0 \\
+1 & 1 \\  
+\end{array}\right)
+\quad
+\mbox{and}\quad
+y=
+\left(\begin{array}{cc}
+1 & 0 \\
+0 & -1 \\  
+\end{array}\right)
+$$ 
+which obey  
+$$\langle t_a,t_b,y\ :\ (t_at_bt_a)^4=1,t_at_bt_a=t_bt_at_b,y^2=1,yt_ay^{-1}={t_a}^{-1},
+yt_by^{-1}={t_b}^{-1}\rangle$$
+
+
+The first two are left twists from $a$ a simple meridian curve and $b$ a simple longitude curve. 
+The matrix for $y$ represents a autohomeomorphism which is not a twist and inverts orientation.
+It is obtained by inverting curve $b$'s direction and extending in a 
+regular neighborhood $N(b)$, then extending to $N(a\cup b)$ 
+and finally in a disk to the whole torus.
+
+Now we can represent the periodic monodromies of example 12.4 in [Hempel, pp.122-123] in terms of those
+generators as
+
+$$1=
+\left(\begin{array}{cc}
+1 & 0 \\
+0 & 1 \\  
+\end{array}\right)
+,\ (t_bt_a)^3=
+\left(\begin{array}{cc}
+-1 & 0 \\
+0 & -1 \\  
+\end{array}\right)
+,\ y=
+\left(\begin{array}{cc}
+1 & 0 \\
+0 & -1 \\  
+\end{array}\right)
+,\ t_ay=
+\left(\begin{array}{cc}
+1 & 1 \\
+0 & -1 \\  
+\end{array}\right)
+$$
+
+$$(t_bt_a)^2=
+\left(\begin{array}{cc}
+0 & -1 \\
+1 & -1 \\  
+\end{array}\right)
+,\ (t_at_bt_a)^3=
+\left(\begin{array}{cc}
+0 & 1 \\
+-1 & 0 \\  
+\end{array}\right)
+,\ t_at_b=
+\left(\begin{array}{cc}
+0 & -1 \\
+1 & 1 \\  
+\end{array}\right)
+$$
+of periods 1,\ 2,\ 2,\ 2,\ 3,\ 4,\ 6 respectively [Hempel, pp.123].
+
+\bigskip
+
+And in turn give the Seifert fiber spaces
+\bigskip
+
+$(Oo,1|\ 0)=T\times S^1$
+
+$(On,2|\ 0)=(Oo,0|\ (1,-2),(2,1),(2,1),(2,1),(2,1))$
+
+$(No,1|\ 0)=(NnI,2|\ 0)=K\times S^1$
+
+$(No,1|\ 1)=(NnI,2|\ 1))=K\times_{\tau} S^1$
+
+$(Oo,0|\ (3,2),(3,-1),(3,-1))$
+
+$(Oo,0|\ (2,1),(4,-1),(4,-1))$
+
+$(Oo,0|\ (2,1),(3,-1),(6,-1))$
+
+:)
+
+{\bf References:}
+
+\begin{enumerate}
+\item J. Hempel, {\it 3-manifolds}, Annals of Math. Studies, 86, Princeton Univ. Press 1976.
+\item P. Orlik, {\it Seifert Manifolds}, Lecture Notes in Math. 291, 1972 Springer-Verlag.
+\item P. Orlik, F. Raymond, {\it On 3-manifolds with local ${\rm SO}_2$ action}, Quart. J. Math. Oxford Ser.(2) 20 (1969), 143-160.
+\item H. Seifert, {\it Topologie dreidimensionaler gefaserter R\"aume}, 60(1933), 147-238.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

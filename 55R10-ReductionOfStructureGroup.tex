@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReductionOfStructureGroup}
+\pmcreated{2013-03-22 13:26:06}
+\pmmodified{2013-03-22 13:26:06}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{reduction of structure group}
+\pmrecord{12}{33995}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R10}
+\pmrelated{VectorBundle}
+\pmrelated{FiberBundle}
+\pmdefines{Euclidean structure}
+\pmdefines{Riemannian structure}
+\pmdefines{complex structure}
+\pmdefines{almost-complex structure}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{theorem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\cpxs}{{\mathbb C}} % The "complexes" :)
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\theorembodyfont{\upshape}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newtheorem{exm}{Example}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\projp}{{\mathbb R}P}
+
+% open cells (not very nice...)
+\newcommand{\oce}{\smash{\overset{\circ}e}} 
+\newcommand{\ocD}{\smash{\overset{\circ}D}} 
+
+\newcommand{\susp}{\Sigma}
+\newcommand{\restr}[2]{{#1}|_{#2}}
+
+\renewcommand{\hom}{\mathop{\mathrm{Hom}}} % Homomorphisms functor
+\newcommand{\rp}{\reals P} % real projective space
+\newcommand{\cp}{\cpxs P} % complex projective space
+\newcommand{\zmod}[1]{\integs / #1\integs} % Z/nZ
+\begin{document}
+\PMlinkescapeword{structure}
+
+Given a fiber bundle $\funcdef{p}{E}{B}$ with typical fiber $F$ and structure group $G$ (henceforth called an $(F,G)$-bundle over $B$), we say that the bundle admits a {\em reduction of its structure group to $H$,} where $H<G$ is a subgroup, if it is isomorphic to an $(F,H)$-bundle over $B.$ 
+
+
+Equivalently, $E$ admits a reduction of structure group to $H$ if there is
+a choice of local trivializations covering $E$ such that the transition
+functions all belong to $H.$
+
+\begin{rmk}
+Here, the action of $H$ on $F$ is the restriction of the $G$-action; in 
+particular, this means that an $(F,H)$-bundle is automatically an 
+$(F,G)$-bundle. The bundle isomorphism in the definition then becomes meaningful
+in the category of $(F,G)$-bundles over $B$.
+\end{rmk}
+
+\begin{exm}
+Let $H$ be the trivial subgroup. Then, the existence of a reduction of structure group to $H$ is equivalent to the bundle being trivial.
+\end{exm}
+
+For the following examples, let $E$ be an $n$-dimensional vector bundle, so that
+$F\isom\reals^n$ with $G=GL(n,\reals),$ the general linear group acting as 
+usual.
+
+\begin{exm}
+Set $H=GL^+(n,\reals),$ the subgroup of $GL(n,\reals)$ consisting of matrices with positive determinant. A reduction to $H$ is equivalent to an orientation of the vector bundle. In the case where $B$ is a smooth manifold and $E=TB$ is its tangent bundle, this coincides with other definitions of an orientation of $B$.
+\end{exm}
+
+\begin{exm}
+Set $H=O(n)$, the orthogonal group. A reduction to $H$ is called a {\em Riemannian\/} or {\em Euclidean structure\/} on the vector bundle. It coincides with a continuous fiberwise choice
+of a positive definite inner product, and for the case of the tangent bundle, 
+with the usual notion of a Riemannian metric on a manifold.
+
+When $B$ is paracompact, an argument with partitions of unity shows that
+a Riemannian structure always exists on any given vector bundle. For this reason, it is often convenient to start out assuming the structure group
+to be $O(n).$
+\end{exm}
+
+\begin{exm}
+Let $n=2m$ be even, and let $H=GL(m,\cpxs),$ the group of invertible complex matrices, embedded in $GL(n,\reals)$ by means of the usual identification of $\cpxs$ with $\reals^2.$
+A reduction to $H$ is called a {\em complex structure} on the vector bundle, and 
+it is equivalent to a continuous fiberwise choice of an endomorphism $J$ satisfying $J^2=-I.$ 
+
+A complex structure on a tangent bundle is called an {\em almost-complex structure\/} on the manifold. This is to distinguish it from the
+more restrictive notion of a complex structure on a manifold, which requires the existence of an atlas with charts in $\cpxs^m$ such that the transition functions are holomorphic.
+\end{exm}
+
+\begin{exm}
+Let $H=GL(1,\reals)\cross GL(n-1,\reals),$ embedded in $GL(n,\reals)$ by
+$\tuple{A,B}\mapsto A\oplus B.$ A reduction to $H$ is equivalent to the 
+existence of a splitting $E\isom E_1\oplus E_2,$ where $E_1$ is a line bundle.
+More generally, a reduction to $GL(k,\reals)\cross GL(n-k,\reals)$ is equivalent to a splitting $E\isom E_1\oplus E_2,$ where $E_1$ is a $k$-plane bundle.
+\end{exm}
+
+\begin{rmk}
+These examples all have two features in common, namely:
+\begin{itemize}
+\item
+the subgroup $H$ can be interpreted as being precisely the subgroup of $G$ which preserves a particular structure, and,
+
+\item
+a reduction to $H$ is equivalent to a continuous fiber-by-fiber choice of a
+structure of the same kind.
+\end{itemize}
+
+For example, $O(n)$ is the subgroup of $GL(n,\reals)$ which preserves the
+standard inner product of $\reals^n,$ and reduction of structure to $O(n)$ is
+equivalent to a fiberwise choice of inner products. 
+
+This is not a coincidence. The intuition behind this is as follows. There
+is no obstacle to choosing a fiberwise inner product in a neighborhood of any given point $x\in B$: we simply choose a neighborhood $U$ on which the bundle is trivial, and with respect to a trivialization $\inv{p}(U)\homeo\reals^n\cross U$, we can let the inner product on each $\inv{p}(y)$ be the standard inner product. However, if we make these choices locally around every point in $B$, 
+there is no guarantee that they ``glue together'' properly to yield a global 
+continuous choice, {\em unless} the transition functions preserve the standard 
+inner product. But this is precisely what reduction of structure to $O(n)$ 
+means.
+
+The same explanation holds for subgroups preserving other kinds of structure. 
+
+\end{rmk}
+
+% Coming soon: relation with classifying spaces and classifying maps.
+%%%%%
+%%%%%
+\end{document}

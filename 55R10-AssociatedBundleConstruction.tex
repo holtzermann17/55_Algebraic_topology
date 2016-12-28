@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AssociatedBundleConstruction}
+\pmcreated{2013-03-22 13:26:46}
+\pmmodified{2013-03-22 13:26:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{associated bundle construction}
+\pmrecord{9}{34009}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R10}
+\pmdefines{associated bundle}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+%\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+\newcommand{\Au}{\text{Aut}}
+\def\co{\colon\thinspace}
+\begin{document}
+Let $G$ be a topological group, $\pi\co P\to X$ a (right) principal $G$-bundle,
+$F$  a topological  space and $\Gr\co G\to \Au(F)$ a 
+representation of  $G$ as homeomorphisms of $F$. Then the fiber bundle
+\emph{associated} to $P$ by $\Gr$, is a fiber bundle $\pi_\Gr\co P\times_\Gr F 
+\to X$ with fiber $F$ and group $G$ that is defined as follows:
+\begin{itemize}
+\item The total space is defined as 
+$$P\times_\Gr F:=P\times F/G$$
+where the (left) action of $G$ on $P\times F$ is defined by
+$$g\cdot (p,f):=\left(pg^{-1},\Gr(g)(f)\right), \quad \forall g\in G, p\in P, F\in
+F\,.$$
+\item The projection $\pi_\Gr$ is defined by 
+$$\pi_\Gr[p,f]:=\pi(p)\,,$$
+where $[p,f]$ denotes the $G$--orbit of $(p,f)\in P\times F$. 
+\end{itemize}
+
+\begin{thm}
+  The above is well defined and  defines a $G$--bundle over $X$ with fiber
+  $F$. Furthermore $P\times_\Gr F$ has the same transition functions as $P$. 
+\end{thm}
+
+\begin{proof}[Sketch of proof]
+  To see that $\pi_\Gr$ is well defined just notice that for $p\in P$ and
+  $g\in G$,  $\pi(pg)=\pi(p)$. To see that the fiber is $F$ notice that since
+  the principal action is simply transitive, given $p\in P$ any orbit of the
+  $G$--action on $P\times F$ contains a \emph{unique} representative of the
+  form $(p,f)$ for some $f\in F$. It is clear that an open cover that
+  trivializes $P$ trivializes $P\times_\Gr F$ as well.
+  To see that $P\times_\Gr F$ has the same
+  transition functions as $P$ notice that transition functions of $P$  act on the
+  left and thus commute with the principal $G$--action on $P$.  
+\end{proof}
+
+Notice that if $G$ is a Lie group, $P$ a smooth principal bundle and $F$ is a
+smooth manifold and $\Gr$ maps inside the diffeomorphism group of $F$, the
+above construction produces a smooth bundle. Also quite often $F$ has extra
+structure and $\Gr$ maps into the homeomorphisms of $F$ that preserve that
+structure. In that case the above construction produces a ``bundle of such
+structures.''  For example    when $F$ is a vector space and
+$\Gr(G) \subset \operatorname{GL}(F) $, i.e. $\Gr$ is a linear
+representation  of $G$ we get
+a vector bundle; if   $\Gr(G) \subset \operatorname{SL}(F)$ we get an
+oriented vector bundle, etc.    
+
+%% To be added: 
+% It turns out that the above construction has an inverse. Namely let $\pi\co
+% E \to X$ be a fiber bundle with group $G$ and fiber $F$. Define the
+% associated principal bundle $\pi_p\co P \to X$ as follows. The fiber of
+% $\pi_p$ over $x\in X$ consists
+%%%%%
+%%%%%
+\end{document}

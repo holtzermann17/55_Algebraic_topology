@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulerCharacteristic}
+\pmcreated{2013-03-22 16:12:51}
+\pmmodified{2013-03-22 16:12:51}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Euler  characteristic}
+\pmrecord{13}{38311}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The term \emph{Euler characteristic} is defined for several objects.
+
+If $K$ is a finite simplicial complex of dimension $m$, let $\alpha_i$ be the number of
+simplexes of dimension $i$. The \emph{Euler characteristic} of $K$
+is defined to be
+$$
+\chi(K) = \sum_{i=0}^m (-1)^i \alpha_i .
+$$
+
+Next, if $K$ is a finite CW complex, let $\alpha_i$ be the number of i-cells
+in $K$. The \emph{Euler characteristic} of $K$
+is defined to be
+
+$$
+\chi(K) = \sum_{i \ge 0}(-1)^i \alpha_i .
+$$
+
+If $X$ is a finite polyhedron, with triangulation $K$, a simplicial complex,
+then the \emph{Euler characteristic} of $X$ is $\chi(K)$. It can be shown
+that all triangulations of $X$ have the same value for $\chi(K)$ so that
+this is well-defined. 
+
+Finally, if $C=\{C_q\}$ is a finitely generated graded group, then
+the \emph{Euler characteristic} of $C$ is defined to be
+$$
+\chi(C) = \sum_{q \ge 0}  (-1)^q rank(C_q) .
+$$
+%%%%%
+%%%%%
+\end{document}

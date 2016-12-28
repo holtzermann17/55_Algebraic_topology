@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfDeRhamCohomology}
+\pmcreated{2013-03-22 14:25:01}
+\pmmodified{2013-03-22 14:25:01}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{example of de Rham cohomology}
+\pmrecord{5}{35922}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55N05}
+\pmclassification{msc}{58A12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\HdR{{\rm H}_{\rm dR}}
+\begin{document}
+If $\omega$ is a differential form on a smooth manifold $X$, then it is always true that if $\omega$ is {\em exact} ($\omega=d\eta$ for some other differential form $\eta$), then $\omega$ is {\em closed} ($d\omega=0$).  On some manifolds, the opposite is also the case: all closed forms of degree at least 1 are exact.  However, in general this is not true.  The idea of de Rham cohomology is to measure the extent to which closed differential forms are not exact in terms of real vector spaces.
+
+The simplest example of a differential manifold (apart from the empty manifold) is the zero-dimensional manifold consisting of a single point.  Here the only differential forms are those of degree 0; actually, $\Omega X=\Omega^0 X\cong\mathbb{R}$ if $X$ is a single point.  Applying the definition of the de Rham cohomology gives $\HdR X=\HdR^0 X\cong\mathbb{R}$.
+
+Next, we use the fact that the de Rham cohomology is a homotopy invariant functor to show that for any $n\ge 0$ the de Rham cohomology groups of $\mathbb{R}^n$ are 
+$$
+\HdR^0(\mathbb{R}^n)\cong\mathbb{R}
+$$
+and
+$$
+\HdR^i(\mathbb{R}^n)=0\quad\hbox{for $i>0$.}
+$$
+The reason for this is that $\mathbb{R}^n$ is contractible (homotopy equivalent to a point), and so has the same de Rham cohomology.  More generally, any contractible manifold has the de Rham cohomology of a point; this is essentially the statement of the Poincar\'e lemma.
+
+The first example of a non-trivial $\HdR^i$ for $i>0$ is the circle $S^1$.  In fact, we have
+$$
+\HdR^0(S^1)\cong\mathbb{R}
+$$
+and
+$$\HdR^1(S^1)\cong\mathbb{R}\cdot[\omega],
+$$
+where $\omega$ is any 1-form on $S^1$ with $\int_{S^1}\omega\ne0$.  The standard volume form $d\phi$ on $S^1$, which it inherits from $\mathbb{R}^2$ if we view $S^1$ as the unit circle, is such a form.  The notation $d\phi$ is somewhat misleading since it is not the differential of a global function $\phi$; this is exactly the reason it appears in $\HdR^1(S^1)$.  (However, by the Poincar\'e lemma, it can locally be viewed as the differential of a function.)
+
+For arbitrary $n>0$, the dimensions of the de Rham cohomology groups of $S^n$ are given by $\dim\HdR^i(S^n)=1$ for $i=0$ or $i=n$, and $\dim\HdR^i(S^n)=0$ otherwise.  A couple of methods exist for calculating the de Rham cohomology groups for $S^n$ and other, more complicated, manifolds.  The Mayer-Vietoris sequence is an example of such a tool.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VanKampensTheorem}
+\pmcreated{2013-03-22 13:24:17}
+\pmmodified{2013-03-22 13:24:17}
+\pmowner{RonaldBrown}{18528}
+\pmmodifier{RonaldBrown}{18528}
+\pmtitle{Van Kampen's theorem}
+\pmrecord{9}{33947}
+\pmprivacy{1}
+\pmauthor{RonaldBrown}{18528}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55Q05}
+\pmsynonym{Seifert-Van Kampen theorem}{VanKampensTheorem}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+Van Kampen's theorem for fundamental groups may be stated as
+follows:
+\begin{thm}
+ Let $X$ be a topological space which is the union of the interiors of  two path connected
+ subspaces $X_1, X_2$. Suppose $X_0:=X_1\cap X_2$ is path connected. Let
+ further $*\in X_0$ and $i_k\co \pi_1(X_0,*)\to\pi_1(X_k,*)$,
+ $j_k\co\pi_1(X_k,*)\to\pi_1(X,*)$ be induced by the inclusions for
+ $k=1,2$. Then $X$ is path connected and the natural morphism
+$$\pi_1(X_1,*)\bigstar_{\pi_1(X_0,*)}\pi_1(X_2,*)\to \pi_1(X,*)\,,$$
+is an isomorphism,     that is, the fundamental group of $X$ is the
+free product of the
+    fundamental groups of $X_1$ and $X_2$ with amalgamation  of $\pi_1(X_0,*)$.
+\end{thm}
+
+Usually the morphisms induced by inclusion in this theorem are not
+themselves injective, and the more precise version of the  statement
+is in terms of {pushouts} of groups.
+
+The notion of pushout in the category of groupoids allows for a
+version of the theorem  for the non path connected case, using the
+fundamental groupoid $\pi_1(X,A)$  on a set $A$ of base points,
+\cite{rb1}. This groupoid consists of homotopy classes rel end
+points of paths in $X$ joining points of $A\cap X$. In particular,
+if $X$ is a contractible space, and $A$ consists of two distinct
+points of $X$, then $\pi_1(X,A)$ is easily seen to be isomorphic to
+the groupoid often written $\mathcal I$ with two vertices and
+exactly one morphism between any two vertices. This groupoid plays a
+role in the theory of groupoids analogous to that of the group of
+integers in the theory of groups.
+
+
+\begin{thm}
+Let the topological space $X$ be covered by the interiors of two
+subspaces $X_1, X_2$ and let $A$ be a set which meets each path
+component of $X_1, X_2$ and $X_0:=X_1 \cap X_2$. Then $A$ meets each
+path component of $X$ and the following diagram of morphisms induced
+by inclusion
+$$\xymatrix{ {\pi_1(X_0,A)}\ar [r]^{\pi_1(i_1)}\ar[d]_{\pi_1(i_2)}
+&\pi_1(X_1,A)\ar[d]^{\pi_1(j_1)} \\
+{\pi_1(X_2,A)}\ar [r]_{\pi_1(j_2)}&  {\pi_1(X,A)} }
+$$
+is a  pushout diagram in the category of groupoids.
+\end{thm}
+
+The interpretation of this theorem as a calculational tool for
+fundamental groups needs some development of `combinatorial groupoid
+theory', \cite{rb,higgins}. This theorem implies the calculation of
+the fundamental group of the circle as the group of integers, since
+the group of integers is obtained from the groupoid $\mathcal I$ by
+identifying, in the category of groupoids,  its two vertices.
+
+There is a version of the last theorem when $X$ is covered by the
+union of the interiors of a family $\{U_\lambda : \lambda \in
+\Lambda\}$ of subsets, \cite{brs}.  The conclusion is that if  $A$
+meets each path component of all 1,2,3-fold intersections of the
+sets $U_\lambda$, then A meets all path components of $X$ and the
+diagram
+$$ \bigsqcup_{(\lambda,\mu) \in \Lambda^2} \pi_1(U_\lambda \cap U_\mu, A) \rightrightarrows \bigsqcup_{\lambda \in \Lambda} \pi_1(U_\lambda, A)\rightarrow \pi_1(X,A) $$
+of morphisms induced by inclusions is a coequaliser in the category
+of groupoids.
+
+\begin{thebibliography}{8}
+\bibitem{rb1} R. Brown, ``Groupoids and Van Kampen's theorem'', {\em Proc. London
+Math. Soc.} (3)  17 (1967) 385-401.
+
+\bibitem{rb} R. Brown, {\em Topology and Groupoids}, Booksurge PLC (2006).
+\bibitem{brs} R. Brown and A. Razak, ``A van Kampen theorem for unions of
+non-connected  spaces'', {\em Archiv. Math.} 42 (1984) 85-88.
+\bibitem{higgins} P.J. Higgins, {\em Categories and Groupoids}, van Nostrand, 1971,
+Reprints of   Theory and Applications of Categories,  No. 7 (2005)
+pp 1-195.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

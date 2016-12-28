@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomotopyEquivalence}
+\pmcreated{2013-03-22 12:13:22}
+\pmmodified{2013-03-22 12:13:22}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{homotopy equivalence}
+\pmrecord{14}{31589}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P10}
+\pmrelated{HomotopyOfMaps}
+\pmrelated{WeakHomotopyEquivalence}
+\pmrelated{Contractible}
+\pmrelated{HomotopyInvariance}
+\pmrelated{ChainHomotopyEquivalence}
+\pmrelated{PathConnectnessAsAHomotopyInvariant}
+\pmrelated{TheoremOnCWComplexApproximationOfQuantumStateSpacesInQAT}
+\pmdefines{homotopy equivalent}
+\pmdefines{homotopically equivalent}
+\pmdefines{homotopy type}
+\pmdefines{strong homotopy equivalence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Definition} Suppose that $X$ and $Y$ are topological spaces and 
+$f: X \to Y$ is a continuous map. 
+If there exists a 
+continuous map $g:Y \to X$ such that $f\circ g \simeq id_{Y}$
+(i.e. $f\circ g$ is \PMlinkid{homotopic}{1584} to the identity 
+mapping on $Y$), 
+and $g \circ f \simeq id_{X}$, then 
+$f$ is a \emph{homotopy equivalence}.
+This homotopy equivalence is sometimes called
+\emph{strong homotopy equivalence} to distinguish it from
+weak homotopy equivalence.
+
+If there exist a homotopy equivalence between the topological 
+spaces $X$ and $Y$, we say that $X$ and $Y$ are  
+\emph{homotopy equivalent}, or that 
+$X$ and $Y$ are of the same \emph{homotopy type}. 
+We then write  $X\simeq Y$. 
+
+\subsubsection{Properties}
+\begin{enumerate}
+\item Any homeomorphism $f:X\to Y$ is obviously a homotopy equivalence with 
+$g=f^{-1}$.
+\item For topological spaces, homotopy equivalence is an 
+equivalence relation.
+\item A topological space $X$ is (by definition) contractible, 
+if $X$ is homotopy equivalent to a point, i.e., $X\simeq \{x_0\}$.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+ \bibitem{hatcher_at} A. Hatcher, \emph{Algebraic Topology}, Cambridge University Press, 2002. Also available
+ \PMlinkexternal{online}{http://www.math.cornell.edu/~hatcher/AT/ATpage.html}.
+ \end{thebibliography}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

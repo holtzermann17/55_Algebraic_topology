@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Fibration}
+\pmcreated{2013-03-22 15:37:57}
+\pmmodified{2013-03-22 15:37:57}
+\pmowner{whm22}{2009}
+\pmmodifier{whm22}{2009}
+\pmtitle{fibration}
+\pmrecord{5}{37560}
+\pmprivacy{1}
+\pmauthor{whm22}{2009}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55R65}
+\pmrelated{fibremap}
+\pmrelated{FibreBundle}
+\pmrelated{LocallyTrivialBundle}
+\pmrelated{LongExactSequenceLocallyTrivialBundle}
+\pmrelated{homotopyliftingproperty}
+\pmrelated{cofibration}
+\pmdefines{fibration}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A fibration is a map satisfying the homotopy lifting property.  This is easily seen to be equivalent to the following:
+
+A map $f:X \to Y$ is a fibration if and only if there is a continuous function which given a path, $\phi$, in $Y$ and a point, $x$, lying above $\phi(0)$, returns a lift of $\phi$, starting at $x$.
+
+Let $D^2$ denote the set of complex numbers with modulus less than or equal to 1. An example of a fibration is the map $g: D^2 \to [-1,1]$ sending a complex number $z$ to $re(z)$. 
+
+Note that if we restrict $g$ to the boundary of $D^2$, we do not get a fibration.  Although we may still lift any path to begin at a prescribed point, we cannot make this assignment continuously.
+
+Another class of fibrations are found in fibre bundles.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeakHomotopyEquivalence}
+\pmcreated{2013-03-22 13:25:45}
+\pmmodified{2013-03-22 13:25:45}
+\pmowner{antonio}{1116}
+\pmmodifier{antonio}{1116}
+\pmtitle{weak homotopy equivalence}
+\pmrecord{9}{33987}
+\pmprivacy{1}
+\pmauthor{antonio}{1116}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55P10}
+\pmsynonym{weak equivalence}{WeakHomotopyEquivalence}
+\pmrelated{HomotopyEquivalence}
+\pmrelated{WeakHomotopyAdditionLemma}
+\pmrelated{ApproximationTheoremForAnArbitrarySpace}
+\pmrelated{OmegaSpectrum}
+\pmrelated{WhiteheadTheorem}
+\pmdefines{weakly homotopy equivalent}
+\pmdefines{weakly equivalent}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\limv}[2]{\lim\limits_{#1\rightarrow #2}}
+\newcommand{\eb}{\mathbf{e}} % Standard basis
+\newcommand{\comp}{\circ} % Function composition
+\newcommand{\reals}{{\mathbb R}} % The reals
+\newcommand{\integs}{{\mathbb Z}} % The integers
+\newcommand{\setc}[2]{\left\{#1:\: #2\right\}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\cycle}[1]{\left(#1\right)}
+\newcommand{\tuple}[1]{\left(#1\right)}
+\newcommand{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\PartialSl}[2]{\partial #1/\partial #2}
+\newcommand{\funcsig}[2]{#1\rightarrow #2}
+\newcommand{\funcdef}[3]{#1:\funcsig{#2}{#3}}
+\newcommand{\supp}{\mathop{\mathrm{Supp}}} % Support of a function
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}} % Sign function
+\newcommand{\tr}[1]{#1^\mathrm{tr}} % Transpose of a matrix
+\newcommand{\inprod}[2]{\left<#1,#2\right>} % Inner product
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+\newcommand{\maps}[2]{\mathop{\mathrm{Maps}}\left(#1,#2\right)}
+\newcommand{\intoc}[2]{\left(#1,#2\right]}
+\newcommand{\intco}[2]{\left[#1,#2\right)}
+\newcommand{\intoo}[2]{\left(#1,#2\right)}
+\newcommand{\intcc}[2]{\left[#1,#2\right]}
+\newcommand{\transv}{\pitchfork}
+\newcommand{\pair}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sqnorm}[1]{\left\|#1\right\|^2}
+\newcommand{\bdry}{\partial}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\tensor}{\otimes}
+\newcommand{\bigtensor}{\bigotimes}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\coker}{\operatorname{im}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\crit}{\operatorname{Crit}}
+\newtheorem{thm}{Theorem}
+\newtheorem{dthm}[thm]{Desired Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dcor}[thm]{Desired Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}{Definition}
+\newtheorem{rmk}{Remark}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\nabla}
+\newcommand{\homeo}{\cong}
+\newcommand{\isom}{\cong}
+\newcommand{\htpyeq}{\backsimeq}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\from}{\leftarrow}
+\begin{document}
+\PMlinkescapeword{induced}
+
+A continuous map $\funcdef{f}{X}{Y}$ between path-connected based 
+topological spaces is said to be a {\em weak homotopy equivalence\/} if for each $k\ge 1$ it induces an isomorphism $\funcdef{f_*}{\pi_k(X)}{\pi_k(Y)}$ between the
+$k$th homotopy groups. $X$ and $Y$ are then said to be {\em weakly
+homotopy equivalent.} 
+
+\begin{rmk}
+  It is {\em not\/} enough for $\pi_k(X)$ to be isomorphic to
+  $\pi_k(Y)$ for all $k.$ The definition requires these isomorphisms
+  to be induced by a space-level map $f.$
+\end{rmk}
+
+\begin{rmk}
+  More generally, two spaces $X$ and $Y$ are defined to be weakly homotopy equivalent if there is a sequence of spaces and maps
+  $$ X \to X_1 \from X_2 \to X_3 \from \cdots \to X_n \from Y$$ in which each map is a weak homotopy equivalence.
+\end{rmk}
+
+
+%%%%%
+%%%%%
+\end{document}

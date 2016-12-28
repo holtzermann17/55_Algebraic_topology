@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WindingNumber}
+\pmcreated{2013-03-22 12:56:06}
+\pmmodified{2013-03-22 12:56:06}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{winding number}
+\pmrecord{8}{33291}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{55M25}
+\pmclassification{msc}{30A99}
+\pmsynonym{index}{WindingNumber}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{net}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{definable}
+\PMlinkescapeword{integral}
+%30A99
+Winding numbers are a basic notion in algebraic topology, and play an
+important role in connection with analytic functions of a complex variable.
+Intuitively, given a closed curve $t\mapsto S(t)$ in an oriented
+Euclidean plane (such as the complex plane $\mathbb{C}$), and a point
+$p$ not in the image of $S$, the winding number (or index) of $S$ with respect
+to $p$ is the net number of times $S$ surrounds $p$. It is not altogether
+easy to make this notion rigorous.
+
+Let us take $\mathbb{C}$ for the plane. We have
+a continuous mapping $S:[a,b]\to \mathbb{C}$ where $a$ and $b$ are some
+reals with $a<b$ and $S(a)=S(b)$. Denote by $\theta(t)$ the angle from the
+positive real axis to the ray from $z_0$ to $S(t)$. As $t$ moves from $a$ to
+$b$, we expect $\theta$ to increase or decrease by a multiple of $2\pi$,
+namely $2\omega\pi$ where $\omega$ is the winding number. One therefore thinks
+of using integration. And indeed, in the theory of
+functions of a complex variable, it is proved that the value
+$$\frac{1}{2\pi i} \int_S \frac{dz}{z-z_0}$$
+is an integer and has the expected properties of a winding number around
+$z_0$. To define the winding number in this way, we need to assume
+that the closed path $S$ is rectifiable (so that the path
+integral is defined). An equivalent condition is that the real and imaginary
+parts of the function $S$ are of bounded variation.
+
+But if $S$ is any continuous mapping $[a,b]\to \mathbb{C}$ having
+$S(a)=S(b)$, the winding number is still definable, without any integration.
+We can break up the domain of $S$ into a finite number of intervals such that
+the image of $S$, on any of those intervals, is contained in a disc which
+does not contain $z_0$. Then $2\omega\pi$ emerges as a finite sum: the sum
+of the angles subtended at $z_0$ by the sides of a polygon.
+
+Let $A$, $B$, and $C$ be any three distinct rays from $z_0$.
+The three sets
+$$S^{-1}(A)\qquad S^{-1}(B)\qquad S^{-1}(C)$$
+are closed in $[a,b]$, and they \emph{determine}
+the winding number of $S$ around $z_0$. This result can provide an alternative
+definition of winding numbers in $\mathbb{C}$, and a definition in some other
+spaces also, but the details are rather subtle.
+
+For one more variation on the theme, let $S$ be any topological space
+homeomorphic to a circle, and let
+$f:S\to S$ be any continuous mapping. Intuitively we expect that if a point
+$x$ travels once around $S$, the point $f(x)$ will travel around $S$ some
+integral number of times, say $n$ times. The notion can be made precise.
+Moreover, the number $n$ is determined by the three closed sets
+$$f^{-1}(a)\qquad f^{-1}(b)\qquad f^{-1}(c)$$
+where $a$, $b$, and $c$ are any three distinct points in $S$.
+%%%%%
+%%%%%
+\end{document}
