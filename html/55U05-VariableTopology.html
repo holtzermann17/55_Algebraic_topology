@@ -1,0 +1,173 @@
+<!DOCTYPE html><html>
+<head>
+<title>variable topology</title>
+<!--Generated on Sat Feb 10 11:45:59 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">variable topology</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Preliminary data</span>
+Let us recall the basic notion that a <em class="ltx_emph ltx_font_italic">topological space</em>
+consists of a set <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and a ‘topology’ on <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> where the latter
+gives a precise but general sense to the intuitive ideas of
+‘nearness’ and ‘continuity’. Thus the initial task is to
+axiomatize the notion of ‘neighborhood’ and then consider a
+topology in terms of open or of closed sets, a compact-open
+topology, and so on (see Brown, 2006). In any case, a topological
+space consists of a pair <math id="p1.m3" class="ltx_Math" alttext="(X,\mathcal{T})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒯</mi><mo stretchy="false">)</mo></mrow></math> where <math id="p1.m4" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math> is a
+topology on <math id="p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. For instance, suppose an <em class="ltx_emph ltx_font_italic">open set topology</em>
+is given by the set <math id="p1.m6" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> of prescribed open sets of <math id="p1.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>
+satisfying the usual axioms (Brown, 2006 Chapter 2). Now, to speak
+of a variable open-set topology one might conveniently take in
+this case a family of sets <math id="p1.m8" class="ltx_Math" alttext="\mathcal{U}_{\lambda}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒰</mi><mi>λ</mi></msub></math> of <em class="ltx_emph ltx_font_italic">a
+system of prescribed open sets</em>, where <math id="p1.m9" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> belongs to some
+indexing set <math id="p1.m10" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>. The system of open sets may of course be
+based on a system of contained neighbourhoods of points where one
+system may have a different geometric property compared say to
+another system (a system of disc-like neighbourhoods compared with
+those of cylindrical-type).</p>
+</div>
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">In general, we may speak of a topological space with a
+<em class="ltx_emph ltx_font_italic">varying topology</em> as a pair <math id="S0.Thmdefinition1.p1.m1" class="ltx_Math" alttext="(X,\mathcal{T}_{\lambda})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mi>λ</mi></msub><mo stretchy="false">)</mo></mrow></math> where <math id="S0.Thmdefinition1.p1.m2" class="ltx_Math" alttext="\lambda\in\Lambda" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></math>
+is an index set.</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example</span> The idea of a varying topology has been introduced to describe possible topological
+distinctions in bio-molecular organisms through stages of
+development, evolution, neo-plasticity, etc. This is indicated
+schematically in the diagram below where we have an <math id="p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-stage
+dynamic evolution (through complexity) of categories <math id="p2.m2" class="ltx_Math" alttext="\mathsf{D}_{i}" display="inline"><msub><mi>𝖣</mi><mi>i</mi></msub></math>
+where the vertical arrows denote the assignment of topologies
+<math id="p2.m3" class="ltx_Math" alttext="\mathcal{T}_{i}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mi>i</mi></msub></math> to the class of objects of the <math id="p2.m4" class="ltx_Math" alttext="\mathsf{D}_{i}" display="inline"><msub><mi>𝖣</mi><mi>i</mi></msub></math> along
+with functors <math id="p2.m5" class="ltx_Math" alttext="\mathcal{F}_{i}:\mathsf{D}_{i}{\longrightarrow}\mathsf{D}_{i+1}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>i</mi></msub><mo>:</mo><mrow><msub><mi>𝖣</mi><mi>i</mi></msub><mo>⟶</mo><msub><mi>𝖣</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow></math>, for
+<math id="p2.m6" class="ltx_Math" alttext="1\leq i\leq n-1" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> :</p>
+</div>
+<div id="p3" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\diagram&amp;\mathcal{T}_{1}\dto&lt;-.05ex&gt;&amp;\mathcal{T}_{2}\dto&lt;-1.2ex&gt;&amp;\cdots&amp;%
+\mathcal{T}_{n-1}\dto&lt;-.05ex&gt;&amp;\mathcal{T}_{n}\dto&lt;-1ex&gt;_{(}0.45){}\\
+&amp;\mathsf{D}_{1}\rto^{\mathcal{F}_{1}}&amp;\mathsf{D}_{2}\rto^{\mathcal{F}_{2}}%
+\rule{5.0pt}{0.0pt}&amp;&amp;\cdots\rto^{\mathcal{F}_{n-1}}\rule{5.0pt}{0.0pt}\mathsf{%
+D}_{n-1}&amp;\rule{0.0pt}{0.0pt}\mathsf{D}_{n}\enddiagram" display="block"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\diagram</mtext></merror><mi mathvariant="normal">&amp;</mi><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mn>1</mn></msub><merror class="ltx_ERROR undefined undefined"><mtext>\dto</mtext></merror><mo>&lt;</mo><mo>-</mo><mn>.05</mn><mi>e</mi><mi>x</mi><mo>&gt;</mo><mi mathvariant="normal">&amp;</mi><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mn>2</mn></msub><merror class="ltx_ERROR undefined undefined"><mtext>\dto</mtext></merror><mo>&lt;</mo><mo>-</mo><mn>1.2</mn><mi>e</mi><mi>x</mi><mo>&gt;</mo><mi mathvariant="normal">&amp;</mi><mi mathvariant="normal">⋯</mi><mi mathvariant="normal">&amp;</mi><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><merror class="ltx_ERROR undefined undefined"><mtext>\dto</mtext></merror><mo>&lt;</mo><mo>-</mo><mn>.05</mn><mi>e</mi><mi>x</mi><mo>&gt;</mo><mi mathvariant="normal">&amp;</mi><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mi>n</mi></msub><merror class="ltx_ERROR undefined undefined"><mtext>\dto</mtext></merror><mo>&lt;</mo><mo>-</mo><mn>1</mn><mi>e</mi><mi>x</mi><msub><mo>&gt;</mo><mo stretchy="false">(</mo></msub><mn>0.45</mn><mo stretchy="false">)</mo><mi mathvariant="normal">&amp;</mi><mi>𝖣</mi><msub><mi></mi><mn>1</mn></msub><merror class="ltx_ERROR undefined undefined"><mtext>\rto</mtext></merror><msup><mi></mi><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mn>1</mn></msub></msup><mi mathvariant="normal">&amp;</mi><mi>𝖣</mi><msub><mi></mi><mn>2</mn></msub><merror class="ltx_ERROR undefined undefined"><mtext>\rto</mtext></merror><msup><mi></mi><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mn>2</mn></msub></msup><mtext mathcolor="red"><span class="ltx_rule" style="width:5.0pt;height:0.0pt;background:black;display:inline-block;"> </span></mtext><mi mathvariant="normal">&amp;</mi><mi mathvariant="normal">&amp;</mi><mi mathvariant="normal">⋯</mi><merror class="ltx_ERROR undefined undefined"><mtext>\rto</mtext></merror><msup><mi></mi><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></msup><mtext mathcolor="red"><span class="ltx_rule" style="width:5.0pt;height:0.0pt;background:black;display:inline-block;"> </span></mtext><mi>𝖣</mi><msub><mi></mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mi mathvariant="normal">&amp;</mi><mtext mathcolor="red"><span class="ltx_rule" style="width:0.0pt;height:0.0pt;background:black;display:inline-block;"></span></mtext><mi>𝖣</mi><msub><mi></mi><mi>n</mi></msub><merror class="ltx_ERROR undefined undefined"><mtext>\enddiagram</mtext></merror></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In this way a variable topology (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/VariableTopology</span>) can be realized through such
+<math id="p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-levels of complexity of the development of an organism.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Another example is that of cell/network topologies in a categorical approach
+involving concepts such as <em class="ltx_emph ltx_font_italic">the free groupoid over a graph</em>
+(Brown, 2006). Thus a <em class="ltx_emph ltx_font_italic">varying graph system</em> clearly induces an
+accompanying system of variable groupoids (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/VariableTopology3</span>). As suggested by
+Golubitsky and Stewart (2006), symmetry groupoids of various cell
+networks would appear relevant to the physiology of animal locomotion as one example.</p>
+</div>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">variable topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">VariableTopology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:15:39</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:15:39</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55U05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55U35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55U40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18G55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18B40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">variable topology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TopologicalSpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">VariableTopology3</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">indexed family of topological spaces</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:45:59 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

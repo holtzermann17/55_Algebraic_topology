@@ -1,0 +1,189 @@
+<!DOCTYPE html><html>
+<head>
+<title>globular ω-groupoid</title>
+<!--Generated on Sat Feb 10 11:44:01 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">globular <math id="m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>-groupoid</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">An <math id="S0.Thmdefinition1.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>-groupoid has a distinct meaning from that of <math id="S0.Thmdefinition1.p1.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>-category, although certain authors restrict its definition to the latter by adding the restriction of invertible morphisms, and thus also assimilate the <math id="S0.Thmdefinition1.p1.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>-groupoid with the <math id="S0.Thmdefinition1.p1.m4" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>-groupoid. Ronald Brown and Higgins showed in 1981 that <math id="S0.Thmdefinition1.p1.m5" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>-groupoids and crossed complexes are <span class="ltx_text ltx_font_italic">equivalent</span>. Subsequently,in 1987, these authors introduced the tensor products and homotopies for <math id="S0.Thmdefinition1.p1.m6" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>-groupoids and crossed complexes. “<span class="ltx_text ltx_font_italic">It is because the geometry of convex sets is so much more complicated in dimensions <math id="S0.Thmdefinition1.p1.m7" class="ltx_Math" alttext="&gt;1" display="inline"><mrow><mi></mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">1</mn></mrow></math> than in dimension <math id="S0.Thmdefinition1.p1.m8" class="ltx_Math" alttext="1" display="inline"><mn mathvariant="normal">1</mn></math> that new complications emerge for the theories of higher order group theory and of higher homotopy groupoids.”</span></p>
+</div>
+<div id="S0.Thmdefinition1.p2" class="ltx_para">
+<p class="ltx_p">However, in order to introduce a precise and useful definition of globular <math id="S0.Thmdefinition1.p2.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>-groupoids one needs to define first the <math id="S0.Thmdefinition1.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-globe <math id="S0.Thmdefinition1.p2.m3" class="ltx_Math" alttext="G^{n}" display="inline"><msup><mi>G</mi><mi>n</mi></msup></math> which is the subspace of an Euclidean <math id="S0.Thmdefinition1.p2.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-space <math id="S0.Thmdefinition1.p2.m5" class="ltx_Math" alttext="R^{n}" display="inline"><msup><mi>R</mi><mi>n</mi></msup></math> of points <math id="S0.Thmdefinition1.p2.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that that their norm
+<math id="S0.Thmdefinition1.p2.m7" class="ltx_Math" alttext="||x||\leq 1" display="inline"><mrow><mrow><mo fence="true">||</mo><mi>x</mi><mo fence="true">||</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math>, but with the cell structure for <math id="S0.Thmdefinition1.p2.m8" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></math> specified in Section <span class="ltx_text ltx_font_bold">1</span> of R. Brown (2007). Also, one needs to consider a <span class="ltx_text ltx_font_italic">filtered space</span> that is defined as a compactly generated space <math id="S0.Thmdefinition1.p2.m9" class="ltx_Math" alttext="X_{\infty}" display="inline"><msub><mi>X</mi><mi mathvariant="normal">∞</mi></msub></math> and a sequence of subspaces <math id="S0.Thmdefinition1.p2.m10" class="ltx_Math" alttext="X_{*}" display="inline"><msub><mi>X</mi><mo>*</mo></msub></math>. Then, the <math id="S0.Thmdefinition1.p2.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-globe <math id="S0.Thmdefinition1.p2.m12" class="ltx_Math" alttext="G^{n}" display="inline"><msup><mi>G</mi><mi>n</mi></msup></math> has a skeletal filtration giving a filtered space <math id="S0.Thmdefinition1.p2.m13" class="ltx_Math" alttext="{G^{n}}_{*}" display="inline"><mmultiscripts><mi>G</mi><none></none><mi>n</mi><mo>*</mo><none></none></mmultiscripts></math>.</p>
+</div>
+<div id="S0.Thmdefinition1.p3" class="ltx_para">
+<p class="ltx_p">Thus, a <span class="ltx_text ltx_font_italic">fundamental globular <math id="S0.Thmdefinition1.p3.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math><span class="ltx_text ltx_font_normal">-groupoid</span> of a filtered (topological) space</span> is defined by using an <math id="S0.Thmdefinition1.p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-globe with its skeletal filtration (R. Brown, 2007 available from: arXiv:math/0702677v1 [math.AT]). This is analogous to the fundamental cubical omega–groupoid of Ronald Brown and Philip Higgins (1981a-c) that relates the construction to the fundamental crossed complex of a filtered space. Thus, as shown in R. Brown (2007: http://arxiv.org/abs/math/0702677), the crossed complex associated to the free globular omega-groupoid on one element of dimension <math id="S0.Thmdefinition1.p3.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the fundamental crossed complex of the <math id="S0.Thmdefinition1.p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-globe.</p>
+</div>
+<div id="S0.Thmdefinition1.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">more to come… entry in progress</span></p>
+</div>
+</div>
+<div id="S0.Thmremark1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 0.1</span>.</h6>
+<div id="S0.Thmremark1.p1" class="ltx_para">
+<p class="ltx_p">An important reason for studying <math id="S0.Thmremark1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>–categories, and especially
+<math id="S0.Thmremark1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-groupoids, is to use them as coefficient objects for non-Abelian Cohomology theories. Thus, some double groupoids defined over Hausdorff spaces that are non-Abelian (or non-commutative) are relevant to non-Abelian Algebraic Topology (NAAT) and <span class="ltx_text ltx_font_typewriter">http://planetphysics.org/?op=getobj&amp;from=lec&amp;id=61</span>NAQAT (or NA-QAT).</p>
+</div>
+<div id="S0.Thmremark1.p2" class="ltx_para">
+<p class="ltx_p">Furthermore, whereas the definition of an <math id="S0.Thmremark1.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-groupoid is a straightforward generalization of a 2-groupoid, the notion of a <em class="ltx_emph ltx_font_italic">multiple groupoid</em> is not at all an obvious generalization or extension of the concept of double groupoid.</p>
+</div>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Brown, R. and Higgins, P.J. (1981). The algebra of cubes. J. Pure Appl. Alg. 21 : 233–260.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Brown, R. and Higgins, P. J. Colimit theorems for relative homotopy groups. J.Pure Appl. Algebra 22 (1) (1981) 11–41.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> Brown, R. and Higgins, P. J. The equivalence of <math id="bib.bib3.m1" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>-groupoids and crossed complexes. Cahiers Topologie G<math id="bib.bib3.m2" class="ltx_Math" alttext="\'{e}" display="inline"><mi mathvariant="normal">é</mi></math>om. Diff<math id="bib.bib3.m3" class="ltx_Math" alttext="\'{e}" display="inline"><mi mathvariant="normal">é</mi></math>rentielle 22 (4) (1981) 371–386.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+Brown, R., Higgins, P. J. and R. Sivera,: 2011. <span class="ltx_text ltx_font_italic">“Non-Abelian Algebraic Topology”</span>, EMS Publication.
+<br class="ltx_break">http://www.bangor.ac.uk/ mas010/nonab-a-t.html ; 
+<br class="ltx_break">http://www.bangor.ac.uk/ mas010/nonab-t/partI010604.pdf
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+Brown, R. and G. Janelidze: 2004. Galois theory and a new homotopy double groupoid of a map of spaces, <em class="ltx_emph ltx_font_italic">Applied Categorical Structures</em> <span class="ltx_text ltx_font_bold">12</span>: 63-80.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">globular <math id="p2.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>-groupoid</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Globularomegagroupoid</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:21:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:21:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55Q35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55Q05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20L05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18D05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">filtered space</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="p2.m2" class="ltx_Math" alttext="G^{n}" display="inline"><msup><mi>G</mi><mi>n</mi></msup></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-globe</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">fundamental globular <math id="p2.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>-groupoid of a filtered topological space</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:44:01 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

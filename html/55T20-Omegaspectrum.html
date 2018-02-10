@@ -1,0 +1,292 @@
+<!DOCTYPE html><html>
+<head>
+<title>Omega-spectrum</title>
+<!--Generated on Sat Feb 10 11:45:30 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Omega-spectrum</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">This is a topic entry on <math id="p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectra and their important role in reduced cohomology theories
+on CW complexes.</p>
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">In algebraic topology a <em class="ltx_emph ltx_font_italic">spectrum</em> <math id="S0.SS1.p1.m1" class="ltx_Math" alttext="{\bf S}" display="inline"><mi>𝐒</mi></math> is defined as a
+sequence of topological spaces <math id="S0.SS1.p1.m2" class="ltx_Math" alttext="[X_{0};X_{1};...X_{i};X_{i+1};...]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mn>0</mn></msub><mo>;</mo><msub><mi>X</mi><mn>1</mn></msub><mo>;</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>X</mi><mi>i</mi></msub></mrow><mo>;</mo><msub><mi>X</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>;</mo><mi mathvariant="normal">…</mi><mo stretchy="false">]</mo></mrow></math> together with
+structure mappings (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ClassesOfAlgebras</span>) <math id="S0.SS1.p1.m3" class="ltx_Math" alttext="S1\bigwedge X_{i}\to X_{i+1}" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mn>1</mn><mo>⁢</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><msub><mi>X</mi><mi>i</mi></msub></mrow></mrow><mo>→</mo><msub><mi>X</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>, where <math id="S0.SS1.p1.m4" class="ltx_Math" alttext="S1" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mn>1</mn></mrow></math> is the <em class="ltx_emph ltx_font_italic">unit circle</em> (that is, a circle with a unit radius).</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span><math id="S0.SS2.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectrum</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">One can express the definition of an <math id="S0.SS2.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectrum in terms of a sequence of CW
+complexes, <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="K_{1},K_{2},..." display="inline"><mrow><msub><mi>K</mi><mn>1</mn></msub><mo>,</mo><msub><mi>K</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> as follows.</p>
+</div>
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">Let us consider <math id="S0.Thmdefinition1.p1.m1" class="ltx_Math" alttext="\Omega K" display="inline"><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><mi>K</mi></mrow></math>, the space of loops in a <math id="S0.Thmdefinition1.p1.m2" class="ltx_Math" alttext="CW" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>W</mi></mrow></math> complex <math id="S0.Thmdefinition1.p1.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> called
+the <span class="ltx_text ltx_font_italic">loopspace of <math id="S0.Thmdefinition1.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math></span>, which is topologized as a subspace of the space <math id="S0.Thmdefinition1.p1.m5" class="ltx_Math" alttext="K^{I}" display="inline"><msup><mi>K</mi><mi>I</mi></msup></math>
+of all maps <math id="S0.Thmdefinition1.p1.m6" class="ltx_Math" alttext="I\to K" display="inline"><mrow><mi>I</mi><mo>→</mo><mi>K</mi></mrow></math> , where <math id="S0.Thmdefinition1.p1.m7" class="ltx_Math" alttext="K^{I}" display="inline"><msup><mi>K</mi><mi>I</mi></msup></math> is given the compact-open topology.
+Then, an <em class="ltx_emph ltx_font_italic"><math id="S0.Thmdefinition1.p1.m8" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectrum</em> <math id="S0.Thmdefinition1.p1.m9" class="ltx_Math" alttext="\left\{K_{n}\right\}" display="inline"><mrow><mo>{</mo><msub><mi>K</mi><mi>n</mi></msub><mo>}</mo></mrow></math> is defined as a
+sequence <math id="S0.Thmdefinition1.p1.m10" class="ltx_Math" alttext="K_{1},K_{2},..." display="inline"><mrow><msub><mi>K</mi><mn>1</mn></msub><mo>,</mo><msub><mi>K</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> of CW complexes together with weak homotopy equivalences (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/WeakHomotopyEquivalence</span>) (<math id="S0.Thmdefinition1.p1.m11" class="ltx_Math" alttext="\epsilon_{n}" display="inline"><msub><mi>ϵ</mi><mi>n</mi></msub></math>):</p>
+</div>
+<div id="S0.Thmdefinition1.p2" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\epsilon_{n}:\Omega K_{n}\to K_{n+1}," display="block"><mrow><mrow><msub><mi>ϵ</mi><mi>n</mi></msub><mo>:</mo><mrow><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><msub><mi>K</mi><mi>n</mi></msub></mrow><mo>→</mo><msub><mi>K</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with <math id="S0.Thmdefinition1.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> being an integer.</p>
+</div>
+</div>
+<div id="S0.SS2.p2" class="ltx_para">
+<p class="ltx_p">An alternative definition of the <math id="S0.SS2.p2.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectrum can also be formulated as follows.</p>
+</div>
+<div id="S0.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.2</span>.</h6>
+<div id="S0.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">An <em class="ltx_emph ltx_font_italic"><math id="S0.Thmdefinition2.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectrum</em>, or <em class="ltx_emph ltx_font_italic">Omega spectrum</em>, is a spectrum <math id="S0.Thmdefinition2.p1.m2" class="ltx_Math" alttext="{\bf E}" display="inline"><mi>𝐄</mi></math> such that for every index <math id="S0.Thmdefinition2.p1.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>,
+the topological space <math id="S0.Thmdefinition2.p1.m4" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math> is fibered, and also the adjoints of the structure mappings (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ClassesOfAlgebras</span>) are all weak equivalences <math id="S0.Thmdefinition2.p1.m5" class="ltx_Math" alttext="X_{i}\cong\Omega X_{i+1}" display="inline"><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>≅</mo><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><msub><mi>X</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow></math>.</p>
+</div>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>The Role of <math id="S0.SS3.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>-spectra in Reduced Cohomology Theories</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">A category of spectra (regarded as above as sequences) will provide a model category that enables one to construct a stable homotopy theory, so that the homotopy category of spectra is canonically defined in the classical manner. Therefore, for any given construction of an <math id="S0.SS3.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectrum one is able to canonically define an associated cohomology theory; thus, one defines the cohomology groups (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProofOfCohomologyGroupTheorem</span>) of a CW-complex <math id="S0.SS3.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> associated with the <math id="S0.SS3.p1.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectrum <math id="S0.SS3.p1.m4" class="ltx_Math" alttext="{\bf E}" display="inline"><mi>𝐄</mi></math> by setting the rule:
+<math id="S0.SS3.p1.m5" class="ltx_Math" alttext="H^{n}(K;{\bf E})=[K,E_{n}]." display="inline"><mrow><mrow><mrow><msup><mi>H</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo>;</mo><mi>𝐄</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>K</mi><mo>,</mo><msub><mi>E</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S0.SS3.p2" class="ltx_para">
+<p class="ltx_p">The latter set when <math id="S0.SS3.p2.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a CW complex can be endowed with a group structure by requiring that
+<math id="S0.SS3.p2.m2" class="ltx_Math" alttext="(\epsilon_{n})*:[K,E_{n}]\to[K,\Omega E_{n+1}]" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>ϵ</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>*</mo><mo>:</mo><mrow><mo stretchy="false">[</mo><mi>K</mi><mo>,</mo><msub><mi>E</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><mo>→</mo><mrow><mo stretchy="false">[</mo><mi>K</mi><mo>,</mo><mi mathvariant="normal">Ω</mi><msub><mi>E</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">]</mo></mrow></mrow></math> is an isomorphism which defines the multiplication
+in <math id="S0.SS3.p2.m3" class="ltx_Math" alttext="[K,E_{n}]" display="inline"><mrow><mo stretchy="false">[</mo><mi>K</mi><mo>,</mo><msub><mi>E</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></math> induced by <math id="S0.SS3.p2.m4" class="ltx_Math" alttext="\epsilon_{n}" display="inline"><msub><mi>ϵ</mi><mi>n</mi></msub></math>.</p>
+</div>
+<div id="S0.SS3.p3" class="ltx_para">
+<p class="ltx_p">One can prove that if <math id="S0.SS3.p3.m1" class="ltx_Math" alttext="\left\{K_{n}\right\}" display="inline"><mrow><mo>{</mo><msub><mi>K</mi><mi>n</mi></msub><mo>}</mo></mrow></math> is a an <math id="S0.SS3.p3.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>-spectrum then the functors
+defined by the assignments <math id="S0.SS3.p3.m3" class="ltx_Math" alttext="X\longmapsto h^{n}(X)=(X,K_{n})," display="inline"><mrow><mrow><mi>X</mi><mo>⟼</mo><mrow><msup><mi>h</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi>K</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math>
+with <math id="S0.SS3.p3.m4" class="ltx_Math" alttext="n\in\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> define a reduced cohomology theory on the category of basepointed CW complexes and basepoint preserving maps; furthermore, every reduced cohomology theory on CW complexes arises in this manner from an <math id="S0.SS3.p3.m5" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>-spectrum (the Brown representability theorem; p. 397 of <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>).</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+H. Masana. 2008. <span class="ltx_text ltx_font_italic">The Tate-Thomason Conjecture</span>.
+<span class="ltx_text ltx_font_typewriter">http://www.math.uiuc.edu/K-theory/0919/TT.pdf</span>Section 1.0.4. , on p.4.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+M. F. Atiyah, “<span class="ltx_text ltx_font_italic">K-theory: lectures.</span>”, Benjamin (1967).
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+H. Bass,“<span class="ltx_text ltx_font_italic">Algebraic K-theory.</span>” , Benjamin (1968)
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+R. G. Swan, “<span class="ltx_text ltx_font_italic">Algebraic K-theory.</span>” , Springer (1968)
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+C. B. Thomas (ed.) and R.M.F. Moss (ed.) , “<span class="ltx_text ltx_font_italic">Algebraic K-theory and its geometric applications.</span>”, Springer (1969)
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">
+Hatcher, A. 2001. <span class="ltx_text ltx_font_typewriter">http://www.math.cornell.edu/ hatcher/AT/AT.pdf</span>Algebraic Topology., Cambridge University Press; Cambridge, UK.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Omega-spectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Omegaspectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:24:01</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:24:01</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">80</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55T20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55T25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55T05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Omega spectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="p2.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> spectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PointedTopologicalSpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalSequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ClassesOfAlgebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HomotopyCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">WeakHomotopyEquivalence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">WeakHomotopyDoubleGroupoid</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CohomologyGroupTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GroupCohomology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCohomologyGroupTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">equence of CW complexes</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">spectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="p2.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>–spectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Omega spectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">unit circle</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">cohomology group</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">category of spectra</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:45:30 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html><html>
+<head>
+<title>Sperner’s lemma</title>
+<!--Generated on Sat Feb 10 11:41:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Sperner’s lemma</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="ABC" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math> be a triangle, and let <math id="p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be the set of vertices of some
+triangulation <math id="p1.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> of <math id="p1.m4" class="ltx_Math" alttext="ABC" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math>. Let <math id="p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> be a mapping
+of <math id="p1.m6" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> into a three-element set, say <math id="p1.m7" class="ltx_Math" alttext="\{1,2,3\}=T" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow><mo>=</mo><mi>T</mi></mrow></math> (indicated by
+red/green/blue respectively in the figure), such that:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">any point <math id="I1.i1.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, if it is on the side <math id="I1.i1.p1.m3" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math>, satisfies
+<math id="I1.i1.p1.m4" class="ltx_Math" alttext="f(P)\in\{1,2\}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">similarly if <math id="I1.i2.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is on the side <math id="I1.i2.p1.m2" class="ltx_Math" alttext="BC" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math>, then <math id="I1.i2.p1.m3" class="ltx_Math" alttext="f(P)\in\{2,3\}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I1.i3.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is on the side <math id="I1.i3.p1.m2" class="ltx_Math" alttext="CA" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>A</mi></mrow></math>, then <math id="I1.i3.p1.m3" class="ltx_Math" alttext="f(P)\in\{3,1\}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">(It follows that <math id="p1.m8" class="ltx_Math" alttext="f(A)=1,f(B)=2,f(C)=3" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></mrow></mrow></math>.)
+Then some (triangular) simplex of <math id="p1.m9" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, say <math id="p1.m10" class="ltx_Math" alttext="UVW" display="inline"><mrow><mi>U</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mi>W</mi></mrow></math>, satisfies</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f(U)=1\qquad f(V)=2\qquad f(W)=3\;." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>2</mn></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mpadded width="+2.8pt"><mn>3</mn></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para ltx_centering">
+<img src="sperner" id="p2.g1" class="ltx_graphics" alt="">
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We will informally sketch a proof of a stronger statement:
+Let <math id="p3.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> (resp. <math id="p3.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>) be the number of simplexes satisfying (1) and whose
+vertices have the same orientation as <math id="p3.m3" class="ltx_Math" alttext="ABC" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math> (resp. the
+opposite orientation). Then <math id="p3.m4" class="ltx_Math" alttext="M-N=1" display="inline"><mrow><mrow><mi>M</mi><mo>-</mo><mi>N</mi></mrow><mo>=</mo><mn>1</mn></mrow></math> (whence <math id="p3.m5" class="ltx_Math" alttext="M&gt;0" display="inline"><mrow><mi>M</mi><mo>&gt;</mo><mn>0</mn></mrow></math>).</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The proof is in the style of well-known proofs of, for example, Stokes’s
+theorem in the plane, or Cauchy’s theorems about a holomorphic function.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Define an antisymmetric function <math id="p5.m1" class="ltx_Math" alttext="d:T\times T\to\mathbb{Z}" display="inline"><mrow><mi>d</mi><mo>:</mo><mrow><mrow><mi>T</mi><mo>×</mo><mi>T</mi></mrow><mo>→</mo><mi>ℤ</mi></mrow></mrow></math> by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="d(1,1)=d(2,2)=d(3,3)=0" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="d(1,2)=d(2,3)=d(3,1)=1" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="d(2,1)=d(3,2)=d(1,3)=-1\;." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mpadded width="+2.8pt"><mn>1</mn></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let’s define a “circuit” of size <math id="p6.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> as an injective mapping <math id="p6.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> of the
+cyclic group <math id="p6.m3" class="ltx_Math" alttext="\mathbb{Z}/n\mathbb{Z}" display="inline"><mrow><mrow><mi>ℤ</mi><mo>/</mo><mi>n</mi></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></math> into <math id="p6.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> such that <math id="p6.m5" class="ltx_Math" alttext="z(n)" display="inline"><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is adjacent to <math id="p6.m6" class="ltx_Math" alttext="z(n+1)" display="inline"><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>
+for all <math id="p6.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> in the group.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Any circuit <math id="p7.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> has what we will call a contour integral <math id="p7.m2" class="ltx_Math" alttext="Iz" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mi>z</mi></mrow></math>, namely</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="Iz=\sum_{n}d(z(n),z(n+1))\;." display="block"><mrow><mrow><mrow><mi>I</mi><mo>⁢</mo><mi>z</mi></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>n</mi></munder><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us say that two vertices <math id="p7.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="p7.m4" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> are equivalent if <math id="p7.m5" class="ltx_Math" alttext="f(P)=f(Q)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">There are four steps:</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">1) Contour integrals are added when their corresponding circuits are juxtaposed.
+</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">2) A circuit of size 3, hitting the vertices of a simplex <math id="p10.m1" class="ltx_Math" alttext="PQR" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi><mo>⁢</mo><mi>R</mi></mrow></math>, has contour integral</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">0 if any two of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, <math id="I2.i1.p1.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, <math id="I2.i1.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> are equivalent, else</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">+3 if they are inequivalent and have the same orientation as <math id="I2.i2.p1.m1" class="ltx_Math" alttext="ABC" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math>, else</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">-3</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">3) If <math id="p11.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is a circuit which travels around the perimeter of the whole
+triangle <math id="p11.m2" class="ltx_Math" alttext="ABC" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math>, and with same orientation as <math id="p11.m3" class="ltx_Math" alttext="ABC" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math>, then <math id="p11.m4" class="ltx_Math" alttext="Iy=3" display="inline"><mrow><mrow><mi>I</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mn>3</mn></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">4) Combining the above results, we get</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="3=\sum Iw=3M-3N" display="block"><mrow><mn>3</mn><mo>=</mo><mrow><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>I</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>M</mi></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>N</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the sum contains one summand for each simplex <math id="p12.m1" class="ltx_Math" alttext="PQR" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi><mo>⁢</mo><mi>R</mi></mrow></math>.</p>
+</div>
+<div id="p13" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks: </span>
+In the figure, <math id="p13.m1" class="ltx_Math" alttext="M=2" display="inline"><mrow><mi>M</mi><mo>=</mo><mn>2</mn></mrow></math> and <math id="p13.m2" class="ltx_Math" alttext="N=1" display="inline"><mrow><mi>N</mi><mo>=</mo><mn>1</mn></mrow></math>: there are two “red-green-blue” simplexes and one blue-green-red.</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">With the same hypotheses as in Sperner’s lemma, there is such a simplex <math id="p14.m1" class="ltx_Math" alttext="UVW" display="inline"><mrow><mi>U</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mi>W</mi></mrow></math>
+which is connected (along edges of the triangulation) to
+the side <math id="p14.m2" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> (resp. <math id="p14.m3" class="ltx_Math" alttext="BC" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mi>C</mi></mrow></math>,<math id="p14.m4" class="ltx_Math" alttext="CA" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>A</mi></mrow></math>)
+by a set of vertices <math id="p14.m5" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> for which <math id="p14.m6" class="ltx_Math" alttext="f(v)\in\{1,2\}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow></mrow></math> (resp. <math id="p14.m7" class="ltx_Math" alttext="\{2,3\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">}</mo></mrow></math>,
+<math id="p14.m8" class="ltx_Math" alttext="\{3,1\})" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></math>. The figure illustrates that result: one of the red-green-blue
+simplexes is connected to the red-green side by a red-green “curve”,
+and to the other two sides likewise.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">The original use of Sperner’s lemma was in a proof
+of Brouwer’s fixed point theorem in two dimensions.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Sperner’s lemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SpernersLemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:44:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:44:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 55M20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:41:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

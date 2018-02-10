@@ -1,0 +1,244 @@
+<!DOCTYPE html><html>
+<head>
+<title>genetic nets</title>
+<!--Generated on Sat Feb 10 11:46:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">genetic nets</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Genetic ‘nets’, or networks</em>, <math id="S0.SS1.p1.m1" class="ltx_Math" alttext="GN" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>N</mi></mrow></math> – that represent a living organism’s genome –are mathematical models of functional genes linked through their non-linear, dynamic interactions.</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">A simple genetic (or gene) network <math id="S0.SS1.p2.m1" class="ltx_Math" alttext="GN_{s}" display="inline"><mrow><mi>G</mi><mo>⁢</mo><msub><mi>N</mi><mi>s</mi></msub></mrow></math> may be thus represented by a directed graph <math id="S0.SS1.p2.m2" class="ltx_Math" alttext="G_{D}" display="inline"><msub><mi>G</mi><mi>D</mi></msub></math> whose nodes (or vertices) are the genes <math id="S0.SS1.p2.m3" class="ltx_Math" alttext="g_{i}" display="inline"><msub><mi>g</mi><mi>i</mi></msub></math> of a cell or a multicellular organism and whose edges (arcs) are arrows representing the actions of a gene <math id="S0.SS1.p2.m4" class="ltx_Math" alttext="a_{g}^{i}" display="inline"><msubsup><mi>a</mi><mi>g</mi><mi>i</mi></msubsup></math> on a linked gene or genes; such a directed graph representing a gene network has a canonically associated biogroupoid <math id="S0.SS1.p2.m5" class="ltx_Math" alttext="\mathcal{G}_{B}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒢</mi><mi>B</mi></msub></math> which is generated or directly computed from the directed graph <math id="S0.SS1.p2.m6" class="ltx_Math" alttext="G_{D}" display="inline"><msub><mi>G</mi><mi>D</mi></msub></math>.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Boolean vs. N-state models of genetic networks in <math id="S0.SS2.m1" class="ltx_Math" alttext="LM_{n}" display="inline"><mrow><mi>L</mi><mo>⁢</mo><msub><mi>M</mi><mi>n</mi></msub></mrow></math>- logic algebras</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">The simplest, Boolean, or two-state models of genomes represented by such directed graphs of gene networks form a proper subcategory of the category of n-state genetic networks, <math id="S0.SS2.p1.m1" class="ltx_Math" alttext="\textbf{GN}_{\L{}M_{n}}" display="inline"><msub><mtext>𝐆𝐍</mtext><mrow><mi>Ł</mi><mo>⁢</mo><msub><mi>M</mi><mi>n</mi></msub></mrow></msub></math> that operate on the basis of a Łukasiewicz-Moisil n-valued logic algebra <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="LM_{n}" display="inline"><mrow><mi>L</mi><mo>⁢</mo><msub><mi>M</mi><mi>n</mi></msub></mrow></math>. Then, the category of genetic networks,
+<math id="S0.SS2.p1.m3" class="ltx_Math" alttext="\textbf{GN}_{\L{}M_{n}}" display="inline"><msub><mtext>𝐆𝐍</mtext><mrow><mi>Ł</mi><mo>⁢</mo><msub><mi>M</mi><mi>n</mi></msub></mrow></msub></math> was shown in ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> to form a subcategory of the
+algebraic category of Łukasiewicz algebras (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AlgebraicCategoryOfLMnLogicAlgebras</span>), <math id="S0.SS2.p1.m4" class="ltx_Math" alttext="\mathcal{LM}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>, <a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. There are several published, extensive computer simulations of Boolean two-state models of both genetic and neuronal networks (for a recent summary of such computations see, for example, ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. Most, but not all, such mathematical models are Bayesian, and therefore involve computations for random networks that may have limited biological relevance as the topology of genomes, defined as their connectivity, is far from being random.</p>
+</div>
+<div id="S0.SS2.p2" class="ltx_para">
+<p class="ltx_p">The category of automata (or sequential machines based on Chrysippean or Boolean logic) and the category of <math id="S0.SS2.p2.m1" class="ltx_Math" alttext="(M,R)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></math>-systems (which can be realized as concrete metabolic-repair biosystems of enzymes, genes, and so on) are subcategories of the category of gene nets <math id="S0.SS2.p2.m2" class="ltx_Math" alttext="\textbf{GN}_{\L{}M_{n}}" display="inline"><msub><mtext>𝐆𝐍</mtext><mrow><mi>Ł</mi><mo>⁢</mo><msub><mi>M</mi><mi>n</mi></msub></mrow></msub></math>. The latter corresponds to organismic sets of zero-th order <math id="S0.SS2.p2.m3" class="ltx_Math" alttext="S_{0}" display="inline"><msub><mi>S</mi><mn>0</mn></msub></math> in the simpler, Rashevsky’s theory of organismic sets.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C. (1977). A Logical Model of Genetic Activities in Łukasiewicz Algebras: The
+Non-linear Theory., <span class="ltx_text ltx_font_italic">Bulletin of Mathematical Biology</span>, <span class="ltx_text ltx_font_bold">39</span>:249-258.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C., Brown, R., Georgescu, G., Glazebrook, J.F. (2006). Complex nonlinear biodynamics in
+categories, higher dimensional algebra and Łukasiewicz-Moisil topos: transformations of neuronal,
+genetic and neoplastic networks. <span class="ltx_text ltx_font_italic">Axiomathes</span> <span class="ltx_text ltx_font_bold">16</span>(1-2):65-122.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+Baianu, I.C., J. Glazebrook, G. Georgescu and R.Brown. (2008). A Novel Approach to
+Complex Systems Biology based on Categories, Higher Dimensional Algebra and Łukasiewicz Topos.
+<span class="ltx_text ltx_font_italic">Manuscript in preparation</span>, 16 pp.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+Georgescu, G. and C. Vraciu (1970). On the Characterization of Łukasiewicz Algebras.,
+<em class="ltx_emph ltx_font_italic">J. Algebra</em>, <span class="ltx_text ltx_font_bold">16</span> (4), 486-495.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">genetic nets</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GeneticNets</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:11:28</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:11:28</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55U99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 92D15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03B50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 92B20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 92B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">genome network</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">genome</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">entity of all interacting genes in a living organism</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DirectedGraph</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AlgebraicCategoryOfLMnLogicAlgebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrganismicSets3</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrganismicSets2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">JanLukasiewicz</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SupercategoriesOfComplexSystems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MolecularSetTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrganismicSetTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FunctionalBiology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gene net</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Bayesian model</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">genetic network</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">N-state net models</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">two-state models</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">genome Boolean models</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">category of genetic nets</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:46:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

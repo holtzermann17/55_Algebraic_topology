@@ -1,0 +1,267 @@
+<!DOCTYPE html><html>
+<head>
+<title>simplicial complex</title>
+<!--Generated on Sat Feb 10 11:46:09 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">simplicial complex</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">An abstract <em class="ltx_emph ltx_font_italic">simplicial complex</em> <math id="p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a collection of nonempty
+finite sets with the property that for any element <math id="p1.m2" class="ltx_Math" alttext="\sigma\in K" display="inline"><mrow><mi>σ</mi><mo>∈</mo><mi>K</mi></mrow></math>, if
+<math id="p1.m3" class="ltx_Math" alttext="\tau\subset\sigma" display="inline"><mrow><mi>τ</mi><mo>⊂</mo><mi>σ</mi></mrow></math> is a nonempty subset, then <math id="p1.m4" class="ltx_Math" alttext="\tau\in K" display="inline"><mrow><mi>τ</mi><mo>∈</mo><mi>K</mi></mrow></math>. An
+element of <math id="p1.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> of cardinality <math id="p1.m6" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math> is called an <em class="ltx_emph ltx_font_italic">
+<math id="p1.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-simplex</em>. An element of an element of <math id="p1.m8" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is called a <em class="ltx_emph ltx_font_italic">vertex</em>. In what follows, we may occasionally identify a vertex <math id="p1.m9" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> with its corresponding singleton set <math id="p1.m10" class="ltx_Math" alttext="\{v\}\in K" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>v</mi><mo stretchy="false">}</mo></mrow><mo>∈</mo><mi>K</mi></mrow></math>; the reader
+will be alerted when this is the case.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">standard <math id="p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-complex</em>, denoted by <math id="p2.m2" class="ltx_Math" alttext="\Delta_{n}" display="inline"><msub><mi mathvariant="normal">Δ</mi><mi>n</mi></msub></math>, is the
+simplicial complex consisting of all nonempty subsets of
+<math id="p2.m3" class="ltx_Math" alttext="\{0,1,\ldots,n\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Geometry of a simplicial complex</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> be a simplicial complex, and let <math id="S1.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be the set of vertices of
+<math id="S1.p1.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. Although there is an established notion of infinite simplicial
+complexes, the geometrical treatment of simplicial complexes is much simpler in the finite case and so for
+now we will assume that <math id="S1.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a finite set of cardinality <math id="S1.p1.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">We introduce the vector space <math id="S1.p2.m1" class="ltx_Math" alttext="\mathbb{R}^{V}" display="inline"><msup><mi>ℝ</mi><mi>V</mi></msup></math> of formal
+<math id="S1.p2.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>–linear combinations of elements of <math id="S1.p2.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>; i.e.,</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\mathbb{R}^{V}:=\{a_{1}V_{1}+a_{2}V_{2}+\cdots+a_{k}V_{k}\mid a_{i}\in\mathbb{%
+R},\ V_{i}\in V\}," display="block"><mrow><mrow><msup><mi>ℝ</mi><mi>V</mi></msup><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>V</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>V</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>V</mi><mi>k</mi></msub></mrow></mrow><mo>∣</mo><mrow><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∈</mo><mi>ℝ</mi></mrow><mo rspace="7.5pt">,</mo><mrow><msub><mi>V</mi><mi>i</mi></msub><mo>∈</mo><mi>V</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the vector space operations are defined by formal addition and
+scalar multiplication. Note that we may regard each vertex in <math id="S1.p2.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> as a
+one-term formal sum, and thus as a point in <math id="S1.p2.m5" class="ltx_Math" alttext="\mathbb{R}^{V}" display="inline"><msup><mi>ℝ</mi><mi>V</mi></msup></math>.
+</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">geometric realization</em> of <math id="S1.p3.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, denoted <math id="S1.p3.m2" class="ltx_Math" alttext="|K|" display="inline"><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow></math>, is the subset
+of <math id="S1.p3.m3" class="ltx_Math" alttext="\mathbb{R}^{V}" display="inline"><msup><mi>ℝ</mi><mi>V</mi></msup></math> consisting of the union, over all <math id="S1.p3.m4" class="ltx_Math" alttext="\sigma\in K" display="inline"><mrow><mi>σ</mi><mo>∈</mo><mi>K</mi></mrow></math>, of
+the convex hull of <math id="S1.p3.m5" class="ltx_Math" alttext="\sigma\subset\mathbb{R}^{V}" display="inline"><mrow><mi>σ</mi><mo>⊂</mo><msup><mi>ℝ</mi><mi>V</mi></msup></mrow></math>. If we fix a bijection <math id="S1.p3.m6" class="ltx_Math" alttext="\phi\colon V\to\{1,\ldots,k\}" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>k</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, then the vector space <math id="S1.p3.m7" class="ltx_Math" alttext="\mathbb{R}^{V}" display="inline"><msup><mi>ℝ</mi><mi>V</mi></msup></math> is isomorphic to the Euclidean vector space <math id="S1.p3.m8" class="ltx_Math" alttext="\mathbb{R}^{k}" display="inline"><msup><mi>ℝ</mi><mi>k</mi></msup></math> via <math id="S1.p3.m9" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>, and the set <math id="S1.p3.m10" class="ltx_Math" alttext="|K|" display="inline"><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow></math>
+inherits a metric from <math id="S1.p3.m11" class="ltx_Math" alttext="\mathbb{R}^{k}" display="inline"><msup><mi>ℝ</mi><mi>k</mi></msup></math> making it into a metric space
+and topological space. The isometry class of <math id="S1.p3.m12" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is independent of the choice of the bijection <math id="S1.p3.m13" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples:</span></p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\Delta_{2}=\{\{0\},\{1\},\{2\},\{0,1\},\{0,2\},\{1,2\},\{0,1,2\}\}" display="inline"><mrow><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math> has <math id="I1.i1.p1.m2" class="ltx_Math" alttext="V=3" display="inline"><mrow><mi>V</mi><mo>=</mo><mn>3</mn></mrow></math>, so its realization <math id="I1.i1.p1.m3" class="ltx_Math" alttext="|\Delta_{2}|" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo stretchy="false">|</mo></mrow></math> is a subset
+of <math id="I1.i1.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>, consisting of all points on the hyperplane <math id="I1.i1.p1.m5" class="ltx_Math" alttext="x+y+z=1" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>=</mo><mn>1</mn></mrow></math> that are inside or on the boundary of the first octant. These
+points form a triangle in <math id="I1.i1.p1.m6" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> with one face, three edges,
+and three vertices (for example, the convex hull of <math id="I1.i1.p1.m7" class="ltx_Math" alttext="\{0,1\}\in\Delta_{2}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><mo>∈</mo><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub></mrow></math> is the edge of this triangle that lies in the <math id="I1.i1.p1.m8" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>–plane).</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Similarly, the realization of the standard <math id="I1.i2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>–simplex
+<math id="I1.i2.p1.m2" class="ltx_Math" alttext="\Delta_{n}" display="inline"><msub><mi mathvariant="normal">Δ</mi><mi>n</mi></msub></math> is an <math id="I1.i2.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>–dimensional tetrahedron contained inside
+<math id="I1.i2.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{n+1}" display="inline"><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">A triangle without interior (a “wire frame” triangle) can be
+geometrically realized by starting from the simplicial complex
+<math id="I1.i3.p1.m1" class="ltx_Math" alttext="\{\{0\},\{1\},\{2\},\{0,1\},\{0,2\},\{1,2\}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Notice that, under this procedure, an element of <math id="S1.p6.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> of cardinality 1
+is geometrically a vertex; an element of cardinality 2 is an edge;
+cardinality 3, a face; and, in general, an element of cardinality <math id="S1.p6.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+is realized as an <math id="S1.p6.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-face inside <math id="S1.p6.m4" class="ltx_Math" alttext="\mathbb{R}^{V}" display="inline"><msup><mi>ℝ</mi><mi>V</mi></msup></math>.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">In general, a <em class="ltx_emph ltx_font_italic">triangulation</em> of a topological space <math id="S1.p7.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a
+simplicial complex <math id="S1.p7.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> together with a homeomorphism from <math id="S1.p7.m3" class="ltx_Math" alttext="|K|" display="inline"><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow></math> to
+<math id="S1.p7.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Homology of a simplicial complex</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">In this section we define the homology and cohomology groups
+associated to a simplicial complex <math id="S2.p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. We do so not because the
+homology of a simplicial complex is so intrinsically interesting in
+and of itself, but because the resulting homology theory is identical
+to the singular homology of the associated topological space <math id="S2.p1.m2" class="ltx_Math" alttext="|K|" display="inline"><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow></math>,
+and therefore provides an accessible way to calculate the latter
+homology groups (and, by extension, the homology of any space <math id="S2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>
+admitting a triangulation by <math id="S2.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>).</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">As before, let <math id="S2.p2.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> be a simplicial complex, and let <math id="S2.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be the set of
+vertices in <math id="S2.p2.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. Let the chain group <math id="S2.p2.m4" class="ltx_Math" alttext="C_{n}(K)" display="inline"><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the subgroup of the
+exterior algebra <math id="S2.p2.m5" class="ltx_Math" alttext="\Lambda(\mathbb{R}^{V})" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>V</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> generated by all elements of the form
+<math id="S2.p2.m6" class="ltx_Math" alttext="V_{0}\wedge V_{1}\wedge\cdots\wedge V_{n}" display="inline"><mrow><msub><mi>V</mi><mn>0</mn></msub><mo>∧</mo><msub><mi>V</mi><mn>1</mn></msub><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msub><mi>V</mi><mi>n</mi></msub></mrow></math> such that <math id="S2.p2.m7" class="ltx_Math" alttext="V_{i}\in V" display="inline"><mrow><msub><mi>V</mi><mi>i</mi></msub><mo>∈</mo><mi>V</mi></mrow></math> and
+<math id="S2.p2.m8" class="ltx_Math" alttext="\{V_{0},V_{1},\ldots,V_{n}\}\in K" display="inline"><mrow><mrow><mo stretchy="false">{</mo><msub><mi>V</mi><mn>0</mn></msub><mo>,</mo><msub><mi>V</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>V</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mo>∈</mo><mi>K</mi></mrow></math>. Note that we are ignoring here the
+<math id="S2.p2.m9" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>–vector space structure of <math id="S2.p2.m10" class="ltx_Math" alttext="\mathbb{R}^{V}" display="inline"><msup><mi>ℝ</mi><mi>V</mi></msup></math>; the group <math id="S2.p2.m11" class="ltx_Math" alttext="C_{n}(K)" display="inline"><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></math> under this
+definition is merely a free abelian group, generated by the
+alternating products of the above form and with the relations that are
+implied by the properties of the wedge product.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Define the boundary map <math id="S2.p3.m1" class="ltx_Math" alttext="\partial_{n}:C_{n}(K)\longrightarrow C_{n-1}(K)" display="inline"><mrow><msub><mo>∂</mo><mi>n</mi></msub><mo>:</mo><mrow><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⟶</mo><mrow><msub><mi>C</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> by the formula</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="\partial_{n}(V_{0}\wedge V_{1}\wedge\cdots\wedge V_{n}):=\sum_{j=0}^{n}(-1)^{j%
+}(V_{0}\wedge\cdots\wedge\hat{V_{j}}\wedge\cdots\wedge V_{n})," display="block"><mrow><mrow><mrow><msub><mo>∂</mo><mi>n</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mn>0</mn></msub><mo>∧</mo><msub><mi>V</mi><mn>1</mn></msub><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msub><mi>V</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>V</mi><mn>0</mn></msub><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><mover accent="true"><msub><mi>V</mi><mi>j</mi></msub><mo stretchy="false">^</mo></mover><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msub><mi>V</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the hat notation means the term under the hat is left out of the
+product, and extending linearly to all of <math id="S2.p3.m2" class="ltx_Math" alttext="C_{n}(K)" display="inline"><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Then one checks
+easily that <math id="S2.p3.m3" class="ltx_Math" alttext="\partial_{n-1}\circ\partial_{n}=0" display="inline"><mrow><mrow><msub><mo>∂</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>∘</mo><msub><mo>∂</mo><mi>n</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math>, so the collection
+of chain groups <math id="S2.p3.m4" class="ltx_Math" alttext="C_{n}(K)" display="inline"><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></math> and boundary maps <math id="S2.p3.m5" class="ltx_Math" alttext="\partial_{n}" display="inline"><msub><mo>∂</mo><mi>n</mi></msub></math> forms a chain
+complex <math id="S2.p3.m6" class="ltx_Math" alttext="\mathcal{C}(K)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></math>. The simplicial homology and cohomology
+groups of <math id="S2.p3.m7" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> are defined to be that of <math id="S2.p3.m8" class="ltx_Math" alttext="\mathcal{C}(K)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem:</span> The simplicial homology and cohomology groups of <math id="S2.p4.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>,
+as defined above, are canonically isomorphic to the singular homology
+and cohomology groups of the geometric realization <math id="S2.p4.m2" class="ltx_Math" alttext="|K|" display="inline"><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow></math> of <math id="S2.p4.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">The proof of this theorem is considerably more difficult than what we
+have done to this point, requiring the techniques of barycentric
+subdivision and simplicial approximation, and we refer the interested
+reader to <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">Munkres, James. <span class="ltx_text ltx_font_italic">Elements of Algebraic
+Topology</span>, Addison–Wesley, New York, 1984.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">simplicial complex</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SimplicialComplex</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:34:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:34:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55U10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 54E99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HomologyTopologicalSpace</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWComplex</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">simplicial homology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">simplicial cohomology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">triangulation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">abstract simplicial complex</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">abstract <math id="p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-simplex</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:46:09 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

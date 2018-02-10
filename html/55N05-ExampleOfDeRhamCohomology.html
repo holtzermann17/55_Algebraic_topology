@@ -1,0 +1,127 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of de Rham cohomology</title>
+<!--Generated on Sat Feb 10 11:41:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of de Rham cohomology</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">If <math id="p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is a differential form on a smooth manifold <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, then it is always true that if <math id="p1.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is <span class="ltx_text ltx_font_italic">exact</span> (<math id="p1.m4" class="ltx_Math" alttext="\omega=d\eta" display="inline"><mrow><mi>ω</mi><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mi>η</mi></mrow></mrow></math> for some other differential form <math id="p1.m5" class="ltx_Math" alttext="\eta" display="inline"><mi>η</mi></math>), then <math id="p1.m6" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is <span class="ltx_text ltx_font_italic">closed</span> (<math id="p1.m7" class="ltx_Math" alttext="d\omega=0" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ω</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>). On some manifolds, the opposite is also the case: all closed forms of degree at least 1 are exact. However, in general this is not true. The idea of de Rham cohomology is to measure the extent to which closed differential forms are not exact in terms of real vector spaces.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The simplest example of a differential manifold (apart from the empty manifold) is the zero-dimensional manifold consisting of a single point. Here the only differential forms are those of degree 0; actually, <math id="p2.m1" class="ltx_Math" alttext="\Omega X=\Omega^{0}X\cong\mathbb{R}" display="inline"><mrow><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><mi>X</mi></mrow><mo>=</mo><mrow><msup><mi mathvariant="normal">Ω</mi><mn>0</mn></msup><mo>⁢</mo><mi>X</mi></mrow><mo>≅</mo><mi>ℝ</mi></mrow></math> if <math id="p2.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a single point. Applying the definition of the de Rham cohomology gives <math id="p2.m3" class="ltx_Math" alttext="{\rm H}_{\rm dR}X={\rm H}_{\rm dR}^{0}X\cong\mathbb{R}" display="inline"><mrow><mrow><msub><mi mathvariant="normal">H</mi><mi>dR</mi></msub><mo>⁢</mo><mi>X</mi></mrow><mo>=</mo><mrow><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mn>0</mn></msubsup><mo>⁢</mo><mi>X</mi></mrow><mo>≅</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Next, we use the fact that the de Rham cohomology is a homotopy invariant functor to show that for any <math id="p3.m1" class="ltx_Math" alttext="n\geq 0" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></math> the de Rham cohomology groups of <math id="p3.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> are</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="{\rm H}_{\rm dR}^{0}(\mathbb{R}^{n})\cong\mathbb{R}" display="block"><mrow><mrow><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mn>0</mn></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mi>ℝ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="{\rm H}_{\rm dR}^{i}(\mathbb{R}^{n})=0\quad\hbox{for $i&gt;0$.}" display="block"><mrow><mrow><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mi>i</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>0</mn><mo mathvariant="italic" separator="true"> </mo><mrow><mtext>for </mtext><mrow><mi>i</mi><mo>&gt;</mo><mn>0</mn></mrow><mtext>.</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The reason for this is that <math id="p3.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is contractible (homotopy equivalent to a point), and so has the same de Rham cohomology. More generally, any contractible manifold has the de Rham cohomology of a point; this is essentially the statement of the Poincaré lemma.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The first example of a non-trivial <math id="p4.m1" class="ltx_Math" alttext="{\rm H}_{\rm dR}^{i}" display="inline"><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mi>i</mi></msubsup></math> for <math id="p4.m2" class="ltx_Math" alttext="i&gt;0" display="inline"><mrow><mi>i</mi><mo>&gt;</mo><mn>0</mn></mrow></math> is the circle <math id="p4.m3" class="ltx_Math" alttext="S^{1}" display="inline"><msup><mi>S</mi><mn>1</mn></msup></math>. In fact, we have</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="{\rm H}_{\rm dR}^{0}(S^{1})\cong\mathbb{R}" display="block"><mrow><mrow><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mn>0</mn></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mi>ℝ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="{\rm H}_{\rm dR}^{1}(S^{1})\cong\mathbb{R}\cdot[\omega]," display="block"><mrow><mrow><mrow><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mn>1</mn></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mrow><mi>ℝ</mi><mo>⋅</mo><mrow><mo stretchy="false">[</mo><mi>ω</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p4.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is any 1-form on <math id="p4.m5" class="ltx_Math" alttext="S^{1}" display="inline"><msup><mi>S</mi><mn>1</mn></msup></math> with <math id="p4.m6" class="ltx_Math" alttext="\int_{S^{1}}\omega\neq 0" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>S</mi><mn>1</mn></msup></msub><mi>ω</mi></mrow><mo>≠</mo><mn>0</mn></mrow></math>. The standard volume form <math id="p4.m7" class="ltx_Math" alttext="d\phi" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></math> on <math id="p4.m8" class="ltx_Math" alttext="S^{1}" display="inline"><msup><mi>S</mi><mn>1</mn></msup></math>, which it inherits from <math id="p4.m9" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> if we view <math id="p4.m10" class="ltx_Math" alttext="S^{1}" display="inline"><msup><mi>S</mi><mn>1</mn></msup></math> as the unit circle, is such a form. The notation <math id="p4.m11" class="ltx_Math" alttext="d\phi" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>ϕ</mi></mrow></math> is somewhat misleading since it is not the differential of a global function <math id="p4.m12" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>; this is exactly the reason it appears in <math id="p4.m13" class="ltx_Math" alttext="{\rm H}_{\rm dR}^{1}(S^{1})" display="inline"><mrow><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mn>1</mn></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>S</mi><mn>1</mn></msup><mo stretchy="false">)</mo></mrow></mrow></math>. (However, by the Poincaré lemma, it can locally be viewed as the differential of a function.)</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For arbitrary <math id="p5.m1" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, the dimensions of the de Rham cohomology groups of <math id="p5.m2" class="ltx_Math" alttext="S^{n}" display="inline"><msup><mi>S</mi><mi>n</mi></msup></math> are given by <math id="p5.m3" class="ltx_Math" alttext="\dim{\rm H}_{\rm dR}^{i}(S^{n})=1" display="inline"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mi>i</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>S</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> for <math id="p5.m4" class="ltx_Math" alttext="i=0" display="inline"><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow></math> or <math id="p5.m5" class="ltx_Math" alttext="i=n" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>n</mi></mrow></math>, and <math id="p5.m6" class="ltx_Math" alttext="\dim{\rm H}_{\rm dR}^{i}(S^{n})=0" display="inline"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><msubsup><mi mathvariant="normal">H</mi><mi>dR</mi><mi>i</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>S</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> otherwise. A couple of methods exist for calculating the de Rham cohomology groups for <math id="p5.m7" class="ltx_Math" alttext="S^{n}" display="inline"><msup><mi>S</mi><mi>n</mi></msup></math> and other, more complicated, manifolds. The Mayer-Vietoris sequence is an example of such a tool.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of de Rham cohomology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfDeRhamCohomology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:25:01</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:25:01</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55N05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 58A12</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:41:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

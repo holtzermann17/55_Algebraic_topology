@@ -1,0 +1,293 @@
+<!DOCTYPE html><html>
+<head>
+<title>homotopy category</title>
+<!--Generated on Sat Feb 10 11:43:15 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">homotopy category</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Homotopy category, fundamental groups and fundamental groupoids</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Let us consider first the category <math id="S0.SS1.p1.m1" class="ltx_Math" alttext="Top" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>p</mi></mrow></math> whose objects are topological spaces <math id="S0.SS1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> with a chosen
+basepoint <math id="S0.SS1.p1.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> and whose morphisms are continuous maps <math id="S0.SS1.p1.m4" class="ltx_Math" alttext="X\to Y" display="inline"><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></math> that associate the basepoint of <math id="S0.SS1.p1.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> to the
+basepoint of <math id="S0.SS1.p1.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. The fundamental group of <math id="S0.SS1.p1.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> specifies a functor <math id="S0.SS1.p1.m8" class="ltx_Math" alttext="Top\to\textbf{G}" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>p</mi></mrow><mo>→</mo><mtext>𝐆</mtext></mrow></math>,
+with <span class="ltx_text ltx_markedasmath ltx_font_bold">G</span> being the category of groups and group homomorphisms, which is called
+<em class="ltx_emph ltx_font_italic">the fundamental group functor</em>.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Homotopy category</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">Next, when one has a suitably defined relation of homotopy between morphisms, or maps, in a category <math id="S0.SS2.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>, one can define the <em class="ltx_emph ltx_font_italic">homotopy category</em> <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="hU" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mi>U</mi></mrow></math> as the category whose objects are the same as the objects of <math id="S0.SS2.p1.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>, but with morphisms being defined by the homotopy classes of maps; this is in fact the homotopy category of <em class="ltx_emph ltx_font_italic">unbased spaces</em>.</p>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>Fundamental groups</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">We can further require that homotopies on <math id="S0.SS3.p1.m1" class="ltx_Math" alttext="Top" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>p</mi></mrow></math> map each basepoint to a corresponding basepoint, thus leading to the definition of the <em class="ltx_emph ltx_font_italic">homotopy category <math id="S0.SS3.p1.m2" class="ltx_Math" alttext="hTop" display="inline"><mrow><mi>h</mi><mo mathvariant="italic">⁢</mo><mi>T</mi><mo mathvariant="italic">⁢</mo><mi>o</mi><mo mathvariant="italic">⁢</mo><mi>p</mi></mrow></math> of based spaces</em>. Therefore, the fundamental group is a <em class="ltx_emph ltx_font_italic">homotopy invariant</em> functor on <math id="S0.SS3.p1.m3" class="ltx_Math" alttext="Top" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>p</mi></mrow></math>, with the meaning that the latter functor factors through a functor <math id="S0.SS3.p1.m4" class="ltx_Math" alttext="hTop\to\textbf{G}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>p</mi></mrow><mo>→</mo><mtext>𝐆</mtext></mrow></math>. A homotopy equivalence in <math id="S0.SS3.p1.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is an isomorphism in <math id="S0.SS3.p1.m6" class="ltx_Math" alttext="hTop" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>p</mi></mrow></math>. Thus, based homotopy equivalence induces an isomorphism of fundamental groups.</p>
+</div>
+</section>
+<section id="S0.SS4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.4 </span>Fundamental groupoid</h2>
+
+<div id="S0.SS4.p1" class="ltx_para">
+<p class="ltx_p">In the general case when one does not choose a basepoint, a <em class="ltx_emph ltx_font_italic">fundamental groupoid</em>
+<math id="S0.SS4.p1.m1" class="ltx_Math" alttext="\Pi_{1}(X)" display="inline"><mrow><msub><mi mathvariant="normal">Π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> of a topological space <math id="S0.SS4.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> needs to be defined as the category whose objects are
+the base points of <math id="S0.SS4.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and whose morphisms <math id="S0.SS4.p1.m4" class="ltx_Math" alttext="x\to y" display="inline"><mrow><mi>x</mi><mo>→</mo><mi>y</mi></mrow></math> are the equivalence classes of paths from <math id="S0.SS4.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to <math id="S0.SS4.p1.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Explicitly, the objects of <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\Pi_{1}(X)" display="inline"><mrow><msub><mi mathvariant="normal">Π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> are the points of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathrm{Obj}(\Pi_{1}(X))=X\,," display="block"><mrow><mrow><mrow><mi>Obj</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi mathvariant="normal">Π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mpadded width="+1.7pt"><mi>X</mi></mpadded></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">morphisms are homotopy classes of paths “rel endpoints” that is</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathrm{Hom}_{\Pi_{1}(x)}(x,y)=\mathrm{Paths}(x,y)/\sim\,," display="block"><mrow><msub><mi>Hom</mi><mrow><msub><mi mathvariant="normal">Π</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>Paths</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>/</mo><mo rspace="4.2pt">∼</mo><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where, <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> denotes homotopy rel endpoints, and,</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">composition of morphisms is defined <em class="ltx_emph ltx_font_italic">via</em> piecing together, or concatenation, of paths.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S0.SS5" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.5 </span>Fundamental groupoid functor</h2>
+
+<div id="S0.SS5.p1" class="ltx_para">
+<p class="ltx_p">Therefore, the set of endomorphisms of an object <math id="S0.SS5.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is precisely the fundamental group
+<math id="S0.SS5.p1.m2" class="ltx_Math" alttext="\pi(X,x)" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>. One can thus construct the <em class="ltx_emph ltx_font_italic">groupoid of homotopy equivalence classes</em>; this construction can be then carried out by utilizing functors from the category <math id="S0.SS5.p1.m3" class="ltx_Math" alttext="Top" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>p</mi></mrow></math>, or its subcategory <math id="S0.SS5.p1.m4" class="ltx_Math" alttext="hU" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mi>U</mi></mrow></math>,
+to the <em class="ltx_emph ltx_font_italic">category of groupoids and groupoid homomorphisms</em>, <math id="S0.SS5.p1.m5" class="ltx_Math" alttext="Grpd" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>d</mi></mrow></math>. One such functor
+which associates to each topological space its fundamental (homotopy) groupoid is appropriately called the
+<em class="ltx_emph ltx_font_italic">fundamental groupoid functor</em>.</p>
+</div>
+</section>
+<section id="S0.SS6" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.6 </span>An example: the category of simplicial, or CW-complexes</h2>
+
+<div id="S0.SS6.p1" class="ltx_para">
+<p class="ltx_p">As an important example, one may wish to consider the category of simplicial, or <math id="S0.SS6.p1.m1" class="ltx_Math" alttext="CW" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>W</mi></mrow></math>-complexes and homotopy defined
+for <math id="S0.SS6.p1.m2" class="ltx_Math" alttext="CW" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>W</mi></mrow></math>-complexes. Perhaps, the simplest example is that of a one-dimensional <math id="S0.SS6.p1.m3" class="ltx_Math" alttext="CW" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>W</mi></mrow></math>-complex, which is a graph.
+As described above, one can define a functor from the category of graphs, <span class="ltx_text ltx_font_bold">Grph</span>, to <math id="S0.SS6.p1.m4" class="ltx_Math" alttext="Grpd" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>d</mi></mrow></math>
+and then define the fundamental homotopy groupoids of graphs, hypergraphs, or pseudographs. The case of freely generated
+graphs (one-dimensional <math id="S0.SS6.p1.m5" class="ltx_Math" alttext="CW" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>W</mi></mrow></math>-complexes) is particularly simple and can be computed with a digital computer by a finite
+algorithm using the finite groupoids associated with such finitely generated <math id="S0.SS6.p1.m6" class="ltx_Math" alttext="CW" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>W</mi></mrow></math>-complexes.</p>
+</div>
+<section id="S0.SS6.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.6.1 </span>Remark</h3>
+
+<div id="S0.SS6.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Related to this concept of homotopy category for unbased topological spaces, one can then prove the
+<em class="ltx_emph ltx_font_italic">approximation theorem for an arbitrary space</em> by considering a functor</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\Gamma:\textbf{hU}\longrightarrow\textbf{hU}," display="block"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>:</mo><mrow><mtext>𝐡𝐔</mtext><mo>⟶</mo><mtext>𝐡𝐔</mtext></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and also the construction of an approximation of an arbitrary space <math id="S0.SS6.SSS1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> as the
+colimit <math id="S0.SS6.SSS1.p1.m2" class="ltx_Math" alttext="\Gamma X" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mi>X</mi></mrow></math> of a sequence of cellular inclusions of <math id="S0.SS6.SSS1.p1.m3" class="ltx_Math" alttext="CW" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>W</mi></mrow></math>-complexes <math id="S0.SS6.SSS1.p1.m4" class="ltx_Math" alttext="X_{1},...,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> , so
+that one obtains <math id="S0.SS6.SSS1.p1.m5" class="ltx_Math" alttext="X\equiv colim[X_{i}]" display="inline"><mrow><mi>X</mi><mo>≡</mo><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S0.SS6.SSS1.p2" class="ltx_para">
+<p class="ltx_p">Furthermore, the homotopy groups of the <math id="S0.SS6.SSS1.p2.m1" class="ltx_Math" alttext="CW" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>W</mi></mrow></math>-complex <math id="S0.SS6.SSS1.p2.m2" class="ltx_Math" alttext="\Gamma X" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mi>X</mi></mrow></math> are the colimits of the
+homotopy groups of <math id="S0.SS6.SSS1.p2.m3" class="ltx_Math" alttext="X_{n}" display="inline"><msub><mi>X</mi><mi>n</mi></msub></math>, and <math id="S0.SS6.SSS1.p2.m4" class="ltx_Math" alttext="\gamma_{n+1}:\pi_{q}(X_{n+1})\longmapsto\pi_{q}(X)" display="inline"><mrow><msub><mi>γ</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>:</mo><mrow><mrow><msub><mi>π</mi><mi>q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>⟼</mo><mrow><msub><mi>π</mi><mi>q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> is a group epimorphism.</p>
+</div>
+</section>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+May, J.P. 1999, <em class="ltx_emph ltx_font_italic">A Concise Course in Algebraic Topology.</em>, The University of Chicago Press: Chicago
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+R. Brown and G. Janelidze.(2004). Galois theory and a new homotopy double groupoid of a map of spaces.(2004).
+<span class="ltx_text ltx_font_italic">Applied Categorical Structures</span>,<span class="ltx_text ltx_font_bold">12</span>: 63-80. Pdf file in arxiv: math.AT/0208211
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">homotopy category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HomotopyCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:17:07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:17:07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">44</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55P99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55R10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55R05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55R65</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 55R37</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">category of homotopy equivalence classes</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FundamentalGroupoidFunctor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TopologicalSpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ApproximationTheoremForAnArbitrarySpace</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FundamentalGroupoid</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RiemannianMetric</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CohomologyGroupTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OmegaSpectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfGroupoids2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">fundamental groupoid</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">fundamental group functor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">homotopy category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">fundamental groupoid of a topological space</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:43:15 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
